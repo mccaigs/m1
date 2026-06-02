@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "Technical review": { "range": "£650 - £2,500", "recommended_route": "Begin with a focused technical review." },
+    "Website and workflow upgrade": { "range": "£2,500 - £8,000", "recommended_route": "Start with the website, enquiry path, and connected workflow." },
+    "Automation project": { "range": "£4,000 - £15,000", "recommended_route": "Map the repeated work and define the smallest useful automation release." },
+    "Internal system": { "range": "£4,000 - £15,000", "recommended_route": "Map the current operation and define the smallest useful internal system." },
+    "Controlled AI assistant": { "range": "£3,500 - £12,000", "recommended_route": "Define the approved knowledge, boundaries, and fallback behaviour." },
+    "Product / SaaS build": { "range": "£8,000 - £35,000+", "recommended_route": "Define a deliberate first release around the core user journey." }
+  }
+}

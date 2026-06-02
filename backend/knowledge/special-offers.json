@@ -1,0 +1,75 @@
+{
+  "offers": [
+    {
+      "id": "standard-business-website",
+      "title": "Standard Business Website",
+      "price": "£599",
+      "priority": 4,
+      "keywords": [
+        "website",
+        "website cost",
+        "website pricing",
+        "website offer",
+        "special offer",
+        "offers",
+        "business website",
+        "small business website",
+        "startup website",
+        "web design",
+        "brochure website",
+        "website package",
+        "website quote",
+        "cheapest website",
+        "affordable website",
+        "affordable",
+        "budget",
+        "startup",
+        "599"
+      ],
+      "phrases": [
+        "how much does a website cost",
+        "do you have any offers",
+        "what's your cheapest website",
+        "whats your cheapest website",
+        "can you build a website for my business",
+        "what can i get for 599",
+        "website for my small business"
+      ],
+      "summary": "A professionally designed business website for organisations that need a modern online presence without the cost of a fully custom platform.",
+      "related_response_fragment": "For businesses looking for a focused website starting point, the current Standard Business Website offer is £599.",
+      "includes": [
+        "Up to 5 pages",
+        "Home page",
+        "About page",
+        "Services page",
+        "Contact page",
+        "One additional content page",
+        "Mobile-responsive design",
+        "Contact form",
+        "Basic SEO setup",
+        "Google Maps integration",
+        "Three design review rounds",
+        "Deployment and launch support"
+      ],
+      "excludes": [
+        "Custom software",
+        "Membership systems",
+        "Complex integrations",
+        "E-commerce functionality"
+      ],
+      "response_fragments": [
+        "We currently offer a Standard Business Website package from £599.",
+        "It is designed for businesses that need a professional online presence without the cost of a fully custom platform.",
+        "The package includes up to five pages, a contact form, mobile-responsive design, basic SEO setup, Google Maps integration, three design review rounds, and deployment and launch support.",
+        "It does not include custom software, membership systems, complex integrations, or e-commerce functionality."
+      ],
+      "cta_label": "Start a project",
+      "cta_href": "/start-project",
+      "suggested_questions": [
+        "What is included in the £599 website package?",
+        "Can you improve our enquiry process?",
+        "What happens if we need custom functionality?"
+      ]
+    }
+  ]
+}

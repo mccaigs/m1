@@ -1,0 +1,16 @@
+{
+  "topics": [
+    {
+      "topic": "timelines",
+      "keywords": ["timeline", "timelines", "time", "weeks", "months", "long"],
+      "phrases": ["how long", "how long does a project take", "project timeline"],
+      "fragments": [
+        "Typical timings depend on scope.",
+        "A technical review can take 1 to 2 weeks, a website and workflow upgrade 2 to 6 weeks, an automation or internal tool project 4 to 12 weeks, and a product or platform build 8 to 16 weeks or more.",
+        "The useful next step is to define the smallest coherent first release."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What kind of budget should we expect?", "What is a good-fit project?", "How does Start a Project work?"]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "topics": [
+    {
+      "topic": "audience_fit",
+      "keywords": ["sme", "smes", "startup", "startups", "small business", "small businesses", "small firm", "small firms", "family business", "family businesses", "owner-managed", "owner managed", "owner-managed company", "owner-managed companies", "scottish business", "scottish businesses", "uk business", "uk businesses", "accountant", "accountancy", "solicitor", "solicitors", "estate agent", "estate agents", "property", "hospitality", "restaurant", "hotel", "trade", "trades", "manufacturer", "manufacturing", "professional services", "local business", "local businesses", "local services", "education provider", "education providers"],
+      "phrases": ["do you work with small businesses", "are you suitable for smaller businesses", "are you suitable for a small firm", "would you work with a trade business", "do you work with startups", "do you work with professional services", "do you work with scottish businesses", "do you work with family businesses", "scottish family businesses"],
+      "fragments": [
+        "Yes. McCaigs works with ambitious Scottish and UK SMEs, startups, specialist organisations, and owner-managed companies.",
+        "That can include trades, professional services firms, hospitality businesses, local services, property businesses, manufacturers, and education providers.",
+        "The useful question is whether there is a real operational problem, a clear commercial outcome, and a sensible first release."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What is a good-fit first project?", "What kind of budget should we expect?", "How does McCaigs work?"]
+    },
+    {
+      "topic": "customer_service_bottlenecks",
+      "keywords": ["customer service", "customer support", "support requests", "customer enquiries", "booking enquiries", "response times", "follow-up", "follow ups"],
+      "phrases": ["too many customer enquiries", "customer service bottleneck", "slow response times", "customers wait too long"],
+      "fragments": [
+        "Customer service bottlenecks often come from scattered enquiries, repeated questions, unclear ownership, or slow hand-offs.",
+        "A useful first step is to map where requests arrive, what can be answered consistently, and where a person needs to step in.",
+        "The result may be a clearer workflow, better routing, a controlled assistant, or a focused internal tool."
+      ],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["Could a controlled assistant help?", "Can you improve our enquiry process?", "What would a first project look like?"]
+    },
+    {
+      "topic": "quoting_workflows",
+      "keywords": ["quote", "quotes", "quoting", "quotation", "quotations", "estimate", "estimates", "job pricing", "proposal"],
+      "phrases": ["quoting takes too long", "improve our quoting process", "send quotes faster", "price jobs faster"],
+      "fragments": [
+        "Quoting workflows become slow when information is collected inconsistently, prices need repeated manual checks, or follow-up depends on memory.",
+        "McCaigs can help structure the enquiry, capture the right details, apply approved business rules, and make the next action visible.",
+        "Where judgement is needed, the system should prepare the work for human review rather than make an unsupported promise."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["Could automation reduce our admin?", "Can you integrate with existing software?", "What would a first project look like?"]
+    },
+    {
+      "topic": "data_quality",
+      "keywords": ["data", "data quality", "spreadsheet", "spreadsheets", "duplicates", "duplicate records", "messy data", "missing information", "inconsistent data"],
+      "phrases": ["our data is messy", "information is inconsistent", "too many spreadsheets", "duplicate customer records"],
+      "fragments": [
+        "Reliable systems depend on reliable information.",
+        "If data is duplicated, incomplete, or spread across several tools, the sensible first step is to identify the important records, define what good data looks like, and improve the flow before adding complexity.",
+        "That preparation makes reporting, automation, and practical AI more dependable."
+      ],
+      "cta": { "label": "View process", "href": "/process" },
+      "suggested_questions": ["Can you integrate with existing software?", "Could an internal system help?", "How does McCaigs work?"]
+    },
+    {
+      "topic": "integrations",
+      "keywords": ["integration", "integrations", "integrate", "crm", "accounting software", "booking system", "email platform", "existing software", "api"],
+      "phrases": ["connect with our existing software", "integrate with our crm", "work with our booking system", "connect our systems"],
+      "fragments": [
+        "Yes. McCaigs can assess how a new workflow or tool should connect with the software already in use.",
+        "The right approach depends on the systems involved, the available interfaces, the data quality, and how important the connection is to day-to-day work.",
+        "A focused discovery step confirms what is practical before the build is scoped."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What information should we prepare?", "How long does a project take?", "What kind of budget should we expect?"]
+    },
+    {
+      "topic": "support_maintenance",
+      "keywords": ["support", "maintenance", "maintain", "updates", "after launch", "ongoing help", "hosting"],
+      "phrases": ["what happens after launch", "do you provide support", "can you maintain the system", "do you offer ongoing support"],
+      "fragments": [
+        "McCaigs scopes support and maintenance around the system being delivered.",
+        "That can include launch support, agreed improvements, technical maintenance, and a clear route for issues that need attention.",
+        "The right arrangement is defined during the project so responsibilities remain visible and commercially sensible."
+      ],
+      "cta": { "label": "View process", "href": "/process" },
+      "suggested_questions": ["How does McCaigs work?", "How long does a project take?", "What would a first project look like?"]
+    },
+    {
+      "topic": "seo_lead_generation",
+      "keywords": ["seo", "search engine", "google", "lead generation", "generate leads", "more leads", "online enquiries", "website enquiries"],
+      "phrases": ["can you help with seo", "website is not generating enquiries", "get more enquiries from our website", "generate more leads"],
+      "fragments": [
+        "A business website should explain the offer clearly and make the next step easy for the right customer.",
+        "McCaigs can improve the website structure, enquiry path, basic search setup, and connected follow-up workflow.",
+        "Search performance also depends on the market, the quality of the content, and ongoing commercial activity, so the studio does not promise unsupported rankings or lead volumes."
+      ],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["Can you build a website for my business?", "Can you improve our enquiry process?", "Do you have any website offers?"]
+    }
+  ]
+}

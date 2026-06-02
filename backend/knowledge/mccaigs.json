@@ -1,0 +1,51 @@
+{
+  "topics": [
+    {
+      "topic": "what_mccaigs_does",
+      "keywords": ["mccaigs", "studio", "build", "offer"],
+      "phrases": ["what does mccaigs do", "what do you build"],
+      "fragments": [
+        "McCaigs is Scotland's Elite Technical Studio.",
+        "We build practical AI, automation, websites, internal systems, and digital products for ambitious businesses that need more than a standard agency can offer.",
+        "The work starts with the real operation, the useful outcome, and the simplest reliable route to improvement."
+      ],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["What makes McCaigs different?", "Do you work with SMEs?", "How does McCaigs work?"]
+    },
+    {
+      "topic": "studio_difference",
+      "keywords": ["different", "difference", "hands-on", "senior"],
+      "phrases": ["what makes mccaigs different", "why mccaigs"],
+      "fragments": [
+        "McCaigs is a small, hands-on technical studio.",
+        "We start with the real business problem rather than a fashionable tool.",
+        "That means software rules where logic is enough, practical AI where it adds value, and clear human responsibility where judgement matters."
+      ],
+      "cta": { "label": "View the studio", "href": "/studio" },
+      "suggested_questions": ["Do you work with SMEs?", "How does McCaigs work?", "What is a good-fit project?"]
+    },
+    {
+      "topic": "project_fit",
+      "keywords": ["fit", "suitable", "sme", "smes", "ordinary", "organisation"],
+      "phrases": ["good fit", "ordinary businesses", "work with smes", "suitable for ordinary businesses"],
+      "fragments": [
+        "Yes. McCaigs works with ambitious SMEs, owner-managed businesses, startups, and specialised organisations.",
+        "A good fit is a real business problem with a useful outcome: too much manual administration, scattered enquiries, information that is hard to find, disconnected tools, a website that should work harder, or a product idea that needs capable technical execution."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What does McCaigs build?", "What kind of budget should we expect?", "How does McCaigs work?"]
+    },
+    {
+      "topic": "deterministic_ai",
+      "keywords": ["deterministic", "logic", "rules", "predictable", "hallucinate", "hallucination"],
+      "phrases": ["deterministic ai", "can this assistant hallucinate", "make things up"],
+      "fragments": [
+        "This assistant does not generate open-ended answers from a general model.",
+        "It selects and presents approved McCaigs knowledge using deterministic rules.",
+        "When it does not know, it says so rather than inventing an answer."
+      ],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["Could a controlled assistant help?", "Can AI help my business?", "What is a good-fit project?"]
+    }
+  ]
+}

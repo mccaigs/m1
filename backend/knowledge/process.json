@@ -1,0 +1,28 @@
+{
+  "topics": [
+    {
+      "topic": "process",
+      "keywords": ["process", "method", "delivery", "work"],
+      "phrases": ["how does mccaigs work", "how do you work", "delivery process"],
+      "fragments": [
+        "The studio process is Diagnose, Design, Build, Evaluate, Ship, and Improve.",
+        "The aim is a useful release, evaluated properly, with a clear route to improvement.",
+        "The work stays close to the real operation so feedback arrives early and decisions remain visible."
+      ],
+      "cta": { "label": "View process", "href": "/process" },
+      "suggested_questions": ["How long does a project take?", "What is a good-fit project?", "How does Start a Project work?"]
+    },
+    {
+      "topic": "contact",
+      "keywords": ["start", "project", "enquire", "enquiry", "brief"],
+      "phrases": ["how does start a project work", "start a project", "project builder"],
+      "fragments": [
+        "Start a Project is the separate structured qualification route.",
+        "It asks about the business, the problem, the desired outcome, and the likely complexity before returning an indicative planning estimate from approved rules.",
+        "It is not a formal quotation. It is a useful first planning step."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What kind of budget should we expect?", "How long do projects take?", "What is a good-fit project?"]
+    }
+  ]
+}

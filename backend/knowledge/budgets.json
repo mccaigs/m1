@@ -1,0 +1,17 @@
+{
+  "topics": [
+    {
+      "topic": "budgets",
+      "keywords": ["budget", "budgets", "cost", "price", "pricing", "quote", "estimate"],
+      "phrases": ["what kind of budget", "how much does it cost", "project estimate"],
+      "related_offer_ids": ["standard-business-website"],
+      "fragments": [
+        "Project costs depend on scope, complexity, integrations, data quality, urgency, and the right delivery route.",
+        "The Assistant does not guess at a quote.",
+        "Start a Project collects the useful detail and returns an indicative planning estimate from approved rules."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["How long do projects take?", "What is a good-fit project?", "How does McCaigs work?"]
+    }
+  ]
+}

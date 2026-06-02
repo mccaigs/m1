@@ -1,0 +1,49 @@
+{
+  "starting_prompts": [
+    "What does McCaigs do?",
+    "Can AI help my business?",
+    "We spend too much time on admin",
+    "What kind of budget should we expect?"
+  ],
+  "default_suggested_questions": [
+    "What does McCaigs build?",
+    "What kind of budget should we expect?",
+    "How does McCaigs work?"
+  ],
+  "unknown": {
+    "topic": "fallback",
+    "fragments": [
+      "I do not have an approved answer for that yet.",
+      "I can still help with the closest useful route, or you can use Start a Project to give the studio enough detail to review the question properly."
+    ],
+    "cta": { "label": "Start a project", "href": "/start-project" },
+    "suggested_questions": [
+      "What does McCaigs build?",
+      "What kind of budget should we expect?",
+      "How does McCaigs work?"
+    ]
+  },
+  "closest_routes": [
+    {
+      "topic": "closest_services",
+      "keywords": ["website", "automation", "workflow", "assistant", "internal tool", "internal system", "software", "portal", "saas", "product"],
+      "fragments": ["This sounds closest to the studio's services and common business problems."],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["What does McCaigs build?", "Could an internal system help?", "Can AI help my business?"]
+    },
+    {
+      "topic": "closest_process",
+      "keywords": ["delivery", "prepare", "discovery", "requirements", "support", "maintenance", "launch"],
+      "fragments": ["This sounds closest to how the studio scopes, delivers, and supports a project."],
+      "cta": { "label": "View process", "href": "/process" },
+      "suggested_questions": ["How does McCaigs work?", "What information should we prepare?", "What happens after launch?"]
+    },
+    {
+      "topic": "closest_project",
+      "keywords": ["budget", "cost", "quote", "timeline", "project", "idea", "help"],
+      "fragments": ["This sounds closest to a project-specific question. Start a Project is the most useful next step."],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What kind of budget should we expect?", "How long does a project take?", "What is a good-fit first project?"]
+    }
+  ]
+}

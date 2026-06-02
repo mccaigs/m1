@@ -1,0 +1,110 @@
+{
+  "topics": [
+    {
+      "topic": "business_problem_enquiries",
+      "keywords": ["enquiry", "enquiries", "leads", "referrals", "response time"],
+      "phrases": ["not generating enough enquiries", "missed opportunities", "lose enquiries"],
+      "fragments": [
+        "When enquiries arrive through different routes, good opportunities can be missed or handled inconsistently.",
+        "A useful first step is to bring qualification, routing, tracking, and response ownership into one clear process.",
+        "That can improve response times without making the day-to-day work more complicated."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["Can you improve our website too?", "What would a first project look like?", "What kind of budget should we expect?"]
+    },
+    {
+      "topic": "business_problem_admin",
+      "keywords": ["admin", "administration", "repetitive", "manual", "copying", "chasing"],
+      "phrases": ["too much time on admin", "repetitive work", "manual administration"],
+      "fragments": [
+        "Repeated administration is often a sign that the process can be simplified.",
+        "McCaigs can review where information is copied, chased, or moved by hand and design a clearer workflow.",
+        "The aim is less repetitive work and more time for the parts of the business that need people."
+      ],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["Could an internal system help?", "What would a first project look like?", "How does McCaigs work?"]
+    },
+    {
+      "topic": "business_problem_knowledge",
+      "keywords": ["documents", "emails", "knowledge", "information", "search", "spreadsheets"],
+      "phrases": ["spread across emails", "too many places", "difficult to find"],
+      "fragments": [
+        "When information lives across emails, documents, spreadsheets, and people's heads, it becomes slow to find and easy to lose.",
+        "A useful system gives the organisation one reliable place to find approved information when it is needed.",
+        "Where the knowledge is well defined, a controlled assistant can make access faster without inventing answers."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["Could a controlled assistant help?", "Can this assistant hallucinate?", "What would a first project look like?"]
+    },
+    {
+      "topic": "business_problem_ai_unclear",
+      "keywords": ["ai", "artificial intelligence", "unclear"],
+      "phrases": ["can ai help my business", "i think ai could help", "do not know where"],
+      "fragments": [
+        "AI can help when it solves a defined problem better than simpler software.",
+        "The useful starting point is the work itself: where time is lost, where information is hard to use, and where a better decision or faster response would matter.",
+        "A practical review identifies where AI creates genuine value, where automation is enough, and where the current process should be improved first."
+      ],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["What is deterministic AI?", "Can this assistant hallucinate?", "Could a controlled assistant help?"]
+    },
+    {
+      "topic": "service_automation",
+      "keywords": ["automation", "automate", "workflow"],
+      "phrases": ["business automation", "automate repetitive work"],
+      "fragments": [
+        "Automation is useful for repeated handling: enquiry routing, document processing, email triage, customer updates, and internal hand-offs.",
+        "The aim is not to add software for its own sake.",
+        "It is to remove repeated administration and make the next action clearer."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What would a first project look like?", "How long does a project take?", "What kind of budget should we expect?"]
+    },
+    {
+      "topic": "service_internal_systems",
+      "keywords": ["internal system", "internal tool", "dashboard", "portal"],
+      "phrases": ["need an internal system", "customer portal"],
+      "fragments": [
+        "Internal systems replace fragile spreadsheets, disconnected tools, and manual tracking with a focused interface designed around how the business actually operates.",
+        "The first release should solve the most valuable operational problem without trying to rebuild everything at once."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What would a first project look like?", "How long does a project take?", "What kind of budget should we expect?"]
+    },
+    {
+      "topic": "service_websites",
+      "keywords": ["website", "websites", "site", "platform"],
+      "phrases": ["website and workflow", "improve our website"],
+      "fragments": [
+        "A good website should contribute to the business rather than simply exist online.",
+        "McCaigs builds websites and digital platforms that explain the business clearly, generate enquiries, support customers, and connect into the day-to-day operation."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["Can you improve our enquiry process?", "What kind of budget should we expect?", "How does McCaigs work?"]
+    },
+    {
+      "topic": "service_controlled_assistants",
+      "keywords": ["assistant", "knowledge base", "controlled assistant"],
+      "phrases": ["deterministic assistant", "controlled assistant"],
+      "fragments": [
+        "A controlled assistant answers from approved knowledge, follows clear boundaries, and uses a sensible fallback when an answer is unknown.",
+        "It is useful when a business needs consistent guidance rather than improvisation.",
+        "The system can still feel conversational while remaining reviewable and predictable underneath."
+      ],
+      "cta": { "label": "View services", "href": "/services" },
+      "suggested_questions": ["Can this assistant hallucinate?", "Can AI help my business?", "What is a good-fit project?"]
+    },
+    {
+      "topic": "service_saas",
+      "keywords": ["saas", "product", "marketplace", "mvp"],
+      "phrases": ["build a saas", "build a product", "saas product"],
+      "fragments": [
+        "McCaigs builds practical product and SaaS foundations with a deliberate first-release scope.",
+        "That can include portals, marketplaces, and software-enabled services for established businesses or startups.",
+        "The first goal is a maintainable product that can be tested with real users and improved using evidence."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What would a first project look like?", "How long does a project take?", "What kind of budget should we expect?"]
+    }
+  ]
+}

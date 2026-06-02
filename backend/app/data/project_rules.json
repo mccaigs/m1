@@ -1,0 +1,10 @@
+{
+  "classification_rules": [
+    { "classification": "Product / SaaS build", "keywords": ["product or saas"] },
+    { "classification": "Website and workflow upgrade", "keywords": ["website", "enquiries"] },
+    { "classification": "Internal system", "keywords": ["internal system", "customer portal"] },
+    { "classification": "Controlled AI assistant", "keywords": ["ai"] },
+    { "classification": "Automation project", "keywords": ["automate", "admin"] }
+  ],
+  "fallback": "Technical review"
+}

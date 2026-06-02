@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-midnight: var(--colour-midnight);
+  --color-deep-blue: var(--colour-deep-blue);
+  --color-signal: var(--colour-signal-blue);
+  --color-signal-soft: var(--colour-ice-blue);
+  --color-off-white: var(--colour-off-white);
+  --color-ink: var(--colour-ink);
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  --colour-midnight: #071426;
+  --colour-deep-blue: #0b2342;
+  --colour-signal-blue: #3aa7ff;
+  --colour-ice-blue: #d8efff;
+  --colour-off-white: #f6f3ec;
+  --colour-ink: #102239;
+  --background: #071426;
+  --foreground: #f6f3ec;
+  --card: #0a1a30;
+  --card-foreground: #f6f3ec;
+  --popover: #0a1a30;
+  --popover-foreground: #f6f3ec;
+  --primary: #d8efff;
+  --primary-foreground: #071426;
+  --secondary: #102b4d;
+  --secondary-foreground: #d8efff;
+  --muted: #102b4d;
+  --muted-foreground: #9fb0c3;
+  --accent: #163a65;
+  --accent-foreground: #d8efff;
+  --destructive: #f08383;
+  --border: rgb(216 239 255 / 0.16);
+  --input: rgb(216 239 255 / 0.16);
+  --ring: #3aa7ff;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 78% 8%, rgb(58 167 255 / 0.055), transparent 24rem);
+  }
+
+  a,
+  button {
+    @apply transition-colors;
+  }
+}
+
+.technical-grid {
+  background-image:
+    linear-gradient(rgb(216 239 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(216 239 255 / 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.hero-glow {
+  background: radial-gradient(circle, rgb(58 167 255 / 0.15), transparent 68%);
+}
+
+.systems-path {
+  animation: systems-path-flow 20s linear infinite;
+}
+
+.systems-path-delayed {
+  animation-delay: -7s;
+}
+
+@keyframes systems-path-flow {
+  to {
+    stroke-dashoffset: -160;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .systems-path {
+    animation: none;
+  }
+}

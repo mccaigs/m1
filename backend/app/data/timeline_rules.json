@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "Technical review": "1 - 2 weeks",
+    "Website and workflow upgrade": "2 - 6 weeks",
+    "Automation project": "4 - 12 weeks",
+    "Internal system": "4 - 12 weeks",
+    "Controlled AI assistant": "3 - 8 weeks",
+    "Product / SaaS build": "8 - 16+ weeks"
+  }
+}
