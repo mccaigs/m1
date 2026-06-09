@@ -1,17 +1,32 @@
-import type { Metadata } from "next";
 import { ContactCta } from "@/components/marketing/contact-cta";
 import { PageHero } from "@/components/marketing/page-hero";
+import { PageFaqSection } from "@/components/marketing/page-faq-section";
 import { SiteFrame } from "@/components/marketing/site-frame";
+import { JsonLd } from "@/components/seo/json-ld";
+import { createBreadcrumbStructuredData, createPageMetadata, publicRoutes } from "@/lib/seo";
 import { commonServiceProblems, services, typicalEngagements } from "@/lib/studio-content";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description: "Practical websites, systems, and improvements for ambitious Scottish businesses with operational problems to solve.",
-};
+export const metadata = createPageMetadata(publicRoutes[2]);
+
+const serviceFaqs = [
+  {
+    question: "What does McCaigs build?",
+    answer: "McCaigs builds practical AI systems, automation, websites, internal tools, SaaS products, and modern digital platforms around real business problems.",
+  },
+  {
+    question: "Who does McCaigs work with?",
+    answer: "McCaigs works with startups, Scottish SMEs, owner-managed businesses, professional services firms, specialist organisations, and teams that need useful software built properly.",
+  },
+  {
+    question: "Can McCaigs improve an existing system?",
+    answer: "Yes. Many projects begin with an existing website, workflow, spreadsheet, software process, or AI idea that needs to become clearer, faster, or easier to maintain.",
+  },
+] as const;
 
 export default function ServicesPage() {
   return (
     <SiteFrame>
+      <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }])} />
       <PageHero
         copy="Start with the part of the business that is taking too much time, losing opportunities, or making everyday work harder than it should be."
         eyebrow="Services / Practical business improvements"
@@ -31,7 +46,7 @@ export default function ServicesPage() {
                   </div>
                   <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/50">0{index + 1}</span>
                 </div>
-                <h2 className="mt-7 text-xl font-semibold">{title}</h2>
+                <h3 className="mt-7 text-xl font-semibold">{title}</h3>
                 <p className="mt-3 text-sm leading-6 text-ink/65">{copy}</p>
                 <div className="mt-6 border-t border-ink/10 pt-5">
                   <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/65">Useful outcome</p>
@@ -54,7 +69,7 @@ export default function ServicesPage() {
                   <div className="flex size-10 items-center justify-center rounded-lg border border-signal/20 bg-signal/8 text-signal"><Icon className="size-5" /></div>
                   <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">0{index + 1}</span>
                 </div>
-                <h2 className="mt-6 text-xl font-semibold">{title}</h2>
+                <h3 className="mt-6 text-xl font-semibold">{title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p>
               </div>
               <div className="border-t border-white/10 pt-5 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
@@ -88,6 +103,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      <PageFaqSection eyebrow="Services FAQ" items={[...serviceFaqs]} />
       <ContactCta />
     </SiteFrame>
   );

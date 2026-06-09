@@ -37,9 +37,8 @@ export async function createSocialImage() {
             width: "100%",
           }}
         >
-          <div style={{ alignItems: "center", display: "flex", gap: "20px" }}>
-            <img alt="" src={`data:image/svg+xml;base64,${logoData}`} style={{ height: "84px", width: "84px" }} />
-            <span style={{ fontSize: "42px", fontWeight: 700 }}>McCaigs</span>
+          <div style={{ alignItems: "center", display: "flex" }}>
+            <img alt="" src={`data:image/svg+xml;base64,${logoData}`} style={{ height: "66px", width: "320px" }} />
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
             <span style={{ color: "#3aa7ff", fontSize: "22px", letterSpacing: "5px", textTransform: "uppercase" }}>

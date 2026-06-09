@@ -1,4 +1,6 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
+import { createConvexEnquiry } from "@/lib/convex-server";
+import { deliverGoogleAppsScriptWebhook } from "@/lib/google-apps-script-webhook";
 import { contactSubmissionSchema } from "@/lib/validation/contact";
 
 export async function POST(request: Request) {
@@ -22,19 +24,6 @@ export async function POST(request: Request) {
     );
   }
 
-  const webhookUrl = process.env.GOOGLE_APPS_SCRIPT_WEBHOOK_URL;
-  const directMobile = process.env.DIRECT_CONTACT_MOBILE;
-
-  if (!webhookUrl || !directMobile) {
-    return NextResponse.json(
-      {
-        error:
-          "The qualified enquiry route is not connected in this preview. Please try again once the production service is configured.",
-      },
-      { status: 503 },
-    );
-  }
-
   const enquiry = {
     budgetRange: submission.data.budgetRange,
     company: submission.data.company,
@@ -45,41 +34,50 @@ export async function POST(request: Request) {
     projectType: submission.data.projectType,
     timeline: submission.data.timeline,
   };
-  const payload = {
-    enquiry,
-    qualification: {
-      captchaPassed: true,
-      consentGranted: true,
-      source: "mccaigs.com/contact",
-    },
-    submittedAt: new Date().toISOString(),
-    version: "contact-enquiry-v1",
-  };
+  let convexRecordId: string | null = null;
 
   try {
-    const webhookResponse = await fetch(webhookUrl, {
-      body: JSON.stringify(payload),
-      headers: { "content-type": "application/json" },
-      method: "POST",
-      signal: AbortSignal.timeout(10_000),
-    });
-
-    if (!webhookResponse.ok) {
-      throw new Error("Webhook rejected the enquiry.");
-    }
+    convexRecordId = await createConvexEnquiry(enquiry);
   } catch {
+    convexRecordId = null;
+  }
+  const convexStored = Boolean(convexRecordId);
+
+  const webhookUrlPresent = Boolean(process.env.GOOGLE_APPS_SCRIPT_WEBHOOK_URL);
+  const directMobile = process.env.DIRECT_CONTACT_MOBILE;
+
+  if (!webhookUrlPresent && !convexStored) {
     return NextResponse.json(
       {
         error:
-          "The enquiry could not be sent just now. Please try again shortly.",
+          "The qualified enquiry route is not connected in this preview. Please try again once the production service is configured.",
       },
-      { status: 502 },
+      { status: 503 },
     );
   }
 
+  const payload = {
+    type: "contact_enquiry",
+    ...enquiry,
+    source: "mccaigs.com/contact",
+    createdAt: new Date().toISOString(),
+    convexId: convexRecordId,
+    version: "contact-enquiry-v1",
+  };
+
+  console.info("[enquiries] webhook scheduling", {
+    payloadType: payload.type,
+    webhookUrlPresent,
+  });
+
+  if (webhookUrlPresent) {
+    after(() => deliverGoogleAppsScriptWebhook(payload));
+  }
+
   return NextResponse.json({
-    directContact: { mobile: directMobile },
+    directContact: directMobile ? { mobile: directMobile } : undefined,
     message: "Your qualified enquiry has been received.",
     ok: true,
+    stored: convexStored,
   });
 }

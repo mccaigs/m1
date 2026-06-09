@@ -71,3 +71,15 @@ pnpm build
 ```
 
 Product and engineering documentation lives in [`docs/`](./docs).
+
+## Search metadata
+
+Public search metadata assumes the production origin `https://mccaigs.com`. Route metadata, canonical URLs, entity JSON-LD, factual FAQ answers, and the public route inventory live in `src/lib/seo.ts`.
+
+Next.js generates `/robots.txt` and `/sitemap.xml` from App Router metadata routes. Keep the shared SEO source current when adding a public route so canonicals, social previews, and crawl discovery remain aligned.
+
+## Publish an Insight
+
+Insights are repository-managed MDX files in `src/content/insights/`. Add one `.mdx` file per note with the approved frontmatter fields, then set `status: "published"` when it is ready to appear publicly. Draft and archived notes remain private.
+
+The typed loader in `src/lib/insights.ts` adds published articles to `/insights`, generates static article routes, and appends their URLs to `/sitemap.xml`. A production build fails when a published note has incomplete required metadata.

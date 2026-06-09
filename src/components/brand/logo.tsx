@@ -1,41 +1,45 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const logoSizes = {
-  sm: 24,
-  md: 32,
-  lg: 40,
+// SVG intrinsic dimensions (viewBox: 0 0 433.5 89.7)
+const SVG_WIDTH = 434;
+const SVG_HEIGHT = 90;
+
+const sizeClass = {
+  sm: "h-8 w-auto",
+  md: "h-10 w-auto",
+  lg: "h-12 w-auto",
 } as const;
 
 export function Logo({
   className,
   imageClassName,
-  labelClassName,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  labelClassName: _labelClassName,
   priority = false,
-  showLabel = true,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  showLabel: _showLabel,
   size = "md",
 }: {
   className?: string;
   imageClassName?: string;
+  /** @deprecated Text label removed; prop retained for backward compatibility */
   labelClassName?: string;
   priority?: boolean;
+  /** @deprecated Text label removed; prop retained for backward compatibility */
   showLabel?: boolean;
-  size?: keyof typeof logoSizes;
+  size?: keyof typeof sizeClass;
 }) {
-  const pixels = logoSizes[size];
-
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
+    <span className={cn("inline-flex items-center", className)}>
       <Image
-        alt=""
-        aria-hidden="true"
-        className={cn("shrink-0 rounded-[28%]", imageClassName)}
-        height={pixels}
+        alt="McCaigs"
+        className={cn(sizeClass[size], "shrink-0", imageClassName)}
+        height={SVG_HEIGHT}
         priority={priority}
         src="/logo.svg"
-        width={pixels}
+        width={SVG_WIDTH}
       />
-      {showLabel ? <span className={cn("font-semibold tracking-tight", labelClassName)}>McCaigs</span> : <span className="sr-only">McCaigs</span>}
     </span>
   );
 }

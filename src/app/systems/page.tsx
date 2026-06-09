@@ -1,13 +1,11 @@
-import type { Metadata } from "next";
 import { ContactCta } from "@/components/marketing/contact-cta";
 import { PageHero } from "@/components/marketing/page-hero";
 import { SiteFrame } from "@/components/marketing/site-frame";
 import { SystemsSection } from "@/components/marketing/studio-sections";
+import { JsonLd } from "@/components/seo/json-ld";
+import { createBreadcrumbStructuredData, createPageMetadata, publicRoutes } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Systems",
-  description: "Explore the workflow engines, internal tools, practical AI systems, websites, and digital products McCaigs builds.",
-};
+export const metadata = createPageMetadata(publicRoutes[3]);
 
 const systemTypes = [
   ["Practical AI systems", "Useful AI assistance with clear rules, review, and a sensible fallback when the answer is not known."],
@@ -21,6 +19,7 @@ const systemTypes = [
 export default function SystemsPage() {
   return (
     <SiteFrame>
+      <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Systems", path: "/systems" }])} />
       <PageHero
         copy="McCaigs builds websites, workflows, internal tools, and AI-assisted systems around the way a business actually works. The result should make the operation clearer, not more complicated."
         eyebrow="Systems / Selected technical builds"

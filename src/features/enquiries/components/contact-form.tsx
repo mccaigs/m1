@@ -37,7 +37,7 @@ type FieldErrors = Partial<Record<keyof ContactSubmission, string>>;
 type SubmissionState =
   | { type: "idle" }
   | { message: string; type: "error" }
-  | { mobile: string; type: "success" };
+  | { mobile?: string; type: "success" };
 
 export function ContactForm() {
   const [consent, setConsent] = useState(false);
@@ -77,13 +77,13 @@ export function ContactForm() {
         error?: string;
       };
 
-      if (!response.ok || !body.directContact?.mobile) {
+      if (!response.ok) {
         throw new Error(body.error ?? "The enquiry could not be sent just now.");
       }
 
       form.reset();
       setConsent(false);
-      setSubmission({ mobile: body.directContact.mobile, type: "success" });
+      setSubmission({ mobile: body.directContact?.mobile, type: "success" });
     } catch (error) {
       setSubmission({
         message: error instanceof Error ? error.message : "The enquiry could not be sent just now.",
@@ -104,17 +104,19 @@ export function ContactForm() {
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">Qualified enquiry received</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Thank you. The studio has your brief.</h2>
           <p className="mt-4 max-w-xl text-sm leading-6 text-muted-foreground">
-            Your enquiry has been received for review. If speaking directly is useful, the private contact line is now available below.
+            Your enquiry has been received for review. The studio will use the details provided to decide the most useful next step.
           </p>
-          <a className="mt-7 flex items-center gap-3 rounded-xl border border-signal/25 bg-signal/8 p-4 text-signal-soft transition-colors hover:bg-signal/12" href={`tel:${submission.mobile}`}>
-            <Phone className="size-5 text-signal" />
-            <span>
-              <span className="block font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Direct mobile</span>
-              <span className="mt-1 block text-lg font-semibold">{submission.mobile}</span>
-            </span>
-          </a>
+          {submission.mobile ? (
+            <a className="mt-7 flex items-center gap-3 rounded-xl border border-signal/25 bg-signal/8 p-4 text-signal-soft transition-colors hover:bg-signal/12" href={`tel:${submission.mobile}`}>
+              <Phone className="size-5 text-signal" />
+              <span>
+                <span className="block font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Direct mobile</span>
+                <span className="mt-1 block text-lg font-semibold">{submission.mobile}</span>
+              </span>
+            </a>
+          ) : null}
         </div>
-        <p className="flex items-center gap-2 text-xs text-muted-foreground"><ShieldCheck className="size-4 text-signal" /> Revealed after validated enquiry submission.</p>
+        <p className="flex items-center gap-2 text-xs text-muted-foreground"><ShieldCheck className="size-4 text-signal" /> Validated enquiry stored for studio review.</p>
       </div>
     );
   }

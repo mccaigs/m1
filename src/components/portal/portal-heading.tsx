@@ -17,7 +17,7 @@ export function PortalHeading({
         <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{copy}</p>
       </div>
       <Badge className="w-fit border-signal/20 bg-signal/8 font-mono text-[9px] uppercase tracking-[0.14em] text-signal-soft" variant="outline">
-        Foundation preview
+        Live workspace
       </Badge>
     </div>
   );

@@ -76,6 +76,8 @@ Check:
 
 ## Content rules
 
+For Insights publishing, follow `docs/INSIGHTS.md`. Use only `src/content/insights/` and `src/lib/insights.ts`; do not introduce a second content source, CMS, blog route, or Pages Router directory.
+
 Use phrases like:
 
 - Scotland's Elite Technical Studio

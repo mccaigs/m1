@@ -1,53 +1,56 @@
-import type { Metadata } from "next";
-import { MoveRight } from "lucide-react";
 import { ContactCta } from "@/components/marketing/contact-cta";
+import { InsightCard } from "@/components/insights/insight-card";
 import { PageHero } from "@/components/marketing/page-hero";
 import { SiteFrame } from "@/components/marketing/site-frame";
-import { insightAreas } from "@/lib/studio-content";
+import { JsonLd } from "@/components/seo/json-ld";
+import { getPublishedBlogPosts } from "@/lib/blog-convex";
+import { hydrateBlogPost } from "@/lib/blog-posts";
+import { getPublishedInsights } from "@/lib/insights";
+import { createBreadcrumbStructuredData, createPageMetadata, publicRoutes } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Insights",
-  description: "Practical notes from McCaigs on reliable AI, workflow improvement, internal systems, and building useful software.",
-};
+export const metadata = createPageMetadata(publicRoutes[6]);
+export const dynamic = "force-dynamic";
 
-export default function InsightsPage() {
+export default async function InsightsPage() {
+  const [insightPosts, blogMetadata] = await Promise.all([
+    getPublishedInsights(),
+    getPublishedBlogPosts(),
+  ]);
+  const hydratedBlogPosts = (
+    await Promise.all(blogMetadata.map((post) => hydrateBlogPost(post)))
+  ).filter((post) => post !== undefined);
+  const posts = [
+    ...insightPosts.map((post) => ({ href: `/insights/${post.slug}`, post })),
+    ...hydratedBlogPosts
+      .filter(({ metadata }) => !insightPosts.some((post) => post.filename === metadata.contentFile))
+      .map(({ post }) => ({ href: `/blog/${post.slug}`, post })),
+  ].sort(
+    (a, b) =>
+      Date.parse(b.post.publishedAt || "1970-01-01") -
+      Date.parse(a.post.publishedAt || "1970-01-01"),
+  );
+
   return (
     <SiteFrame>
+      <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }])} />
       <PageHero
-        copy="Practical notes for business owners and operators who want technology to make the work clearer, faster, and more reliable."
-        eyebrow="Insights / Studio notes"
+        copy="Field notes from the McCaigs studio: deterministic AI, technical systems, fast MVPs, useful automation, and practical software for ordinary businesses."
+        eyebrow="Insights / Studio field notes"
         title="Useful thinking for businesses that need things built properly."
       />
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">Editorial focus</p>
-        <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">Clear notes. Practical subjects. No hype.</h2>
-        <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">The Insights section is the publishing home for studio notes, build logs, practical guidance, and careful explanations of where AI is useful and where simpler software is the better answer.</p>
-        <div className="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-          {insightAreas.map(([title, copy], index) => (
-            <article className="rounded-xl border border-white/10 bg-card/55 p-6" key={title}>
-              <div className="flex items-center justify-between gap-3">
-                <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Coverage area</span>
-                <span className="font-mono text-[9px] tracking-[0.16em] text-muted-foreground">0{index + 1}</span>
-              </div>
-              <h2 className="mt-7 text-xl font-semibold">{title}</h2>
-              <p className="mt-3 text-sm leading-6 text-muted-foreground">{copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className="border-y border-ink/10 bg-off-white text-ink">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.7fr_1.3fr]">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-deep-blue/65">Publishing foundation</p>
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">Studio notes are being prepared.</h2>
+      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
+        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">Published notes</p>
+        <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">Clear notes. Practical subjects. No hype.</h2>
+        <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">Short, careful explanations from the workshop: what works, what should stay simple, and where the first useful release begins.</p>
+        {posts.length > 0 ? (
+          <div className="mt-8 grid gap-3 md:grid-cols-2">{posts.map(({ href, post }) => <InsightCard href={href} key={href} post={post} />)}</div>
+        ) : (
+          <div className="mt-8 rounded-xl border border-white/10 bg-card/55 p-6 sm:p-8">
+            <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-signal">Editorial queue</p>
+            <h2 className="mt-4 text-2xl font-semibold tracking-tight">The first studio notes are being prepared.</h2>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">There are no published notes yet. The journal will collect practical explanations and build observations as they are approved.</p>
           </div>
-          <div className="max-w-2xl">
-            <p className="text-base leading-7 text-ink/65">The first notes will focus on practical questions: when an internal tool is worth building, where controlled assistants fit, how to remove repeated admin, and how to improve a website so it contributes more to the business.</p>
-            <p className="mt-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-deep-blue/70">
-              <MoveRight className="size-3" /> Repository-managed publishing follows
-            </p>
-          </div>
-        </div>
+        )}
       </section>
       <ContactCta />
     </SiteFrame>

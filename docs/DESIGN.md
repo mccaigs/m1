@@ -194,6 +194,18 @@ The mobile menu must be clean, readable, and properly branded.
 
 The public website uses the dark blue system, light blue signal colour, off-white editorial surfaces, restrained grid detail, codenamed system cards, and mobile sheet navigation. The dedicated Assistant page presents the controlled local demonstration, while Contact owns the gated enquiry flow.
 
+## Studio OS
+
+The authenticated workspace extends the same visual system into a calm operations centre.
+
+- Keep dark blue surfaces, fine pale borders, light-blue operational signals, compact uppercase labels, and restrained cards.
+- Use `Studio OS` as the primary product language and `Operations centre` as the internal navigation label.
+- Owner, admin, staff, and client workspaces display the active role beside the workspace label.
+- Studio navigation contains Overview, Leads, Clients, Projects, Tasks, Activity, and Settings.
+- Client navigation contains My Projects, Updates, and Resources. It must never reveal leads, other clients, internal updates, or administration.
+- Project detail is the principal operating screen: project state, client context, client-visible updates, internal notes, and approved links/assets live together.
+- Empty, loading, disconnected, and restricted states should look intentional and remain useful without inventing data.
+
 Preferred words:
 
 - systems

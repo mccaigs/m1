@@ -1,12 +1,28 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
+import { requireStudioStaff } from "./studioAuth";
 
 const enquiryStatus = v.union(
   v.literal("new"),
-  v.literal("reviewing"),
-  v.literal("qualified"),
-  v.literal("declined"),
-  v.literal("converted"),
+  v.literal("reviewed"),
+  v.literal("contacted"),
+  v.literal("quoted"),
+  v.literal("won"),
+  v.literal("lost"),
+  // Retained so existing records remain valid during the status migration.
+  v.literal("accepted"),
+  v.literal("rejected"),
+  v.literal("archived"),
+);
+
+const enquiryStatusUpdate = v.union(
+  v.literal("new"),
+  v.literal("reviewed"),
+  v.literal("contacted"),
+  v.literal("quoted"),
+  v.literal("won"),
+  v.literal("lost"),
+  v.literal("archived"),
 );
 
 const budgetRange = v.union(
@@ -102,29 +118,31 @@ export const create = mutation({
 });
 
 export const listForStudio = query({
-  args: { status: v.optional(enquiryStatus) },
-  handler: async (ctx, { status }) => {
-    const identity = await ctx.auth.getUserIdentity();
-    if (!identity) {
-      throw new Error("Authentication required.");
-    }
+  args: { limit: v.optional(v.number()), status: v.optional(enquiryStatus) },
+  handler: async (ctx, { limit = 20, status }) => {
+    await requireStudioStaff(ctx);
 
     if (status) {
-      return ctx.db.query("enquiries").withIndex("by_status", (q) => q.eq("status", status)).order("desc").collect();
+      return ctx.db.query("enquiries").withIndex("by_status", (q) => q.eq("status", status)).order("desc").take(limit);
     }
 
-    return ctx.db.query("enquiries").withIndex("by_created_at").order("desc").collect();
+    return ctx.db.query("enquiries").withIndex("by_created_at").order("desc").take(limit);
   },
 });
 
 export const updateStatus = mutation({
-  args: { enquiryId: v.id("enquiries"), status: enquiryStatus },
+  args: { enquiryId: v.id("enquiries"), status: enquiryStatusUpdate },
   handler: async (ctx, { enquiryId, status }) => {
-    const identity = await ctx.auth.getUserIdentity();
-    if (!identity) {
-      throw new Error("Authentication required.");
-    }
+    await requireStudioStaff(ctx);
 
-    await ctx.db.patch(enquiryId, { status, updatedAt: Date.now() });
+    const now = Date.now();
+    await ctx.db.patch(enquiryId, { status, updatedAt: now });
+    await ctx.db.insert("auditLogs", {
+      action: "enquiry.status_updated",
+      entityType: "enquiry",
+      entityId: enquiryId,
+      metadata: { status },
+      createdAt: now,
+    });
   },
 });

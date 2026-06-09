@@ -16,6 +16,12 @@ SUBMISSIONS_PATH = Path(
     )
 )
 
+PROJECT_SHAPES = {
+    "Low": "Focused",
+    "Medium": "Structured",
+    "High": "Multi-part",
+}
+
 
 def load_json(filename: str) -> dict:
     with (DATA_DIR / filename).open(encoding="utf-8") as file:
@@ -53,13 +59,14 @@ def score_complexity(request: ProjectBuilderInput) -> tuple[int, str]:
 def estimate(request: ProjectBuilderInput) -> ProjectEstimate:
     classification = classify(request.problem)
     score, complexity = score_complexity(request)
+    project_shape = PROJECT_SHAPES[complexity]
     pricing = load_json("pricing_rules.json")["routes"][classification]
     timeline = load_json("timeline_rules.json")["routes"][classification]
     assumptions = [
         "The range assumes a focused first release.",
         "Final scope depends on requirements, integrations, data quality, urgency, and delivery constraints.",
         (
-            "The complexity signals suggest planning around the upper part of the approved range."
+            "The project shape suggests planning around the upper part of the approved range."
             if complexity == "High"
             else "The current answers suggest a focused starting scope."
         ),
@@ -69,7 +76,7 @@ def estimate(request: ProjectBuilderInput) -> ProjectEstimate:
             f"Business Problem: {request.problem_detail or request.problem}",
             f"Desired Outcome: {request.desired_outcome_detail or request.desired_outcome}",
             f"Recommended Route: {classification}",
-            f"Complexity: {complexity}",
+            f"Project Shape: {project_shape}",
             f"Indicative Budget: {pricing['range']}",
             f"Estimated Timeline: {timeline}",
         ]

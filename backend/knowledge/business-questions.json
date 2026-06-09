@@ -27,7 +27,7 @@
     {
       "topic": "quoting_workflows",
       "keywords": ["quote", "quotes", "quoting", "quotation", "quotations", "estimate", "estimates", "job pricing", "proposal"],
-      "phrases": ["quoting takes too long", "improve our quoting process", "send quotes faster", "price jobs faster"],
+      "phrases": ["quoting takes too long", "quoting process takes too long", "improve our quoting process", "send quotes faster", "price jobs faster"],
       "fragments": [
         "Quoting workflows become slow when information is collected inconsistently, prices need repeated manual checks, or follow-up depends on memory.",
         "McCaigs can help structure the enquiry, capture the right details, apply approved business rules, and make the next action visible.",

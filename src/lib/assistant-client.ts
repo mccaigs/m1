@@ -22,6 +22,7 @@ export type AssistantReply = {
 export type AssistantIntent = string;
 
 const assistantApiUrl = process.env.NEXT_PUBLIC_ASSISTANT_API_URL?.replace(/\/$/, "");
+const searchStopWords = new Set(["the", "and", "for", "what", "who", "how", "does", "did", "can", "you", "about", "tell"]);
 
 export const startingPrompts = approvedFallbackKnowledge.starting_prompts;
 
@@ -54,13 +55,16 @@ function getLocalReply(message: string): AssistantReply {
 
   if (!bestMatch || bestMatch.score < 6) return getFallbackReply(query);
 
-  const matchedTopics = matches
+  const relevantMatches = matches
     .filter((match) => match.score >= Math.max(6, bestMatch.score * 0.45))
+    .slice(0, 3);
+  const matchedTopics = relevantMatches
     .slice(0, 3)
     .map((match) => match.block.topic);
+  const responseBlock = combineRelevantFaqBlocks(bestMatch.block, relevantMatches);
 
   return {
-    ...replyFromBlock(bestMatch.block, matchedTopics),
+    ...replyFromBlock(responseBlock, matchedTopics),
     confidence: calculateConfidence(bestMatch.score),
   };
 }
@@ -95,6 +99,27 @@ function replyFromBlock(block: ApprovedKnowledgeBlock, matchedTopics: string[]):
   };
 }
 
+function combineRelevantFaqBlocks(bestBlock: ApprovedKnowledgeBlock, relevantMatches: { block: ApprovedKnowledgeBlock; score: number }[]) {
+  if (!isFaqBlock(bestBlock)) return bestBlock;
+
+  const relatedFaqBlocks = relevantMatches
+    .filter((match) => match.block.topic !== bestBlock.topic && isFaqBlock(match.block) && match.score >= 10)
+    .map((match) => match.block)
+    .slice(0, 2);
+
+  if (!relatedFaqBlocks.length) return bestBlock;
+
+  return {
+    ...bestBlock,
+    fragments: [...bestBlock.fragments, ...relatedFaqBlocks.flatMap((block) => block.fragments)],
+    suggested_questions: [...new Set([...bestBlock.suggested_questions, ...relatedFaqBlocks.flatMap((block) => block.suggested_questions)])].slice(0, 3),
+  };
+}
+
+function isFaqBlock(block: ApprovedKnowledgeBlock) {
+  return block.topic.startsWith("company_faq_");
+}
+
 function enrichBlockWithRelatedOffers(block: ApprovedKnowledgeBlock): ApprovedKnowledgeBlock {
   const relatedOffers = specialOffers.filter((offer) => block.related_offer_ids?.includes(offer.id));
   if (!relatedOffers.length) return block;
@@ -112,19 +137,65 @@ function normaliseQuery(query: string) {
 
 function containsTerm(query: string, term: string) {
   const normalisedTerm = normaliseQuery(term);
-  return Boolean(normalisedTerm) && ` ${query} `.includes(` ${normalisedTerm} `);
+  return Boolean(normalisedTerm) && (` ${query} `.includes(` ${normalisedTerm} `) || ` ${normalisedTerm} `.includes(` ${query} `));
 }
 
 function scoreBlock(query: string, block: Pick<ApprovedKnowledgeBlock, "keywords" | "phrases" | "priority">) {
-  const phraseScore = (block.phrases ?? []).reduce(
-    (score, phrase) => score + (containsTerm(query, phrase) ? 12 * normaliseQuery(phrase).split(" ").length : 0),
-    0,
-  );
-  const keywordScore = (block.keywords ?? []).reduce(
-    (score, keyword) => score + (containsTerm(query, keyword) ? 4 * normaliseQuery(keyword).split(" ").length + 2 : 0),
-    0,
-  );
+  const phraseScore = (block.phrases ?? []).reduce((score, phrase) => score + scorePhrase(query, phrase), 0);
+  const keywordScore = (block.keywords ?? []).reduce((score, keyword) => score + scoreKeyword(query, keyword), 0);
   return (block.priority ?? 0) + phraseScore + keywordScore;
+}
+
+function scorePhrase(query: string, phrase: string) {
+  const normalisedPhrase = normaliseQuery(phrase);
+  if (!normalisedPhrase || !query) return 0;
+  const wordCount = normalisedPhrase.split(" ").length;
+  if (query === normalisedPhrase) return 18 * wordCount;
+  if (containsTerm(query, normalisedPhrase)) return 12 * wordCount;
+
+  const overlap = tokenOverlap(query, normalisedPhrase);
+  const similarityScore = similarity(query, normalisedPhrase);
+  return Math.round(overlap * 5 + (similarityScore >= 0.72 ? similarityScore * 10 : 0));
+}
+
+function scoreKeyword(query: string, keyword: string) {
+  const normalisedKeyword = normaliseQuery(keyword);
+  if (!normalisedKeyword || !query) return 0;
+  if (containsTerm(query, normalisedKeyword)) return 4 * normalisedKeyword.split(" ").length + 2;
+  const overlap = tokenOverlap(query, normalisedKeyword);
+  return overlap >= 1 ? overlap * 2 : 0;
+}
+
+function tokenOverlap(left: string, right: string) {
+  const leftTokens = new Set(left.split(" ").filter((token) => token && !searchStopWords.has(token)));
+  const rightTokens = right.split(" ").filter((token) => token && !searchStopWords.has(token));
+  return rightTokens.filter((token) => leftTokens.has(token)).length;
+}
+
+function similarity(left: string, right: string) {
+  const longestLength = Math.max(left.length, right.length);
+  if (!longestLength) return 1;
+  return 1 - levenshtein(left, right) / longestLength;
+}
+
+function levenshtein(left: string, right: string) {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+
+  for (let leftIndex = 0; leftIndex < left.length; leftIndex += 1) {
+    let last = leftIndex;
+    previous[0] = leftIndex + 1;
+
+    for (let rightIndex = 0; rightIndex < right.length; rightIndex += 1) {
+      const old = previous[rightIndex + 1];
+      previous[rightIndex + 1] =
+        left[leftIndex] === right[rightIndex]
+          ? last
+          : Math.min(last + 1, previous[rightIndex] + 1, previous[rightIndex + 1] + 1);
+      last = old;
+    }
+  }
+
+  return previous[right.length];
 }
 
 function calculateConfidence(score: number) {

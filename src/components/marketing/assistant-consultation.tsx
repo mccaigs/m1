@@ -16,7 +16,6 @@ import {
 } from "@/lib/assistant-client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Logo } from "@/components/brand/logo";
 
 type ConversationMessage =
   | { content: string; id: number; role: "user" }
@@ -29,12 +28,12 @@ const featuredPrompts = [
   "What kind of budget should we expect?",
 ] as const;
 
-export function AssistantConsultation() {
+export function AssistantConsultation({ initialQuestion = "" }: { initialQuestion?: string }) {
   const [messages, setMessages] = useState<ConversationMessage[]>([
     { id: 1, reply: initialAssistantReply, role: "assistant" },
   ]);
   const [pending, setPending] = useState(false);
-  const [question, setQuestion] = useState("");
+  const [question, setQuestion] = useState(initialQuestion);
   const [revealingMessageId, setRevealingMessageId] = useState<number | undefined>(1);
   const conversationRef = useRef<HTMLDivElement>(null);
   const messageId = useRef(1);
@@ -81,8 +80,8 @@ export function AssistantConsultation() {
     <section aria-label="McCaigs guided assistant" className="text-ink">
       <div className="flex flex-col gap-4 border-b border-deep-blue/12 pb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-deep-blue/75">
-            <Logo imageClassName="size-5" showLabel={false} size="sm" /> Assistant / consultation channel
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-deep-blue/75">
+            Assistant / consultation channel
           </p>
           <p className="mt-2 max-w-2xl text-xs leading-5 text-ink/60">Ask a business question. The assistant will check approved studio knowledge and guide the next step.</p>
         </div>

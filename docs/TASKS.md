@@ -19,8 +19,8 @@
 - [x] Configure protected routes.
 - [ ] Configure Clerk organisation support.
 - [ ] Add Clerk webhook route.
-- [ ] Mirror required user data into Convex.
-- [ ] Add permission helpers.
+- [x] Mirror required role identity data into Convex.
+- [x] Add permission helpers.
 
 ## Phase 3 - Public website
 
@@ -42,9 +42,9 @@
 - [x] Save enquiries to Convex.
 - [ ] Add deterministic fit scoring.
 - [ ] Add studio notification flow.
-- [ ] Add enquiry admin view.
-- [ ] Add status updates.
-- [ ] Add conversion from enquiry to project.
+- [x] Add enquiry admin view.
+- [x] Add status updates.
+- [x] Add conversion from enquiry to project.
 
 ## Phase 5 - Client portal
 
@@ -53,12 +53,31 @@
 - [x] Add projects, systems, tasks, and activity foundation routes.
 - [x] Add polished workspace empty states.
 - [ ] Add organisation switcher.
-- [ ] Add projects list.
-- [ ] Add project detail page.
-- [ ] Add project updates.
+- [x] Add projects list.
+- [x] Add project detail page.
+- [x] Add project updates.
 - [ ] Add project tasks.
-- [ ] Add document metadata.
-- [ ] Add visibility rules for internal and client content.
+- [x] Add document metadata.
+- [x] Add visibility rules for internal and client content.
+
+## Studio OS operations dashboard
+
+- [x] Add Clerk sign-in and sign-up routes with `/app` redirects.
+- [x] Protect `/app/*` in both proxy and the authenticated layout.
+- [x] Automatically assign the primary McCaigs email to the owner role.
+- [x] Add owner, admin, staff, and client role records and Convex permission helpers.
+- [x] Add clients, projects, project assets, project updates, and lead assignments.
+- [x] Add role-aware studio and client navigation.
+- [x] Add live overview metrics and recently updated projects.
+- [x] Add lead conversion, project creation, and existing-project assignment actions.
+- [x] Add client creation and Clerk identity linking fields.
+- [x] Add project filtering, creation, status control, updates, internal notes, and URL resources.
+- [x] Add owner-only user and role management settings.
+- [x] Add an owner-only idempotent Studio OS seed action for the initial McCaigs client and project portfolio.
+- [ ] Add Clerk invitation and webhook-backed user provisioning.
+- [ ] Add explicit staff assignment controls to project settings.
+- [ ] Add project task CRUD and due-date workflows.
+- [ ] Add Convex file storage after the URL-resource workflow is proven.
 
 ## Phase 6 - AI assistance
 
@@ -72,12 +91,15 @@
 
 ## Phase 7 - Content system
 
-- [ ] Add markdown or MDX insights.
-- [ ] Add post metadata.
-- [ ] Add GitHub-managed content workflow.
+- [x] Add markdown or MDX insights.
+- [x] Add Convex Blog post metadata.
+- [x] Add owner-only Studio OS Blog management.
+- [x] Add local MDX creation and frontmatter editing.
+- [x] Add Blog scheduling and public publication queries.
+- [x] Replace production filesystem writes with a GitHub-backed commit workflow.
 - [ ] Add scheduled style or formatting checks.
 - [ ] Add related posts.
-- [ ] Add sitemap.
+- [x] Add sitemap.
 
 ## Phase 8 - Deployment
 
@@ -184,6 +206,8 @@
 - [x] Add `POST /project-builder/start`, `POST /project-builder/estimate`, and `POST /project-builder/submit`.
 - [x] Store submitted details, classification, complexity score, estimate, and summary in the backend submission store.
 - [x] Place the project-builder workflow on the warm off-white editorial stage.
+- [x] Restyle the project builder as a light premium planning workspace aligned with the Assistant experience.
+- [x] Remove the redundant in-workspace logo panel and left-align the qualification header.
 - [x] Generate the final Current Offers summary from the approved special-offers JSON source.
 
 ## Brand assets and metadata
@@ -193,3 +217,63 @@
 - [x] Serve `public/favicon.ico` through root App Router metadata.
 - [x] Generate local Apple touch, Open Graph, and Twitter assets from the canonical logo.
 - [x] Add a local web app manifest with McCaigs branding.
+
+## Homepage publishing refinement
+
+- [x] Tighten the homepage hero scale and spacing without changing its structure or line breaks.
+- [x] Replace the hero radar decoration with a muted looping product reel using real local McCaigs interfaces and clearly labelled demo data.
+- [x] Explain the client value of the technology ecosystem in plain commercial language.
+- [x] Replace the OpenAI placeholder mark with the current Blossom asset and review the remaining monochrome technology marks for consistency.
+
+## Mobile navigation refinement
+
+- [x] Replace the oversized mobile menu rhythm with compact accessible tap targets.
+- [x] Add a `100dvh` drawer shell with a fixed header and scrollable navigation body.
+- [x] Keep Client portal and Start a Project actions reachable on smaller portrait and landscape screens.
+
+## Mobile homepage refinement
+
+- [x] Tighten homepage section and card spacing at mobile breakpoints without changing desktop composition.
+- [x] Reduce mobile hero height and bring the product reel into view sooner.
+- [x] Compact the technology grid, practical-intelligence section, classified builds, problem cards, service cards, CTA, and footer.
+
+## Technical SEO and answer-engine foundation
+
+- [x] Centralise production URL, public route metadata, and entity details in one typed source.
+- [x] Add route-specific canonicals, descriptions, Open Graph data, and Twitter card data for every public page.
+- [x] Add generated `robots.txt` and `sitemap.xml` routes with the public route inventory and homepage product reel.
+- [x] Add Organisation, ProfessionalService, LocalBusiness, WebSite SearchAction, and Service JSON-LD.
+- [x] Add an extractable homepage FAQ section with FAQPage JSON-LD.
+- [x] Prefill the deterministic Assistant from the SearchAction question parameter without auto-submitting.
+- [x] Correct public heading hierarchy and strengthen contextual internal linking.
+- [x] Expand the footer with legal entity, Edinburgh location, technologies, social profiles, public routes, and client portal access.
+- [x] Explicitly prevent Studio OS and Clerk entry routes from being indexed.
+
+## MDX Insights publishing
+
+- [x] Add a single repository-managed MDX source of truth under `src/content/insights/`.
+- [x] Add typed frontmatter loading, published-only filtering, date sorting, slug lookup, reading-time fallback, and related-note ranking.
+- [x] Fail builds for invalid published metadata while allowing incomplete drafts to remain private.
+- [x] Replace the Insights placeholder with the premium studio journal index and empty state.
+- [x] Add statically generated `/insights/[slug]` article routes with canonical metadata, Article JSON-LD, and related notes.
+- [x] Add McCaigs-styled MDX primitives for callouts, studio notes, build metrics, quote blocks, and dividers.
+- [x] Add two approved example studio notes and include published articles in the generated sitemap.
+- [x] Document the single-source Insights publishing workflow and add a fast published-post validation command.
+
+## Studio OS Blog management
+
+- [x] Add the `blogPosts` Convex table with owner-only CRUD.
+- [x] Add David, Matt, and Kirsty author profiles.
+- [x] Add `/app/blog`, new-post, edit, and owner preview routes.
+- [x] Generate MDX from the shared template and preserve body content on metadata edits.
+- [x] Add featured-image upload to `public/media/blog/`.
+- [x] Add draft, scheduled, published, and archived states.
+- [x] Add scheduled publication through Convex cron handling.
+- [x] Add dynamic `/blog` and `/blog/[slug]` public routes.
+- [x] Add Blog SEO metadata, Article JSON-LD, and sitemap discovery.
+- [x] Add local and GitHub Blog write modes with safe production defaults.
+- [x] Commit MDX and featured images through the server-only GitHub Contents API.
+- [x] Store GitHub sync state and commit metadata in Convex.
+- [x] Add failed-sync visibility and retry controls to Studio OS.
+- [x] Add an MDX body editor and generated metadata frontmatter workflow.
+- [x] Normalise Blog tags defensively across admin, Convex, MDX, and public rendering.

@@ -27,7 +27,7 @@ export function DeterministicEnquiryAssistant({ feature = false }: { feature?: b
     <section className="overflow-hidden rounded-2xl border border-white/10 bg-card/60 shadow-2xl shadow-black/10">
       <div className="technical-grid border-b border-white/10 bg-deep-blue/25 p-5 sm:p-6">
         <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-signal">
-          <Logo imageClassName="size-5" showLabel={false} size="sm" /> Controlled enquiry assistant
+          <Logo size="sm" /> Controlled enquiry assistant
         </p>
         <p className="mt-3 text-xs leading-5 text-muted-foreground">
           Controlled responses only. No general-purpose chat. No invented answers.

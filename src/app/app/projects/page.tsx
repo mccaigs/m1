@@ -1,6 +1,5 @@
-import { FolderKanban } from "lucide-react";
-import { EmptyState } from "@/components/portal/empty-state";
 import { PortalHeading } from "@/components/portal/portal-heading";
+import { ProjectsPanel } from "@/components/portal/projects-panel";
 
 export default function ProjectsPage() {
   return (
@@ -11,11 +10,7 @@ export default function ProjectsPage() {
         title="Projects"
       />
       <div className="mt-7">
-        <EmptyState
-          description="Client and internal builds will appear here when a project is created. Each record will hold status, milestones, decisions, and linked delivery systems."
-          icon={FolderKanban}
-          title="No projects have been added yet"
-        />
+        <ProjectsPanel />
       </div>
     </div>
   );

@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
 import { ContactCta } from "@/components/marketing/contact-cta";
 import { PageHero } from "@/components/marketing/page-hero";
 import { SiteFrame } from "@/components/marketing/site-frame";
 import { PrinciplesSection } from "@/components/marketing/studio-sections";
+import { createPageMetadata, publicRoutes } from "@/lib/seo";
 import { studioAudiences } from "@/lib/studio-content";
 
-export const metadata: Metadata = {
-  title: "Studio",
-  description: "McCaigs is Scotland's Elite Technical Studio for ambitious businesses that need practical AI, automation, websites, and internal systems.",
-};
+export const metadata = createPageMetadata(publicRoutes[1]);
 
 export default function StudioPage() {
   return (

@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
 import { ContactCta } from "@/components/marketing/contact-cta";
 import { PageHero } from "@/components/marketing/page-hero";
 import { SiteFrame } from "@/components/marketing/site-frame";
+import { JsonLd } from "@/components/seo/json-ld";
+import { createBreadcrumbStructuredData, createPageMetadata, publicRoutes } from "@/lib/seo";
 import { processSteps } from "@/lib/studio-content";
 
-export const metadata: Metadata = {
-  title: "Process",
-  description: "The practical, senior-led McCaigs studio process: diagnose, design, build, evaluate, ship, and improve.",
-};
+export const metadata = createPageMetadata(publicRoutes[4]);
 
 export default function ProcessPage() {
   return (
     <SiteFrame>
+      <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Process", path: "/process" }])} />
       <PageHero
         copy="A clear studio process keeps the work close to the business problem, creates feedback early, and turns useful ideas into working systems."
         eyebrow="Process / Senior-led delivery"

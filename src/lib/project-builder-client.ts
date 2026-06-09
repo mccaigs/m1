@@ -39,6 +39,27 @@ export type ProjectEstimate = {
   summary: string;
 };
 
+export type ProjectShape = "Focused" | "Structured" | "Multi-part";
+
+const projectShapes: Record<ProjectEstimate["complexity"], { description: string; label: ProjectShape }> = {
+  Low: {
+    description: "A clearly defined improvement that can usually be delivered quickly.",
+    label: "Focused",
+  },
+  Medium: {
+    description: "Several connected improvements delivered as a coordinated project.",
+    label: "Structured",
+  },
+  High: {
+    description: "A project involving multiple connected systems, workflows, or delivery phases.",
+    label: "Multi-part",
+  },
+};
+
+export function getProjectShape(complexity: ProjectEstimate["complexity"]) {
+  return projectShapes[complexity];
+}
+
 export const businessProblems = [
   "We lose enquiries.",
   "We spend too much time on admin.",
@@ -119,19 +140,20 @@ export function estimateProject(input: ProjectBuilderInput): ProjectEstimate {
     input.complexity.humanReview ? 1 : 0,
   ].reduce((total, value) => total + value, 0);
   const complexity = score >= 6 ? "High" : score >= 3 ? "Medium" : "Low";
+  const projectShape = getProjectShape(complexity);
   const rule = approvedRules[classification];
   const assumptions = [
     "The range assumes a focused first release.",
     "Final scope depends on requirements, integrations, data quality, urgency, and delivery constraints.",
     complexity === "High"
-      ? "The complexity signals suggest planning around the upper part of the approved range."
+      ? "The project shape suggests planning around the upper part of the approved range."
       : "The current answers suggest a focused starting scope.",
   ];
   const summary = [
     `Business Problem: ${input.problemDetail || input.problem}`,
     `Desired Outcome: ${input.desiredOutcomeDetail || input.desiredOutcome}`,
     `Recommended Route: ${classification}`,
-    `Complexity: ${complexity}`,
+    `Project Shape: ${projectShape.label}`,
     `Indicative Budget: ${rule.budget}`,
     `Estimated Timeline: ${rule.timeline}`,
   ].join("\n");
@@ -164,7 +186,19 @@ export async function requestProjectEstimate(input: ProjectBuilderInput): Promis
 }
 
 export async function submitProjectBuilder(input: ProjectBuilderInput): Promise<{ reference?: string; stored: boolean }> {
+  const localResponse = await fetch("/api/project-builder", {
+    body: JSON.stringify(input),
+    headers: { "content-type": "application/json" },
+    method: "POST",
+  });
+
+  if (localResponse.ok) {
+    const result = (await localResponse.json()) as { reference?: string; stored: boolean };
+    return { reference: result.reference, stored: result.stored };
+  }
+
   if (!apiUrl) return { stored: false };
+
   const response = await fetch(`${apiUrl}/project-builder/submit`, {
     body: JSON.stringify(toApiInput(input)),
     headers: { "content-type": "application/json" },
@@ -220,6 +254,8 @@ function fromApiEstimate(result: {
   recommended_route: string;
   summary: string;
 }): ProjectEstimate {
+  const projectShape = getProjectShape(result.complexity);
+
   return {
     assumptions: result.assumptions,
     classification: result.classification,
@@ -228,7 +264,10 @@ function fromApiEstimate(result: {
     indicativeBudget: result.indicative_budget,
     likelyTimeline: result.likely_timeline,
     recommendedRoute: result.recommended_route,
-    summary: result.summary,
+    summary: result.summary.replace(
+      /^Complexity:\s*(?:Low|Medium|High)$/m,
+      `Project Shape: ${projectShape.label}`,
+    ),
   };
 }
 
