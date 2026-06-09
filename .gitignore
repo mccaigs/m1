@@ -56,6 +56,14 @@ build/
 .env
 .env.*
 !.env.example
+!.env.local.example
+
+# Python generated files
+__pycache__/
+*.pyc
+
+# Archives
+*.zip
 
 # IDE files
 .vscode/
@@ -73,6 +81,4 @@ Thumbs.db
 .cache/
 
 # Sensitive files (auto-detected)
-.env.example
 node_modules
-
