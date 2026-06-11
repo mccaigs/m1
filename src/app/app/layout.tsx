@@ -22,7 +22,6 @@ export default async function PortalLayout({
     ),
     clerkSecretKey: Boolean(process.env.CLERK_SECRET_KEY),
     convexUrl: Boolean(process.env.NEXT_PUBLIC_CONVEX_URL),
-    convexJwtProvider: Boolean(process.env.CLERK_JWT_ISSUER_DOMAIN),
   };
   const clerkConfigured =
     environment.clerkPublishableKey && environment.clerkSecretKey;
