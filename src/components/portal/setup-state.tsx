@@ -5,7 +5,6 @@ export type StudioEnvironmentStatus = {
   clerkPublishableKey: boolean;
   clerkSecretKey: boolean;
   convexUrl: boolean;
-  convexJwtProvider: boolean;
 };
 
 export function SetupState({
@@ -13,7 +12,6 @@ export function SetupState({
     clerkPublishableKey: false,
     clerkSecretKey: false,
     convexUrl: false,
-    convexJwtProvider: false,
   },
 }: {
   status?: StudioEnvironmentStatus;
@@ -22,7 +20,6 @@ export function SetupState({
     ["Clerk publishable key", status.clerkPublishableKey],
     ["Clerk secret key", status.clerkSecretKey],
     ["Convex deployment URL", status.convexUrl],
-    ["Convex Clerk JWT provider", status.convexJwtProvider],
   ] as const;
 
   return (
