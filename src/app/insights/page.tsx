@@ -23,7 +23,7 @@ export default async function InsightsPage() {
     ...insightPosts.map((post) => ({ href: `/insights/${post.slug}`, post })),
     ...hydratedBlogPosts
       .filter(({ metadata }) => !insightPosts.some((post) => post.filename === metadata.contentFile))
-      .map(({ post }) => ({ href: `/blog/${post.slug}`, post })),
+      .map(({ post }) => ({ href: `/insights/${post.slug}`, post })),
   ].sort(
     (a, b) =>
       Date.parse(b.post.publishedAt || "1970-01-01") -

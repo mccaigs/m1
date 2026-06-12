@@ -7,6 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
   const insightPosts = await getPublishedInsights();
   const blogPosts = await getPublishedBlogPosts();
+  const insightSlugs = new Set(insightPosts.map((post) => post.slug));
 
   const publicPages: MetadataRoute.Sitemap = publicRoutes.map(({ changeFrequency, path, priority }) => ({
     changeFrequency,
@@ -17,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     videos: path === "/" ? [
       {
         description: "A product reel showing the McCaigs deterministic Assistant, Start a Project workflow, and Studio OS.",
-        thumbnail_loc: absoluteUrl("/media/mccaigs-systems-demo-poster.png"),
+        thumbnail_loc: absoluteUrl("/media/mccaigs-opener-poster.webp"),
         title: "McCaigs systems demonstration",
       },
     ] : undefined,
@@ -31,11 +32,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
       url: absoluteUrl(`/insights/${post.slug}`),
     })),
-    ...blogPosts.map((post) => ({
+    ...blogPosts.filter((post) => !insightSlugs.has(post.slug)).map((post) => ({
       changeFrequency: "monthly" as const,
       lastModified: new Date(post.updatedAt),
       priority: 0.6,
-      url: absoluteUrl(`/blog/${post.slug}`),
+      url: absoluteUrl(`/insights/${post.slug}`),
     })),
   ];
 }

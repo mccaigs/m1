@@ -44,7 +44,7 @@ export default function ServicesPage() {
                   <div className="flex size-10 items-center justify-center rounded-lg border border-deep-blue/15 bg-deep-blue/5 text-deep-blue">
                     <Icon className="size-5" />
                   </div>
-                  <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/50">0{index + 1}</span>
+                  <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/75">0{index + 1}</span>
                 </div>
                 <h3 className="mt-7 text-xl font-semibold">{title}</h3>
                 <p className="mt-3 text-sm leading-6 text-ink/65">{copy}</p>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
             {typicalEngagements.map(({ copy, duration, title }, index) => (
               <article className="bg-off-white p-6" key={title}>
                 <div className="flex items-center justify-between gap-4">
-                  <span className="font-mono text-[10px] tracking-[0.16em] text-deep-blue/55">0{index + 1}</span>
+                  <span className="font-mono text-[10px] tracking-[0.16em] text-deep-blue/75">0{index + 1}</span>
                   <span className="rounded-full border border-deep-blue/15 px-3 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-deep-blue/70">{duration}</span>
                 </div>
                 <h3 className="mt-7 text-xl font-semibold">{title}</h3>

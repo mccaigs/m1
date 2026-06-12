@@ -5,6 +5,8 @@ import { ArticleLayout } from "@/components/insights/article-layout";
 import { mdxComponents } from "@/components/insights/mdx-components";
 import { SiteFrame } from "@/components/marketing/site-frame";
 import { JsonLd } from "@/components/seo/json-ld";
+import { getPublishedBlogPost } from "@/lib/blog-convex";
+import { hydrateBlogPost } from "@/lib/blog-posts";
 import { getAvailableInsightCoverImage, getInsightBySlug, getPublishedInsights, getRelatedInsights } from "@/lib/insights";
 import { absoluteUrl, createBreadcrumbStructuredData, siteConfig } from "@/lib/seo";
 
@@ -12,20 +14,19 @@ type InsightPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   return (await getPublishedInsights()).map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: InsightPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getInsightBySlug(slug);
+  const article = await getPublishedArticle(slug);
 
-  if (!post) {
+  if (!article) {
     return {};
   }
 
+  const { post } = article;
   const url = absoluteUrl(`/insights/${post.slug}`);
   const image = absoluteUrl(getAvailableInsightCoverImage(post.coverImage) ?? "/opengraph-image");
 
@@ -60,12 +61,13 @@ export async function generateMetadata({ params }: InsightPageProps): Promise<Me
 
 export default async function InsightArticlePage({ params }: InsightPageProps) {
   const { slug } = await params;
-  const post = await getInsightBySlug(slug);
+  const article = await getPublishedArticle(slug);
 
-  if (!post) {
+  if (!article) {
     notFound();
   }
 
+  const { authorKey, post } = article;
   const [{ content }, relatedPosts] = await Promise.all([
     compileMDX({ components: mdxComponents, source: post.content }),
     getRelatedInsights(post),
@@ -74,7 +76,10 @@ export default async function InsightArticlePage({ params }: InsightPageProps) {
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    author: { "@type": "Organization", name: post.author },
+    author: {
+      "@type": authorKey ? "Person" : "Organization",
+      name: post.author,
+    },
     dateModified: post.updatedAt ?? post.publishedAt,
     datePublished: post.publishedAt,
     description: post.seoDescription || post.excerpt,
@@ -96,7 +101,23 @@ export default async function InsightArticlePage({ params }: InsightPageProps) {
     <SiteFrame>
       <JsonLd data={articleStructuredData} />
       <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: post.title, path: `/insights/${post.slug}` }])} />
-      <ArticleLayout post={post} relatedPosts={relatedPosts}>{content}</ArticleLayout>
+      <ArticleLayout authorKey={authorKey} post={post} relatedPosts={relatedPosts}>{content}</ArticleLayout>
     </SiteFrame>
   );
+}
+
+async function getPublishedArticle(slug: string) {
+  const insight = await getInsightBySlug(slug);
+  if (insight) return { post: insight };
+
+  const metadata = await getPublishedBlogPost(slug);
+  if (!metadata) return undefined;
+
+  const hydrated = await hydrateBlogPost(metadata);
+  if (!hydrated) return undefined;
+
+  return {
+    authorKey: metadata.authorKey as "david" | "matt" | "kirsty",
+    post: hydrated.post,
+  };
 }

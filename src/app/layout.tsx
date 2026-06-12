@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { AppProviders } from "@/components/providers/app-providers";
 import { JsonLd } from "@/components/seo/json-ld";
 import { absoluteUrl, rootStructuredData, siteConfig, siteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -83,7 +82,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <JsonLd data={rootStructuredData} />
-        <AppProviders>{children}</AppProviders>
+        {children}
       </body>
     </html>
   );

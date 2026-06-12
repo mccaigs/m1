@@ -3,6 +3,7 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import type { StudioEnvironmentStatus } from "@/components/portal/setup-state";
 import { WorkspaceShell } from "@/components/portal/workspace-shell";
+import { AppProviders } from "@/components/providers/app-providers";
 
 export const metadata: Metadata = {
   robots: {
@@ -34,8 +35,10 @@ export default async function PortalLayout({
   }
 
   return (
-    <WorkspaceShell authenticated={authenticated} environment={environment}>
-      {children}
-    </WorkspaceShell>
+    <AppProviders>
+      <WorkspaceShell authenticated={authenticated} environment={environment}>
+        {children}
+      </WorkspaceShell>
+    </AppProviders>
   );
 }

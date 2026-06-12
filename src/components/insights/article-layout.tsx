@@ -62,7 +62,6 @@ export function ArticleLayout({
                   alt={post.coverImageAlt ?? post.title}
                   className="object-cover"
                   fill
-                  priority
                   sizes="(max-width: 768px) calc(100vw - 2.5rem), 960px"
                   src={coverImage}
                 />

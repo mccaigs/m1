@@ -26,9 +26,20 @@ import {
   typicalProblems,
 } from "@/lib/studio-content";
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
+function SectionLabel({
+  children,
+  tone = "dark",
+}: {
+  children: React.ReactNode;
+  tone?: "dark" | "light";
+}) {
   return (
-    <p className="mb-4 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.24em] text-signal sm:mb-5">
+    <p
+      className={cn(
+        "mb-4 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.24em] sm:mb-5",
+        tone === "light" ? "text-deep-blue" : "text-signal",
+      )}
+    >
       <CircleDot className="size-3" /> {children}
     </p>
   );
@@ -37,7 +48,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function SectionHeading({ eyebrow, title, copy, tone = "dark" }: { eyebrow: string; title: string; copy: string; tone?: "dark" | "light" }) {
   return (
     <div className="max-w-2xl">
-      <SectionLabel>{eyebrow}</SectionLabel>
+      <SectionLabel tone={tone}>{eyebrow}</SectionLabel>
       <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>
       <p className={cn("mt-4 text-base leading-7 sm:mt-5 sm:text-lg", tone === "light" ? "text-ink/65" : "text-muted-foreground")}>{copy}</p>
     </div>
@@ -116,7 +127,7 @@ export function PositioningSection() {
         <div className="grid gap-px overflow-hidden rounded-xl border border-ink/10 bg-ink/10 sm:grid-cols-3">
           {points.map(([number, title, copy]) => (
             <div className="bg-off-white p-5 sm:p-6" key={number}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-deep-blue/60">{number}</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-deep-blue/75">{number}</p>
               <h3 className="mt-4 text-xl font-semibold sm:mt-8">{title}</h3>
               <p className="mt-3 text-sm leading-6 text-ink/65">{copy}</p>
             </div>
@@ -227,7 +238,7 @@ function IntelligenceList({ eyebrow, items, number }: { eyebrow: string; items: 
     <div className="bg-off-white p-4 sm:p-7">
       <div className="flex items-center justify-between gap-3">
         <h3 className="font-mono text-[10px] uppercase tracking-[0.18em] text-deep-blue">{eyebrow}</h3>
-        <span className="font-mono text-[10px] text-deep-blue/55">{number}</span>
+        <span className="font-mono text-[10px] text-deep-blue/75">{number}</span>
       </div>
       <div className="mt-5 grid gap-2 sm:mt-7 sm:grid-cols-2 sm:gap-3">
         {items.map((item) => (
@@ -249,9 +260,16 @@ function FromStudioSection() {
           title="Classified builds. Practical outcomes."
           copy="A closer look at the sort of work that happens inside the studio. Codenames protect the context; the operational problem, system shape, and outcome stay visible."
         />
-        <div className="mt-7 grid gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-3">
+        <div className="mt-7 grid overflow-hidden sm:mt-10 sm:gap-4 lg:grid-cols-3">
           {selectedSystems.map((system, index) => (
-            <article className="overflow-hidden rounded-xl border border-white/10 bg-card/55" key={system.codename}>
+            <article
+              className={cn(
+                "relative overflow-hidden rounded-xl border border-white/10 bg-card/55",
+                index < selectedSystems.length - 1 && "-mb-3 sm:mb-0",
+              )}
+              key={system.codename}
+              style={{ zIndex: index + 1 }}
+            >
               <div className="technical-grid flex items-end justify-between border-b border-white/10 bg-deep-blue/30 p-4 sm:p-5">
                 <div>
                   <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-signal">Internal build / 0{index + 1}</p>
@@ -260,7 +278,12 @@ function FromStudioSection() {
                 </div>
                 <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">{system.buildTime}</span>
               </div>
-              <div className="space-y-4 p-4 sm:space-y-5 sm:p-5">
+              <div
+                className={cn(
+                  "space-y-4 p-4 sm:space-y-5 sm:p-5",
+                  index < selectedSystems.length - 1 && "hidden sm:block",
+                )}
+              >
                 <StudioNote label="Problem" text={system.problem} />
                 <StudioNote label="Solution" text={system.solution} />
                 <StudioNote label="Outcome" text={system.outcome} />
@@ -279,7 +302,7 @@ function FromStudioSection() {
 function StudioNote({ label, text }: { label: string; text: string }) {
   return (
     <div>
-      <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-signal/75">{label}</p>
+      <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-signal">{label}</p>
       <p className="mt-1 text-sm leading-6 text-muted-foreground">{text}</p>
     </div>
   );
@@ -391,7 +414,7 @@ export function PrinciplesSection() {
         <div className="mt-12 grid gap-x-12 gap-y-0 md:grid-cols-2">
           {principles.map(([title, copy], index) => (
             <div className="flex gap-4 border-t border-ink/12 py-5" key={title}>
-              <span className="font-mono text-[10px] text-deep-blue/60">0{index + 1}</span>
+              <span className="font-mono text-[10px] text-deep-blue/75">0{index + 1}</span>
               <div>
                 <h3 className="font-semibold">{title}</h3>
                 <p className="mt-1 text-sm leading-6 text-ink/65">{copy}</p>

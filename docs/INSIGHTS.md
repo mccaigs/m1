@@ -14,7 +14,7 @@ Each post must be one `.mdx` file inside that directory. Do not store article
 body content in a database, CMS, JSON file, API, or second content folder.
 
 Studio OS Blog metadata is stored in the Convex `blogPosts` table. It controls
-workflow state, authorship, SEO fields, scheduling, and public Blog visibility,
+workflow state, authorship, SEO fields, scheduling, and public Insights visibility,
 but it never replaces the local MDX body.
 
 The public routes are:
@@ -22,14 +22,12 @@ The public routes are:
 ```txt
 /insights
 /insights/[slug]
-/blog
-/blog/[slug]
 ```
 
 The site uses the Next.js App Router only. Do not create a `/pages` directory
-or another content source. `/insights` is the repository-managed editorial
-index. `/blog` is the Convex-managed publishing view over the same MDX files.
-Both reuse the shared article rendering components.
+or another content source. `/insights` is the single public editorial index.
+Convex-managed Blog metadata publishes the same MDX files under
+`/insights/[slug]`. Legacy `/blog` URLs redirect into Insights.
 
 All public post discovery must go through:
 
@@ -52,9 +50,10 @@ published
 archived
 ```
 
-For `/insights`, only `status: "published"` appears publicly. For `/blog`,
-Convex metadata is authoritative: published posts and scheduled posts whose
-publication time has passed appear publicly and in the sitemap.
+For repository-managed posts, only `status: "published"` appears publicly.
+For Studio OS-managed posts, Convex metadata is authoritative: published posts
+and scheduled posts whose publication time has passed appear under Insights
+and in the sitemap.
 
 Draft and archived posts must never appear on public routes. Keep a new post as `draft` unless publication is explicitly requested.
 

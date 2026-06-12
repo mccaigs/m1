@@ -123,6 +123,42 @@
 - [ ] Run evals after prompt changes.
 - [ ] Maintain changelog.
 
+## Public performance audit - June 2026
+
+- [x] Identify mobile LCP elements on the weak routes with a local production Lighthouse run.
+  - `/`: the autoplaying hero video was the LCP element.
+  - `/services`: the PageHero supporting paragraph was the LCP element.
+  - `/studio`: the PageHero supporting paragraph was the LCP element.
+  - `/process`: the PageHero heading was the LCP element.
+- [x] Compare weak routes with `/process`, `/contact`, and `/start-project`.
+  - All secondary marketing routes use the same server-rendered PageHero; services and studio did not have a unique hero image or animation causing LCP.
+  - The shared root Clerk and Convex provider was the main avoidable public JavaScript difference. Lighthouse attributed roughly 164-224 KiB of unused JavaScript to the initial weak-route runs, much of it Clerk UI/runtime code.
+  - The homepage also eagerly replaced its poster with a 5.8 MB autoplaying video during hydration.
+- [x] Replace the mismatched homepage poster with a 48 KiB WebP extracted from the intended opener and add a 640px mobile WebM.
+- [x] Keep the poster as the initial priority LCP asset and defer video loading until the reel is near the viewport and the initial mobile render has settled.
+- [x] Move Convex/Clerk app providers out of the public root and defer optional public header auth enhancement until interaction.
+- [x] Convert the four published Insight cover images from 1.8-3.3 MB PNG files to 78-330 KiB WebP files and update MDX references.
+- [x] Consolidate public Blog URLs into Insights while retaining Studio OS Blog metadata and publishing tools.
+- [x] Add the opt-in Turbopack analyzer command: `pnpm analyze`.
+- [x] Configure `@next/bundle-analyzer` for optional Webpack analysis with `ANALYZE=true`; it remains disabled by default.
+- [x] Fix low-contrast small labels on the homepage, Services, and Studio without changing the palette or layout.
+
+Local Lighthouse runs are intentionally comparative rather than production scores because they use a local Windows production server with simulated mobile throttling. In the same environment:
+
+| Route | Performance before | Performance after | LCP before | LCP after | TBT before | TBT after | Unused JS before | Unused JS after |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `/` | 48 | 69 | 5.39 s | 4.96 s | 1,614 ms | 372 ms | 224 KiB | 27 KiB |
+| `/services` | 55 | 74 | 5.10 s | 4.59 s | 1,089 ms | 331 ms | 181 KiB | 27 KiB |
+| `/studio` | 56 | 75 | 4.99 s | 4.43 s | 1,018 ms | 319 ms | 160 KiB | 27 KiB |
+| `/process` | 62 | 80 | 4.92 s | 4.43 s | 685 ms | 158 ms | 189 KiB | 27 KiB |
+
+Deliberately left unchanged:
+
+- The visual hierarchy, brand colours, typography, route structure outside the Blog-to-Insights redirects, and all visible marketing sections.
+- Clerk middleware, Convex auth configuration, Studio OS, enquiry handling, project builder logic, and CMS write workflows.
+- The original desktop opener remains available for deferred desktop playback; the smaller mobile file is selected only below 768px.
+- There is no Framer Motion dependency or expensive above-the-fold animation on Services or Studio. The only continuous marketing animation is the lightweight below-the-fold SVG path, which already respects reduced motion.
+
 ## Refinement pass
 
 - [x] Sharpen homepage hierarchy and studio positioning copy.
