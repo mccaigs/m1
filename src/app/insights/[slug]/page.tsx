@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { getPublishedBlogPost } from "@/lib/blog-convex";
 import { hydrateBlogPost } from "@/lib/blog-posts";
 import { getAvailableInsightCoverImage, getInsightBySlug, getPublishedInsights, getRelatedInsights } from "@/lib/insights";
-import { absoluteUrl, createBreadcrumbStructuredData, siteConfig } from "@/lib/seo";
+import { absoluteUrl, createBreadcrumbStructuredData, siteConfig, socialImageUrl } from "@/lib/seo";
 
 type InsightPageProps = {
   params: Promise<{ slug: string }>;
@@ -28,7 +28,8 @@ export async function generateMetadata({ params }: InsightPageProps): Promise<Me
 
   const { post } = article;
   const url = absoluteUrl(`/insights/${post.slug}`);
-  const image = absoluteUrl(getAvailableInsightCoverImage(post.coverImage) ?? "/opengraph-image");
+  const coverImage = getAvailableInsightCoverImage(post.coverImage);
+  const image = coverImage ? absoluteUrl(coverImage) : socialImageUrl;
 
   return {
     alternates: { canonical: url },
@@ -72,6 +73,8 @@ export default async function InsightArticlePage({ params }: InsightPageProps) {
     compileMDX({ components: mdxComponents, source: post.content }),
     getRelatedInsights(post),
   ]);
+  const coverImage = getAvailableInsightCoverImage(post.coverImage);
+  const image = coverImage ? absoluteUrl(coverImage) : socialImageUrl;
 
   const articleStructuredData = {
     "@context": "https://schema.org",
@@ -84,7 +87,7 @@ export default async function InsightArticlePage({ params }: InsightPageProps) {
     datePublished: post.publishedAt,
     description: post.seoDescription || post.excerpt,
     headline: post.title,
-    image: absoluteUrl(getAvailableInsightCoverImage(post.coverImage) ?? "/opengraph-image"),
+    image,
     mainEntityOfPage: absoluteUrl(`/insights/${post.slug}`),
     publisher: {
       "@id": "https://mccaigs.com/#organisation",

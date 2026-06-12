@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogPosts } from "@/lib/blog-convex";
 import { getPublishedInsights } from "@/lib/insights";
-import { absoluteUrl, publicRoutes } from "@/lib/seo";
+import { absoluteUrl, publicRoutes, socialImageUrl } from "@/lib/seo";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const publicPages: MetadataRoute.Sitemap = publicRoutes.map(({ changeFrequency, path, priority }) => ({
     changeFrequency,
-    images: path === "/" ? [absoluteUrl("/opengraph-image")] : undefined,
+    images: path === "/" ? [socialImageUrl] : undefined,
     lastModified,
     priority,
     url: absoluteUrl(path),

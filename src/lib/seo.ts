@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const siteUrl = "https://mccaigs.com";
+export const socialImageUrl = `${siteUrl}/media/mccaigs-opener-poster.webp`;
 
 export const siteConfig = {
   description:
@@ -13,9 +14,6 @@ export const siteConfig = {
   title: "Scotland's Elite Technical Studio",
   twitter: "https://x.com/mccaigs",
 } as const;
-
-const socialImage = `${siteUrl}/opengraph-image`;
-const twitterImage = `${siteUrl}/twitter-image`;
 
 export const publicRoutes = [
   { changeFrequency: "weekly", description: siteConfig.description, path: "/", priority: 1, title: siteConfig.title },
@@ -54,7 +52,7 @@ export function createPageMetadata({
     description,
     openGraph: {
       description,
-      images: [{ alt: `${siteConfig.name} - ${siteConfig.title}`, height: 630, url: socialImage, width: 1200 }],
+      images: [{ alt: `${siteConfig.name} team working in the Edinburgh studio`, height: 720, url: socialImageUrl, width: 1280 }],
       locale: "en_GB",
       siteName: siteConfig.name,
       title,
@@ -65,7 +63,7 @@ export function createPageMetadata({
     twitter: {
       card: "summary_large_image",
       description,
-      images: [twitterImage],
+      images: [socialImageUrl],
       site: "@mccaigs",
       title,
     },
@@ -170,6 +168,7 @@ export const rootStructuredData = {
         addressRegion: "Scotland",
       },
       description: siteConfig.description,
+      image: socialImageUrl,
       legalName: siteConfig.legalName,
       logo: absoluteUrl("/logo.svg"),
       name: siteConfig.name,
@@ -196,6 +195,7 @@ export const rootStructuredData = {
       ],
       description:
         siteConfig.description,
+      image: socialImageUrl,
       founder: {
         "@id": `${siteUrl}/about#david-robertson`,
         "@type": "Person",
@@ -215,6 +215,7 @@ export const rootStructuredData = {
         addressRegion: "Scotland",
       },
       areaServed: ["Edinburgh", "Scotland", "United Kingdom"],
+      image: socialImageUrl,
       name: siteConfig.name,
       parentOrganization: { "@id": `${siteUrl}/#organisation` },
       url: siteUrl,
@@ -222,6 +223,7 @@ export const rootStructuredData = {
     {
       "@id": `${siteUrl}/#website`,
       "@type": "WebSite",
+      image: socialImageUrl,
       name: siteConfig.name,
       potentialAction: {
         "@type": "SearchAction",

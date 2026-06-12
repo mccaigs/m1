@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { JsonLd } from "@/components/seo/json-ld";
-import { absoluteUrl, rootStructuredData, siteConfig, siteUrl } from "@/lib/seo";
+import { rootStructuredData, siteConfig, siteUrl, socialImageUrl } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     description: siteConfig.description,
-    images: [{ alt: `${siteConfig.name} - ${siteConfig.title}`, height: 630, url: absoluteUrl("/opengraph-image"), width: 1200 }],
+    images: [{ alt: `${siteConfig.name} team working in the Edinburgh studio`, height: 720, url: socialImageUrl, width: 1280 }],
     locale: "en_GB",
     siteName: siteConfig.name,
     title: `${siteConfig.name} | ${siteConfig.title}`,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     description: siteConfig.description,
-    images: [absoluteUrl("/twitter-image")],
+    images: [socialImageUrl],
     site: "@mccaigs",
     title: `${siteConfig.name} | ${siteConfig.title}`,
   },
