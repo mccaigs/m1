@@ -33,7 +33,7 @@ export function Logo({
   return (
     <span className={cn("inline-flex items-center", className)}>
       <Image
-        alt="McCaigs"
+        alt="mccaigs"
         className={cn(sizeClass[size], "shrink-0", imageClassName)}
         height={SVG_HEIGHT}
         priority={priority}

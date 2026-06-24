@@ -7,7 +7,7 @@ from .assistant.router import router as assistant_router
 from .project_builder.router import router as project_builder_router
 
 
-app = FastAPI(title="McCaigs Deterministic Assistant", version="0.1.0")
+app = FastAPI(title="mccaigs Deterministic Assistant", version="0.1.0")
 
 allowed_origins = [
     origin.strip()

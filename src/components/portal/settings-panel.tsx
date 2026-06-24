@@ -120,10 +120,10 @@ export function SettingsPanel() {
           <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-2xl">
               <h2 className="text-lg font-semibold text-signal-soft">
-                Install the initial McCaigs project portfolio.
+                Install the initial mccaigs project portfolio.
               </h2>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Creates the internal McCaigs Studio client, six core projects,
+                Creates the internal mccaigs studio client, six core projects,
                 initial updates, and project assignments. The operation is safe to
                 run more than once.
               </p>

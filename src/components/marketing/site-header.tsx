@@ -25,7 +25,7 @@ export function SiteHeader() {
   return (
     <header className="relative z-30 border-b border-white/8 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link aria-label="McCaigs home" href="/">
+        <Link aria-label="mccaigs home" href="/">
           <Logo />
         </Link>
         <nav className="hidden items-center gap-4 lg:flex xl:gap-6" aria-label="Primary navigation">
@@ -50,7 +50,7 @@ export function SiteHeader() {
           <SheetContent className="h-[100dvh] max-h-[100dvh] w-[min(88vw,22rem)] gap-0 overflow-hidden border-white/10 bg-background p-0 text-foreground" side="right">
             <SheetHeader className="shrink-0 border-b border-white/10 px-5 py-4 pr-12">
               <SheetTitle className="text-left text-foreground"><Logo /></SheetTitle>
-              <SheetDescription className="sr-only">Navigate the McCaigs technical studio website.</SheetDescription>
+              <SheetDescription className="sr-only">Navigate the mccaigs technical studio website.</SheetDescription>
             </SheetHeader>
             <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain px-5 pb-5">
               <nav className="flex flex-col py-3" aria-label="Mobile navigation">

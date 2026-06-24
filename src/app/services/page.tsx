@@ -10,15 +10,15 @@ export const metadata = createPageMetadata(publicRoutes[2]);
 
 const serviceFaqs = [
   {
-    question: "What does McCaigs build?",
-    answer: "McCaigs builds practical AI systems, automation, websites, internal tools, SaaS products, and modern digital platforms around real business problems.",
+    question: "What does mccaigs build?",
+    answer: "mccaigs builds practical AI systems, automation, websites, internal tools, SaaS products, and modern digital platforms around real business problems.",
   },
   {
-    question: "Who does McCaigs work with?",
-    answer: "McCaigs works with startups, Scottish SMEs, owner-managed businesses, professional services firms, specialist organisations, and teams that need useful software built properly.",
+    question: "Who does mccaigs work with?",
+    answer: "mccaigs works with startups, Scottish SMEs, owner-managed businesses, professional services firms, specialist organisations, and teams that need useful software built properly.",
   },
   {
-    question: "Can McCaigs improve an existing system?",
+    question: "Can mccaigs improve an existing system?",
     answer: "Yes. Many projects begin with an existing website, workflow, spreadsheet, software process, or AI idea that needs to become clearer, faster, or easier to maintain.",
   },
 ] as const;

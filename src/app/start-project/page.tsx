@@ -11,7 +11,7 @@ export const metadata = createPageMetadata(publicRoutes[8]);
 const startProjectFaqs = [
   {
     question: "What happens after I submit a project?",
-    answer: "McCaigs reviews the structured enquiry, checks the fit and likely route, then follows up with a practical next step rather than treating the estimate as a binding quote.",
+    answer: "mccaigs reviews the structured enquiry, checks the fit and likely route, then follows up with a practical next step rather than treating the estimate as a binding quote.",
   },
   {
     question: "Do I need a full brief?",

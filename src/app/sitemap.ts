@@ -17,9 +17,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: absoluteUrl(path),
     videos: path === "/" ? [
       {
-        description: "A product reel showing the McCaigs deterministic Assistant, Start a Project workflow, and Studio OS.",
+        description: "A product reel showing the mccaigs deterministic Assistant, Start a Project workflow, and Studio OS.",
         thumbnail_loc: absoluteUrl("/media/mccaigs-opener-poster.webp"),
-        title: "McCaigs systems demonstration",
+        title: "mccaigs systems demonstration",
       },
     ] : undefined,
   }));
@@ -29,13 +29,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...insightPosts.map((post) => ({
       changeFrequency: "monthly" as const,
       lastModified: new Date(post.updatedAt ?? post.publishedAt),
-      priority: 0.6,
+      priority: 0.7,
       url: absoluteUrl(`/insights/${post.slug}`),
     })),
     ...blogPosts.filter((post) => !insightSlugs.has(post.slug)).map((post) => ({
       changeFrequency: "monthly" as const,
       lastModified: new Date(post.updatedAt),
-      priority: 0.6,
+      priority: 0.7,
       url: absoluteUrl(`/insights/${post.slug}`),
     })),
   ];

@@ -24,7 +24,7 @@ Fields:
 
 ### organisations
 
-Represents McCaigs, client companies, and future workspace structures.
+Represents mccaigs, client companies, and future workspace structures.
 
 Fields:
 

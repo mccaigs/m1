@@ -34,7 +34,7 @@ export default async function InsightsPage() {
     <SiteFrame>
       <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }])} />
       <PageHero
-        copy="Field notes from the McCaigs studio: deterministic AI, technical systems, fast MVPs, useful automation, and practical software for ordinary businesses."
+        copy="Field notes from the mccaigs studio: deterministic AI, technical systems, fast MVPs, useful automation, and practical software for ordinary businesses."
         eyebrow="Insights / Studio field notes"
         title="Useful thinking for businesses that need things built properly."
       />

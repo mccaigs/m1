@@ -273,7 +273,7 @@ function fromApiEstimate(result: {
 
 export function downloadProjectSummary(estimate: ProjectEstimate) {
   const content = [
-    "McCaigs Project Builder",
+    "mccaigs Project Builder",
     "",
     estimate.summary.replaceAll("£", "GBP "),
     "",

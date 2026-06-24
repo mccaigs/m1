@@ -11,7 +11,7 @@
         "Start a Project collects the useful detail and returns an indicative planning estimate from approved rules."
       ],
       "cta": { "label": "Start a project", "href": "/start-project" },
-      "suggested_questions": ["How long do projects take?", "What is a good-fit project?", "How does McCaigs work?"]
+      "suggested_questions": ["How long do projects take?", "What is a good-fit project?", "How does mccaigs work?"]
     }
   ]
 }

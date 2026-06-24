@@ -22,7 +22,7 @@ type ConversationMessage =
   | { id: number; reply: AssistantReply; role: "assistant" };
 
 const featuredPrompts = [
-  "What does McCaigs do?",
+  "What does mccaigs do?",
   "Can AI help my business?",
   "We spend too much time on admin",
   "What kind of budget should we expect?",
@@ -77,7 +77,7 @@ export function AssistantConsultation({ initialQuestion = "" }: { initialQuestio
   }
 
   return (
-    <section aria-label="McCaigs guided assistant" className="text-ink">
+    <section aria-label="mccaigs guided assistant" className="text-ink">
       <div className="flex flex-col gap-4 border-b border-deep-blue/12 pb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-deep-blue/75">
@@ -135,7 +135,7 @@ export function AssistantConsultation({ initialQuestion = "" }: { initialQuestio
           )}
           <form className="flex gap-2" onSubmit={handleSubmit}>
             <Input
-              aria-label="Ask McCaigs Assistant"
+              aria-label="Ask mccaigs Assistant"
               className="h-11 border-deep-blue/16 bg-white/70 px-3 text-ink placeholder:text-ink/45"
               disabled={busy}
               onChange={(event) => setQuestion(event.target.value)}
@@ -164,7 +164,7 @@ function UserMessage({ content }: { content: string }) {
 function AssistantMessage({ isRevealing, messageId, onRevealComplete, reducedMotion, reply }: AssistantMessageProps) {
   return (
     <div className="max-w-3xl">
-      <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/55">McCaigs Assistant</p>
+      <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/55">mccaigs Assistant</p>
       <div className="rounded-2xl rounded-bl-sm border border-deep-blue/12 bg-white/55 p-5 sm:p-6">
         <p className="sr-only" aria-live="polite">{reply.response}</p>
         <ProgressiveResponse
@@ -212,7 +212,7 @@ function ProgressiveResponse({ animate, messageId, onComplete, reducedMotion, re
 function TypingIndicator() {
   return (
     <div className="max-w-3xl" role="status">
-      <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/55">McCaigs Assistant</p>
+      <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/55">mccaigs Assistant</p>
       <div className="inline-flex items-center gap-3 rounded-2xl rounded-bl-sm border border-deep-blue/12 bg-white/55 px-4 py-3">
         <TypingDots compact />
         <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-deep-blue/55">Checking approved knowledge</span>

@@ -2,7 +2,7 @@
 
 ## Overview
 
-McCaigs uses a modern TypeScript-first architecture with Convex as the main backend layer and Clerk for authentication.
+mccaigs uses a modern TypeScript-first architecture with Convex as the main backend layer and Clerk for authentication.
 
 The platform should be simple enough to ship quickly, but structured enough to support a serious studio website, client portal, internal tools, and future SaaS products.
 

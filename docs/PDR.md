@@ -2,9 +2,9 @@
 
 ## Product
 
-McCaigs.com is the public and operational web platform for McCaigs, positioned as Scotland's Elite Technical Studio.
+mccaigs.com is the public and operational web platform for mccaigs, positioned as Scotland's Elite Technical Studio.
 
-The platform must communicate capability, taste, technical depth, and trust. It should make McCaigs feel selective, hands-on, and quietly confident.
+The platform must communicate capability, taste, technical depth, and trust. It should make mccaigs feel selective, hands-on, and quietly confident.
 
 ## Problem
 
@@ -22,11 +22,11 @@ Scottish SMEs, startups, owner-led businesses, and specialist firms need a techn
 
 ## Positioning statement
 
-McCaigs is Scotland's Elite Technical Studio for ambitious businesses that need practical AI, automation, websites, internal systems, and digital products built properly.
+mccaigs is Scotland's Elite Technical Studio for ambitious businesses that need practical AI, automation, websites, internal systems, and digital products built properly.
 
 ## Goals
 
-- Present McCaigs as premium, selective, and technically excellent.
+- Present mccaigs as premium, selective, and technically excellent.
 - Move away from generic AI consultancy language.
 - Explain the studio model clearly.
 - Create strong enquiry paths for qualified leads.
@@ -35,7 +35,7 @@ McCaigs is Scotland's Elite Technical Studio for ambitious businesses that need 
 
 ## Non-goals
 
-- Do not position McCaigs as a chatbot company.
+- Do not position mccaigs as a chatbot company.
 - Do not overuse AI clichés.
 - Do not make the site feel like a corporate consultancy template.
 - Do not lead with tools, models, or vendor names.
@@ -72,7 +72,7 @@ Login → Client portal → Project status → Documents → Actions → Message
 ### Public website
 
 - Strong hero section with studio positioning.
-- Clear explanation of what McCaigs builds.
+- Clear explanation of what mccaigs builds.
 - Service cards grouped by outcome, not buzzword.
 - Selected builds using stealth or codenamed projects where needed.
 - Technical method section explaining practical, controlled delivery.

@@ -13,7 +13,7 @@ seoTitle: "SEO TITLE"
 seoDescription: "SEO description under 160 characters."
 status: "published"
 coverImage: "/image-file-name.png"
-author: "McCaigs Studio"
+author: "mccaigs studio"
 readingTime: "4 min read"
 ---
 
@@ -41,10 +41,10 @@ Explain the business problem clearly.
 
 ## Systems section title
 
-Explain how McCaigs thinks about the issue from a systems, workflow, operational, or product-build perspective.
+Explain how mccaigs thinks about the issue from a systems, workflow, operational, or product-build perspective.
 
 <StudioNote>
-  Add a useful studio note that reinforces McCaigs' practical approach.
+  Add a useful studio note that reinforces mccaigs' practical approach.
 </StudioNote>
 
 ## Practical section title
@@ -61,6 +61,6 @@ This may include a structured workflow, rules engine, knowledge system, determin
 
 ## Closing section title
 
-End with a clear takeaway that reinforces McCaigs' positioning.
+End with a clear takeaway that reinforces mccaigs' positioning.
 
-McCaigs helps organisations diagnose operational challenges, design practical solutions, and build systems that make work simpler. Learn more about our [process](/process), explore our [systems](/systems), or use [Start a Project](/start-project) to discuss your next build.
+mccaigs helps organisations diagnose operational challenges, design practical solutions, and build systems that make work simpler. Learn more about our [process](/process), explore our [systems](/systems), or use [Start a Project](/start-project) to discuss your next build.

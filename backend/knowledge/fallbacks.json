@@ -1,14 +1,14 @@
 {
   "starting_prompts": [
-    "What does McCaigs do?",
+    "What does mccaigs do?",
     "Can AI help my business?",
     "We spend too much time on admin",
     "What kind of budget should we expect?"
   ],
   "default_suggested_questions": [
-    "What does McCaigs build?",
+    "What does mccaigs build?",
     "What kind of budget should we expect?",
-    "How does McCaigs work?"
+    "How does mccaigs work?"
   ],
   "unknown": {
     "topic": "fallback",
@@ -18,9 +18,9 @@
     ],
     "cta": { "label": "Start a project", "href": "/start-project" },
     "suggested_questions": [
-      "What does McCaigs build?",
+      "What does mccaigs build?",
       "What kind of budget should we expect?",
-      "How does McCaigs work?"
+      "How does mccaigs work?"
     ]
   },
   "closest_routes": [
@@ -29,14 +29,14 @@
       "keywords": ["website", "automation", "workflow", "assistant", "internal tool", "internal system", "software", "portal", "saas", "product"],
       "fragments": ["This sounds closest to the studio's services and common business problems."],
       "cta": { "label": "View services", "href": "/services" },
-      "suggested_questions": ["What does McCaigs build?", "Could an internal system help?", "Can AI help my business?"]
+      "suggested_questions": ["What does mccaigs build?", "Could an internal system help?", "Can AI help my business?"]
     },
     {
       "topic": "closest_process",
       "keywords": ["delivery", "prepare", "discovery", "requirements", "support", "maintenance", "launch"],
       "fragments": ["This sounds closest to how the studio scopes, delivers, and supports a project."],
       "cta": { "label": "View process", "href": "/process" },
-      "suggested_questions": ["How does McCaigs work?", "What information should we prepare?", "What happens after launch?"]
+      "suggested_questions": ["How does mccaigs work?", "What information should we prepare?", "What happens after launch?"]
     },
     {
       "topic": "closest_project",

@@ -4,22 +4,22 @@ import { ContactCta } from "@/components/marketing/contact-cta";
 import { SiteFrame } from "@/components/marketing/site-frame";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
-import { absoluteUrl, createBreadcrumbStructuredData, createPageMetadata, siteConfig } from "@/lib/seo";
+import { absoluteUrl, createBreadcrumbStructuredData, createPageMetadata, siteConfig, siteUrl } from "@/lib/seo";
 
-const aboutDescription = "McCaigs is a Scottish technical studio founded by David Robertson, building practical AI systems, automation, websites, internal tools, and digital products for startups, SMEs, and organisations.";
+const aboutDescription = "mccaigs is a Scottish technical studio founded by David Robertson, building practical AI systems, automation, websites, internal tools, and digital products for startups, SMEs, and organisations.";
 
 export const metadata = createPageMetadata({
   description: aboutDescription,
   path: "/about",
-  title: "About McCaigs | Scotland's Elite Technical Studio",
+  title: "About",
 });
 
 const timeline = [
-  ["2010", "David Robertson creates the McCaigs brand."],
+  ["2010", "David Robertson creates the mccaigs brand."],
   ["2015", "David Robertson wins The Pitch UK Digital Marketing Award."],
-  ["2016", "McCaigs trademark registered."],
-  ["2025", "McCaigs successfully completes the TechScaler Catalyst programme."],
-  ["Today", "McCaigs operates as a Scottish technical studio focused on practical engineering, deterministic systems, AI, automation, websites, internal systems and fast MVP delivery."],
+  ["2016", "mccaigs trademark registered."],
+  ["2025", "mccaigs successfully completes the TechScaler Catalyst programme."],
+  ["Today", "mccaigs operates as a Scottish technical studio focused on practical engineering, deterministic systems, AI, automation, websites, internal systems and fast MVP delivery."],
 ] as const;
 
 const buildAreas = [
@@ -37,20 +37,20 @@ const aboutStructuredData = {
     {
       "@id": `${absoluteUrl("/about")}#about-page`,
       "@type": "AboutPage",
-      about: { "@id": `${absoluteUrl("/")}#organisation` },
+      about: { "@id": `${siteUrl}/#organisation` },
       description: aboutDescription,
-      mainEntity: { "@id": `${absoluteUrl("/")}#organisation` },
-      name: "About McCaigs",
+      mainEntity: { "@id": `${siteUrl}/#organisation` },
+      name: "About | mccaigs",
       url: absoluteUrl("/about"),
     },
     {
       "@id": `${absoluteUrl("/about")}#david-robertson`,
       "@type": "Person",
-      affiliation: "McCaigs completed the TechScaler Catalyst programme in late 2025.",
+      affiliation: "mccaigs completed the TechScaler Catalyst programme in late 2025.",
       award: "The Pitch UK Digital Marketing Award 2015",
       jobTitle: "Founder",
       name: siteConfig.founder,
-      worksFor: { "@id": `${absoluteUrl("/")}#organisation`, name: siteConfig.name },
+      worksFor: { "@id": `${siteUrl}/#organisation`, name: siteConfig.name },
     },
   ],
 };
@@ -66,7 +66,7 @@ export default function AboutPage() {
           <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-signal">
             <CircleDot className="size-3" /> About / Scottish technical studio
           </p>
-          <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.06em] sm:text-7xl">McCaigs is Scotland&apos;s Elite Technical Studio.</h1>
+          <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.06em] sm:text-7xl">mccaigs is Scotland&apos;s Elite Technical Studio.</h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">
             We design and build practical AI systems, automation, websites, internal tools and digital products for startups, SMEs and organisations that need useful software built properly.
           </p>
@@ -79,12 +79,12 @@ export default function AboutPage() {
       <section className="border-b border-ink/10 bg-[#f6f3ec] text-ink">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-deep-blue/65">What McCaigs is</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-deep-blue/65">What mccaigs is</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">A hands-on studio for practical engineering.</h2>
           </div>
           <div className="space-y-5 text-base leading-7 text-ink/70">
             <p>
-              <Link className="font-medium text-deep-blue underline decoration-signal/40 underline-offset-4 hover:text-signal" href="/">McCaigs</Link> works at the point where business operations, software, AI and commercial judgement meet. The studio focuses on systems that help real businesses handle enquiries, reduce administration, organise information, support customers and move faster without adding unnecessary complexity.
+              <Link className="font-medium text-deep-blue underline decoration-signal/40 underline-offset-4 hover:text-signal" href="/">mccaigs</Link> works at the point where business operations, software, AI and commercial judgement meet. The studio focuses on systems that help real businesses handle enquiries, reduce administration, organise information, support customers and move faster without adding unnecessary complexity.
             </p>
             <p>
               The work is deliberately practical: diagnose the awkward part of the operation, design the simplest reliable route, build with modern tools, evaluate against reality, and improve from evidence.
@@ -99,10 +99,10 @@ export default function AboutPage() {
         </div>
         <div className="space-y-5 text-sm leading-7 text-muted-foreground">
           <p id="founder">
-            <span className="text-foreground">David Robertson</span> created the McCaigs brand in 2010. The brand has since developed from early digital work into a Scottish technical studio focused on practical engineering, deterministic systems, AI, automation, websites, internal tools and fast MVPs.
+            <span className="text-foreground">David Robertson</span> created the mccaigs brand in 2010. The brand has since developed from early digital work into a Scottish technical studio focused on practical engineering, deterministic systems, AI, automation, websites, internal tools and fast MVPs.
           </p>
           <p>
-            McCaigs is based in Edinburgh, Scotland, and works with startups, SMEs, owner-managed businesses and specialist organisations across Scotland and the wider United Kingdom.
+            mccaigs is based in Edinburgh, Scotland, and works with startups, SMEs, owner-managed businesses and specialist organisations across Scotland and the wider United Kingdom.
           </p>
         </div>
       </section>
@@ -139,7 +139,7 @@ export default function AboutPage() {
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-deep-blue/65">How we work</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Diagnose first. Build what earns its place.</h2>
             <p className="mt-5 text-sm leading-7 text-ink/65">
-              McCaigs starts with the business problem, the evidence, and the constraints. The first useful release is shaped around what will make the operation clearer, faster or easier to run.
+              mccaigs starts with the business problem, the evidence, and the constraints. The first useful release is shaped around what will make the operation clearer, faster or easier to run.
             </p>
           </div>
           <div>

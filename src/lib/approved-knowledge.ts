@@ -139,6 +139,6 @@ function searchableTokens(value: string) {
 }
 
 function suggestedQuestionsForFaq(entry: CompanyFaqEntry) {
-  const suggestions = [entry.question, "What makes McCaigs different?", "How do we get started?"];
+  const suggestions = [entry.question, "What makes mccaigs different?", "How do we get started?"];
   return [...new Set(suggestions)].slice(0, 3);
 }

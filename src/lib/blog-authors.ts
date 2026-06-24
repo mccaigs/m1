@@ -3,7 +3,7 @@ export const blogAuthors = [
     key: "david",
     name: "David Robertson",
     role: "Founder",
-    bio: "Founder of McCaigs, focused on practical software, AI systems, and technical delivery.",
+    bio: "Founder of mccaigs, focused on practical software, AI systems, and technical delivery.",
     avatar: "/brand/mccaigs-logo.svg",
   },
   {

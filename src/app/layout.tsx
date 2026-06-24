@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   publisher: siteConfig.legalName,
   title: {
-    default: `${siteConfig.name} | ${siteConfig.title}`,
-    template: "%s | McCaigs",
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
   icons: {
     apple: "/apple-icon",
@@ -49,10 +49,10 @@ export const metadata: Metadata = {
   },
   openGraph: {
     description: siteConfig.description,
-    images: [{ alt: `${siteConfig.name} team working in the Edinburgh studio`, height: 720, url: socialImageUrl, width: 1280 }],
+    images: [{ alt: "mccaigs studio systems interface", height: 720, url: socialImageUrl, width: 1280 }],
     locale: "en_GB",
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | ${siteConfig.title}`,
+    title: siteConfig.name,
     type: "website",
     url: siteUrl,
   },
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [socialImageUrl],
     site: "@mccaigs",
-    title: `${siteConfig.name} | ${siteConfig.title}`,
+    title: siteConfig.name,
   },
 };
 

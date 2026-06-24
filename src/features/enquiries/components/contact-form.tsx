@@ -147,14 +147,14 @@ export function ContactForm() {
         </div>
         <div className="sm:col-span-2">
           <Field error={fieldErrors.captcha} label="Deterministic check" name="captcha">
-            <Input aria-invalid={Boolean(fieldErrors.captcha)} autoComplete="off" id="captcha" name="captcha" placeholder="What two letters are hidden inside McCaigs?" />
+            <Input aria-invalid={Boolean(fieldErrors.captcha)} autoComplete="off" id="captcha" name="captcha" placeholder="What two letters are hidden inside mccaigs?" />
           </Field>
         </div>
         <div className="sm:col-span-2">
           <div className="flex items-start gap-3">
             <Checkbox checked={consent} id="consent" onCheckedChange={(checked) => setConsent(checked === true)} />
             <Label className="text-xs font-normal leading-5 text-muted-foreground" htmlFor="consent">
-              I consent to McCaigs using these details to review and reply to this project enquiry.
+              I consent to mccaigs using these details to review and reply to this project enquiry.
             </Label>
           </div>
           {fieldErrors.consent ? <p className="mt-2 text-xs leading-5 text-destructive">{fieldErrors.consent}</p> : null}

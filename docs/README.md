@@ -1,8 +1,8 @@
-# McCaigs Technical Studio Starter
+# mccaigs Technical Studio Starter
 
 ## Positioning
 
-McCaigs is Scotland's Elite Technical Studio.
+mccaigs is Scotland's Elite Technical Studio.
 
 The site should feel like a high-calibre creative technical partner for real businesses, not another generic AI agency, enterprise consultancy, or normal web design studio. The public positioning is built around practical AI, automation, websites, internal systems, and digital products for ambitious Scottish and UK businesses.
 

@@ -2,7 +2,7 @@
 
 ## Brand idea
 
-McCaigs should feel like an elite technical studio hidden in plain sight. Calm, precise, premium, capable, and approachable to an ambitious business owner.
+mccaigs should feel like an elite technical studio hidden in plain sight. Calm, precise, premium, capable, and approachable to an ambitious business owner.
 
 The design should suggest engineering depth without turning into a developer dashboard or an enterprise consultancy. It should feel like a creative technical studio that builds serious systems for ordinary businesses, not a SaaS template with AI gradients slapped on top.
 

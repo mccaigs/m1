@@ -417,7 +417,7 @@ function UnauthenticatedWorkspace({
               Authentication is required.
             </h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
-              Sign in with an authorised McCaigs account to access studio operations,
+              Sign in with an authorised mccaigs account to access studio operations,
               client records, leads, projects, tasks, and activity.
             </p>
             {!configured ? (

@@ -8,10 +8,10 @@ export type AssistantTopic = {
 export const assistantTopics: readonly AssistantTopic[] = [
   {
     id: "studio",
-    label: "What McCaigs does",
+    label: "What mccaigs does",
     keywords: ["mccaigs", "studio", "what do you do", "help", "build", "offer"],
     answer:
-      "McCaigs is Scotland's Elite Technical Studio. We build practical AI, automation, websites, internal business systems, and digital products for ambitious businesses that need more than a standard agency can offer.",
+      "mccaigs is Scotland's Elite Technical Studio. We build practical AI, automation, websites, internal business systems, and digital products for ambitious businesses that need more than a standard agency can offer.",
   },
   {
     id: "fit",
@@ -74,7 +74,7 @@ export const assistantTopics: readonly AssistantTopic[] = [
     label: "SaaS and product builds",
     keywords: ["saas", "product", "platform", "startup", "mvp", "digital product"],
     answer:
-      "McCaigs builds credible SaaS and digital product foundations with a deliberate first-release scope. That can include portals, marketplaces, and software-enabled services for startups or established businesses.",
+      "mccaigs builds credible SaaS and digital product foundations with a deliberate first-release scope. That can include portals, marketplaces, and software-enabled services for startups or established businesses.",
   },
   {
     id: "audits",
@@ -88,12 +88,12 @@ export const assistantTopics: readonly AssistantTopic[] = [
     label: "Websites and platforms",
     keywords: ["website", "websites", "web platform", "digital platform", "site"],
     answer:
-      "McCaigs builds premium websites and digital platforms that explain the business clearly, generate enquiries, support customers, and connect into the workflows behind them.",
+      "mccaigs builds premium websites and digital platforms that explain the business clearly, generate enquiries, support customers, and connect into the workflows behind them.",
   },
 ] as const;
 
 export const assistantFallback =
-  "That is outside this assistant's approved knowledge base. McCaigs will not invent an answer. Add the detail to the enquiry form and the studio can review it properly.";
+  "That is outside this assistant's approved knowledge base. mccaigs will not invent an answer. Add the detail to the enquiry form and the studio can review it properly.";
 
 export function answerAssistantQuestion(question: string) {
   const normalisedQuestion = question.trim().toLowerCase();

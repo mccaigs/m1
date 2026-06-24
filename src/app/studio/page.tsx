@@ -22,7 +22,7 @@ export default function StudioPage() {
             <h2 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">High-calibre technical work for real businesses.</h2>
           </div>
           <div className="space-y-5 text-base leading-7 text-ink/70">
-            <p>McCaigs is not a generic AI agency, a traditional consultancy, or a normal web design studio. The work starts with what the business is trying to do better, then combines technical creativity with practical delivery.</p>
+            <p>mccaigs is not a generic AI agency, a traditional consultancy, or a normal web design studio. The work starts with what the business is trying to do better, then combines technical creativity with practical delivery.</p>
             <p>The point is not to add AI everywhere. It is to use AI where it helps, software where it matters, and human judgement where it counts.</p>
           </div>
         </div>

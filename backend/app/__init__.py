@@ -1,1 +1,1 @@
-"""McCaigs deterministic assistant service."""
+"""mccaigs deterministic assistant service."""

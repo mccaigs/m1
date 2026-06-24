@@ -1,10 +1,10 @@
-# McCaigs Lead Tracking Webhook
+# mccaigs Lead Tracking Webhook
 
 This Google Apps Script receives website contact enquiries and Project Builder submissions, appends them to the matching spreadsheet tab, and emails `mccaigsgroup@gmail.com`.
 
 ## Spreadsheet Setup
 
-Create or open the McCaigs Lead Tracking spreadsheet with these tabs:
+Create or open the mccaigs Lead Tracking spreadsheet with these tabs:
 
 1. `Contact Enquiries`
 2. `Project Builder Submissions`
@@ -13,10 +13,10 @@ The script adds the expected header row when a tab is empty. If a tab already ha
 
 ## Install
 
-1. Open the McCaigs Lead Tracking spreadsheet.
+1. Open the mccaigs Lead Tracking spreadsheet.
 2. Choose **Extensions > Apps Script**.
 3. Replace the editor contents with `Code.gs`.
-4. Save the project as `McCaigs Lead Tracking Webhook`.
+4. Save the project as `mccaigs Lead Tracking Webhook`.
 5. Select and run `authorize` once from the editor.
 6. Approve the requested Spreadsheet and Mail permissions.
 

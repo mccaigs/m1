@@ -310,7 +310,7 @@ export const assistantComparison = [
     ],
   },
   {
-    title: "McCaigs deterministic assistant",
+    title: "mccaigs deterministic assistant",
     points: [
       "Answers from approved knowledge",
       "Clear boundaries and fallback behaviour",

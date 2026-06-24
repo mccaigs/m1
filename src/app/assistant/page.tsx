@@ -9,12 +9,12 @@ export const metadata = createPageMetadata(publicRoutes[5]);
 
 const assistantFaqs = [
   {
-    question: "What is the McCaigs Assistant?",
-    answer: "The McCaigs Assistant is a deterministic studio assistant that helps visitors understand services, fit, budgets, timelines, and practical next steps.",
+    question: "What is the mccaigs Assistant?",
+    answer: "The mccaigs Assistant is a deterministic studio assistant that helps visitors understand services, fit, budgets, timelines, and practical next steps.",
   },
   {
     question: "Does it answer from approved knowledge?",
-    answer: "Yes. It answers from approved McCaigs knowledge rather than behaving like a general-purpose chatbot.",
+    answer: "Yes. It answers from approved mccaigs knowledge rather than behaving like a general-purpose chatbot.",
   },
   {
     question: "What happens when it does not know the answer?",
@@ -36,10 +36,10 @@ export default async function AssistantPage({ searchParams }: PageProps<"/assist
           </p>
           <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">Deterministic Studio Assistant</h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Ask about McCaigs, practical AI, automation, websites, internal systems, project fit, timelines, and how we work.
+            Ask about mccaigs, practical AI, automation, websites, internal systems, project fit, timelines, and how we work.
           </p>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-signal-soft">
-            This assistant answers from approved McCaigs knowledge only. If it does not know, it says so.
+            This assistant answers from approved mccaigs knowledge only. If it does not know, it says so.
           </p>
         </div>
       </section>

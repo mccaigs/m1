@@ -76,7 +76,7 @@ def faq_to_block(question: dict, source: str) -> dict:
             dict.fromkeys(
                 [
                     question["question"],
-                    "What makes McCaigs different?",
+                    "What makes mccaigs different?",
                     "How do we get started?",
                 ]
             )

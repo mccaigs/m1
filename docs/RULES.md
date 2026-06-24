@@ -39,7 +39,7 @@ Deterministic first. AI second. Human accountable.
 
 ## Design rules
 
-- Use the McCaigs colour system.
+- Use the mccaigs colour system.
 - Keep the interface calm, premium, and precise.
 - Make mobile feel first-class.
 - Use animation sparingly.

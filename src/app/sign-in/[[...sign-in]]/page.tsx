@@ -23,8 +23,8 @@ export default async function SignInPage() {
   return (
     <main className="min-h-screen bg-[#f6f3ec] px-5 py-8 text-deep-blue">
       <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl flex-col justify-center gap-8">
-        <Link aria-label="McCaigs home" className="w-fit" href="/">
-          <Image alt="McCaigs" className="h-10 w-auto" height={90} priority src="/brand/mccaigs-logo.svg" width={434} />
+        <Link aria-label="mccaigs home" className="w-fit" href="/">
+          <Image alt="mccaigs" className="h-10 w-auto" height={90} priority src="/brand/mccaigs-logo.svg" width={434} />
         </Link>
         <div className="grid items-center gap-8 lg:grid-cols-[0.8fr_1fr]">
           <div className="max-w-md">

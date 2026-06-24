@@ -21,7 +21,7 @@ export default function SystemsPage() {
     <SiteFrame>
       <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Systems", path: "/systems" }])} />
       <PageHero
-        copy="McCaigs builds websites, workflows, internal tools, and AI-assisted systems around the way a business actually works. The result should make the operation clearer, not more complicated."
+        copy="mccaigs builds websites, workflows, internal tools, and AI-assisted systems around the way a business actually works. The result should make the operation clearer, not more complicated."
         eyebrow="Systems / Selected technical builds"
         title="Systems that earn their place in the operation."
       />

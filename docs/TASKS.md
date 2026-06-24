@@ -64,7 +64,7 @@
 
 - [x] Add Clerk sign-in and sign-up routes with `/app` redirects.
 - [x] Protect `/app/*` in both proxy and the authenticated layout.
-- [x] Automatically assign the primary McCaigs email to the owner role.
+- [x] Automatically assign the primary mccaigs email to the owner role.
 - [x] Add owner, admin, staff, and client role records and Convex permission helpers.
 - [x] Add clients, projects, project assets, project updates, and lead assignments.
 - [x] Add role-aware studio and client navigation.
@@ -73,7 +73,7 @@
 - [x] Add client creation and Clerk identity linking fields.
 - [x] Add project filtering, creation, status control, updates, internal notes, and URL resources.
 - [x] Add owner-only user and role management settings.
-- [x] Add an owner-only idempotent Studio OS seed action for the initial McCaigs client and project portfolio.
+- [x] Add an owner-only idempotent Studio OS seed action for the initial mccaigs client and project portfolio.
 - [ ] Add Clerk invitation and webhook-backed user provisioning.
 - [ ] Add explicit staff assignment controls to project settings.
 - [ ] Add project task CRUD and due-date workflows.
@@ -252,12 +252,12 @@ Deliberately left unchanged:
 - [x] Apply the canonical logo across public, mobile, Studio OS, loading, Assistant, and Start a Project surfaces.
 - [x] Serve `public/favicon.ico` through root App Router metadata.
 - [x] Generate local Apple touch, Open Graph, and Twitter assets from the canonical logo.
-- [x] Add a local web app manifest with McCaigs branding.
+- [x] Add a local web app manifest with mccaigs branding.
 
 ## Homepage publishing refinement
 
 - [x] Tighten the homepage hero scale and spacing without changing its structure or line breaks.
-- [x] Replace the hero radar decoration with a muted looping product reel using real local McCaigs interfaces and clearly labelled demo data.
+- [x] Replace the hero radar decoration with a muted looping product reel using real local mccaigs interfaces and clearly labelled demo data.
 - [x] Explain the client value of the technology ecosystem in plain commercial language.
 - [x] Replace the OpenAI placeholder mark with the current Blossom asset and review the remaining monochrome technology marks for consistency.
 
@@ -292,7 +292,7 @@ Deliberately left unchanged:
 - [x] Fail builds for invalid published metadata while allowing incomplete drafts to remain private.
 - [x] Replace the Insights placeholder with the premium studio journal index and empty state.
 - [x] Add statically generated `/insights/[slug]` article routes with canonical metadata, Article JSON-LD, and related notes.
-- [x] Add McCaigs-styled MDX primitives for callouts, studio notes, build metrics, quote blocks, and dividers.
+- [x] Add mccaigs-styled MDX primitives for callouts, studio notes, build metrics, quote blocks, and dividers.
 - [x] Add two approved example studio notes and include published articles in the generated sitemap.
 - [x] Document the single-source Insights publishing workflow and add a fast published-post validation command.
 

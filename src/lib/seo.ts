@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://mccaigs.com";
+export const siteUrl = "https://www.mccaigs.com";
 export const socialImageUrl = `${siteUrl}/media/mccaigs-opener-poster.webp`;
 
 export const siteConfig = {
@@ -10,22 +10,22 @@ export const siteConfig = {
   legalName: "MCCAIGS GROUP LTD",
   linkedIn: "https://www.linkedin.com/company/mccaigs",
   location: "Edinburgh, Scotland",
-  name: "McCaigs",
+  name: "mccaigs",
   title: "Scotland's Elite Technical Studio",
   twitter: "https://x.com/mccaigs",
 } as const;
 
 export const publicRoutes = [
-  { changeFrequency: "weekly", description: siteConfig.description, path: "/", priority: 1, title: siteConfig.title },
-  { changeFrequency: "monthly", description: "Learn how McCaigs works as an Edinburgh technical studio for Scottish SMEs, startups, and specialist organisations.", path: "/studio", priority: 0.8, title: "Technical Studio Edinburgh" },
-  { changeFrequency: "monthly", description: "Explore practical AI systems, business automation, internal platforms, websites, and product development services from McCaigs.", path: "/services", priority: 0.9, title: "AI Systems, Automation and Software Services" },
-  { changeFrequency: "monthly", description: "Explore codenamed McCaigs builds including decision systems, internal tools, workflow engines, automation layers, and SaaS foundations.", path: "/systems", priority: 0.8, title: "Custom Software and AI Systems" },
-  { changeFrequency: "monthly", description: "Understand the senior-led McCaigs process: diagnose, design, build, evaluate, ship, and improve.", path: "/process", priority: 0.7, title: "Technical Studio Process" },
-  { changeFrequency: "weekly", description: "Ask the deterministic McCaigs Assistant about AI systems, automation, websites, internal software, project fit, budgets, and delivery.", path: "/assistant", priority: 0.8, title: "Deterministic Studio Assistant" },
-  { changeFrequency: "weekly", description: "Read practical McCaigs studio notes on reliable AI, business automation, internal systems, websites, and useful software.", path: "/insights", priority: 0.7, title: "Insights" },
-  { changeFrequency: "monthly", description: "Contact McCaigs in Edinburgh to discuss a practical AI, automation, website, internal software, or digital product project.", path: "/contact", priority: 0.8, title: "Contact" },
-  { changeFrequency: "monthly", description: "Scope a McCaigs project through a structured discovery workflow and receive an indicative planning estimate.", path: "/start-project", priority: 0.9, title: "Start a Project" },
-  { changeFrequency: "monthly", description: "McCaigs is a Scottish technical studio founded by David Robertson, building practical AI systems, automation, websites, internal tools, and digital products for startups, SMEs, and organisations.", path: "/about", priority: 0.7, title: "About McCaigs" },
+  { changeFrequency: "weekly", description: siteConfig.description, path: "/", priority: 1, title: "mccaigs" },
+  { changeFrequency: "monthly", description: "Learn how mccaigs works as an Edinburgh technical studio for Scottish SMEs, startups, and specialist organisations.", path: "/studio", priority: 0.85, title: "Studio" },
+  { changeFrequency: "monthly", description: "Explore practical AI systems, business automation, internal platforms, websites, and product development services from mccaigs.", path: "/services", priority: 0.9, title: "Services" },
+  { changeFrequency: "monthly", description: "Explore codenamed mccaigs builds including decision systems, internal tools, workflow engines, automation layers, and SaaS foundations.", path: "/systems", priority: 0.85, title: "Systems" },
+  { changeFrequency: "monthly", description: "Understand the senior-led mccaigs process: diagnose, design, build, evaluate, ship, and improve.", path: "/process", priority: 0.8, title: "Process" },
+  { changeFrequency: "weekly", description: "Ask the deterministic mccaigs Assistant about AI systems, automation, websites, internal software, project fit, budgets, and delivery.", path: "/assistant", priority: 0.8, title: "Assistant" },
+  { changeFrequency: "weekly", description: "Read practical mccaigs studio notes on reliable AI, business automation, internal systems, websites, and useful software.", path: "/insights", priority: 0.8, title: "Insights" },
+  { changeFrequency: "monthly", description: "Contact mccaigs in Edinburgh to discuss a practical AI, automation, website, internal software, or digital product project.", path: "/contact", priority: 0.8, title: "Contact" },
+  { changeFrequency: "monthly", description: "Scope a mccaigs project through a structured discovery workflow and receive an indicative planning estimate.", path: "/start-project", priority: 0.8, title: "Start a Project" },
+  { changeFrequency: "monthly", description: "mccaigs is a Scottish technical studio founded by David Robertson, building practical AI systems, automation, websites, internal tools, and digital products for startups, SMEs, and organisations.", path: "/about", priority: 0.85, title: "About" },
 ] as const;
 
 export type PublicRoute = (typeof publicRoutes)[number]["path"];
@@ -44,6 +44,7 @@ export function createPageMetadata({
   title: string;
 }): Metadata {
   const url = absoluteUrl(path);
+  const pageTitle = path === "/" ? `${siteConfig.name} | ${siteConfig.title}` : `${title} | ${siteConfig.name}`;
 
   return {
     alternates: {
@@ -52,20 +53,22 @@ export function createPageMetadata({
     description,
     openGraph: {
       description,
-      images: [{ alt: `${siteConfig.name} team working in the Edinburgh studio`, height: 720, url: socialImageUrl, width: 1280 }],
+      images: [{ alt: "mccaigs studio systems interface", height: 720, url: socialImageUrl, width: 1280 }],
       locale: "en_GB",
       siteName: siteConfig.name,
-      title,
+      title: pageTitle,
       type: "website",
       url,
     },
-    title,
+    title: {
+      absolute: pageTitle,
+    },
     twitter: {
       card: "summary_large_image",
       description,
       images: [socialImageUrl],
       site: "@mccaigs",
-      title,
+      title: pageTitle,
     },
   };
 }
@@ -101,32 +104,32 @@ export function createFaqStructuredData(items: Array<{ answer: string; question:
 export const frequentlyAskedQuestions = [
   {
     answer:
-      "McCaigs is an Edinburgh-based technical studio. We design and build practical AI systems, business automation, websites, internal tools, SaaS products, and modern digital platforms.",
-    question: "What does McCaigs do?",
+      "mccaigs is an Edinburgh-based technical studio. We design and build practical AI systems, business automation, websites, internal tools, SaaS products, and modern digital platforms.",
+    question: "What does mccaigs do?",
   },
   {
     answer:
-      "A technical studio is a hands-on build partner. McCaigs starts with the operational problem, chooses the simplest reliable approach, and delivers working software around the needs of the business.",
+      "A technical studio is a hands-on build partner. mccaigs starts with the operational problem, chooses the simplest reliable approach, and delivers working software around the needs of the business.",
     question: "What is a technical studio?",
   },
   {
     answer:
-      "McCaigs combines technical diagnosis with direct delivery. The focus is not a campaign or a generic technology category. It is a useful system, clear ownership, and a commercially sensible result.",
-    question: "How is McCaigs different from an agency?",
+      "mccaigs combines technical diagnosis with direct delivery. The focus is not a campaign or a generic technology category. It is a useful system, clear ownership, and a commercially sensible result.",
+    question: "How is mccaigs different from an agency?",
   },
   {
     answer:
-      "Yes. McCaigs works with ambitious SMEs and owner-managed businesses, including organisations that need a better website, less administration, clearer information, or software that fits the operation properly.",
+      "Yes. mccaigs works with ambitious SMEs and owner-managed businesses, including organisations that need a better website, less administration, clearer information, or software that fits the operation properly.",
     question: "Do you work with SMEs?",
   },
   {
     answer:
-      "Yes. McCaigs helps startups shape and build credible first releases for SaaS products, portals, marketplaces, and software-enabled services.",
+      "Yes. mccaigs helps startups shape and build credible first releases for SaaS products, portals, marketplaces, and software-enabled services.",
     question: "Do you work with startups?",
   },
   {
     answer:
-      "Yes. McCaigs builds controlled AI assistants, AI-assisted workflows, research systems, document processes, and data-backed decision tools. AI is used where it creates practical value.",
+      "Yes. mccaigs builds controlled AI assistants, AI-assisted workflows, research systems, document processes, and data-backed decision tools. AI is used where it creates practical value.",
     question: "Do you build AI systems?",
   },
   {
@@ -136,7 +139,7 @@ export const frequentlyAskedQuestions = [
   },
   {
     answer:
-      "McCaigs uses proven platforms including Next.js, TypeScript, Convex, Clerk, Vercel, OpenAI, Anthropic, and Google AI where they are appropriate to the project.",
+      "mccaigs uses proven platforms including Next.js, TypeScript, Convex, Clerk, Vercel, OpenAI, Anthropic, and Google AI where they are appropriate to the project.",
     question: "What technologies do you use?",
   },
   {
@@ -167,11 +170,12 @@ export const rootStructuredData = {
         addressLocality: "Edinburgh",
         addressRegion: "Scotland",
       },
-      description: siteConfig.description,
+      description: siteConfig.title,
       image: socialImageUrl,
       legalName: siteConfig.legalName,
       logo: absoluteUrl("/logo.svg"),
       name: siteConfig.name,
+      alternateName: "mccaigs studio",
       founder: {
         "@id": `${siteUrl}/about#david-robertson`,
         "@type": "Person",
@@ -202,6 +206,7 @@ export const rootStructuredData = {
         name: siteConfig.founder,
       },
       name: siteConfig.name,
+      alternateName: "mccaigs studio",
       parentOrganization: { "@id": `${siteUrl}/#organisation` },
       url: siteUrl,
     },
@@ -224,7 +229,8 @@ export const rootStructuredData = {
       "@id": `${siteUrl}/#website`,
       "@type": "WebSite",
       image: socialImageUrl,
-      name: siteConfig.name,
+      name: "mccaigs.com",
+      alternateName: "mccaigs official website",
       potentialAction: {
         "@type": "SearchAction",
         "query-input": "required name=search_term_string",

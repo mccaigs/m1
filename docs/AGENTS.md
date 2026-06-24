@@ -2,7 +2,7 @@
 
 ## Role
 
-You are helping build McCaigs, Scotland's Elite Technical Studio.
+You are helping build mccaigs, Scotland's Elite Technical Studio.
 
 Every contribution should make the product feel more precise, premium, technically serious, and commercially useful.
 
@@ -37,7 +37,7 @@ Check:
 - Does this need Convex, or can it be static?
 - Does this need AI, or can deterministic logic solve it?
 - Does this need Python, or can TypeScript handle it?
-- Is the user-facing copy aligned with the McCaigs positioning?
+- Is the user-facing copy aligned with the mccaigs positioning?
 
 ## Code rules
 

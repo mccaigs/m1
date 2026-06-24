@@ -123,7 +123,7 @@ export function PositioningSection() {
   return (
     <section className="border-y border-white/8 bg-off-white text-ink" id="studio">
       <div className="mx-auto grid max-w-7xl gap-7 px-5 py-14 sm:gap-10 sm:px-8 sm:py-24 lg:grid-cols-[0.7fr_1.3fr]">
-        <SectionHeading eyebrow="Studio position" title="Serious systems for ordinary businesses." copy="McCaigs is a creative technical studio for ambitious businesses that need practical AI, automation, websites, internal tools, and digital products built around how the operation actually works." tone="light" />
+        <SectionHeading eyebrow="Studio position" title="Serious systems for ordinary businesses." copy="mccaigs is a creative technical studio for ambitious businesses that need practical AI, automation, websites, internal tools, and digital products built around how the operation actually works." tone="light" />
         <div className="grid gap-px overflow-hidden rounded-xl border border-ink/10 bg-ink/10 sm:grid-cols-3">
           {points.map(([number, title, copy]) => (
             <div className="bg-off-white p-5 sm:p-6" key={number}>

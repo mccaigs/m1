@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { getPublishedBlogPost } from "@/lib/blog-convex";
 import { hydrateBlogPost } from "@/lib/blog-posts";
 import { getAvailableInsightCoverImage, getInsightBySlug, getPublishedInsights, getRelatedInsights } from "@/lib/insights";
-import { absoluteUrl, createBreadcrumbStructuredData, siteConfig, socialImageUrl } from "@/lib/seo";
+import { absoluteUrl, createBreadcrumbStructuredData, siteConfig, siteUrl, socialImageUrl } from "@/lib/seo";
 
 type InsightPageProps = {
   params: Promise<{ slug: string }>;
@@ -90,7 +90,7 @@ export default async function InsightArticlePage({ params }: InsightPageProps) {
     image,
     mainEntityOfPage: absoluteUrl(`/insights/${post.slug}`),
     publisher: {
-      "@id": "https://mccaigs.com/#organisation",
+      "@id": `${siteUrl}/#organisation`,
       "@type": "Organization",
       logo: {
         "@type": "ImageObject",

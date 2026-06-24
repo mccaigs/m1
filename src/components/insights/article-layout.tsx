@@ -97,7 +97,7 @@ export function ArticleLayout({
           </div>
           <div className="flex flex-wrap gap-3">
             <Button asChild className="min-h-11" size="lg"><Link href="/start-project">Start a project <ArrowUpRight /></Link></Button>
-            <Button asChild className="min-h-11" size="lg" variant="outline"><Link href="/contact">Contact McCaigs</Link></Button>
+            <Button asChild className="min-h-11" size="lg" variant="outline"><Link href="/contact">Contact mccaigs</Link></Button>
           </div>
         </div>
       </section>

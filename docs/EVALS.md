@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Evals keep McCaigs systems honest.
+Evals keep mccaigs systems honest.
 
 They should test deterministic logic, AI-assisted outputs, lead scoring, project summaries, and any workflow where accuracy matters.
 
@@ -43,7 +43,7 @@ Metrics:
 - Clear scope.
 - No unsupported claims.
 - Practical next steps.
-- McCaigs tone alignment.
+- mccaigs tone alignment.
 
 ### Deterministic workflow rules
 

@@ -1,6 +1,6 @@
-# McCaigs Technical Studio
+# mccaigs Technical Studio
 
-Multi-page public website and Studio OS foundation for McCaigs, Scotland's Elite Technical Studio for practical AI, automation, websites, internal systems, and digital products.
+Multi-page public website and Studio OS foundation for mccaigs, Scotland's Elite Technical Studio for practical AI, automation, websites, internal systems, and digital products.
 
 ## Stack
 
@@ -74,7 +74,7 @@ Product and engineering documentation lives in [`docs/`](./docs).
 
 ## Search metadata
 
-Public search metadata assumes the production origin `https://mccaigs.com`. Route metadata, canonical URLs, entity JSON-LD, factual FAQ answers, and the public route inventory live in `src/lib/seo.ts`.
+Public search metadata assumes the production origin `https://www.mccaigs.com`. Route metadata, canonical URLs, entity JSON-LD, factual FAQ answers, and the public route inventory live in `src/lib/seo.ts`.
 
 Next.js generates `/robots.txt` and `/sitemap.xml` from App Router metadata routes. Keep the shared SEO source current when adding a public route so canonicals, social previews, and crawl discovery remain aligned.
 

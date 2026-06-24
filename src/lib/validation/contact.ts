@@ -7,7 +7,7 @@ import {
 
 const consentSchema = z.preprocess(
   (value) => value === true || value === "on",
-  z.literal(true, "Confirm that McCaigs may use these details to reply to your enquiry."),
+  z.literal(true, "Confirm that mccaigs may use these details to reply to your enquiry."),
 );
 
 export const contactSubmissionSchema = z.object({

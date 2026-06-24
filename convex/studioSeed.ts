@@ -7,7 +7,7 @@ const UPDATE_BODY = "Imported from Studio OS seed data.";
 
 const projects = [
   {
-    title: "McCaigs Website Redesign",
+    title: "mccaigs Website Redesign",
     slug: "mccaigs-website-redesign",
     status: "build",
     type: "internal",
@@ -68,8 +68,8 @@ export const seedStudioData = mutation({
 
     if (!client) {
       const clientId = await ctx.db.insert("clients", {
-        name: "McCaigs Studio",
-        company: "McCaigs Studio",
+        name: "mccaigs studio",
+        company: "mccaigs studio",
         email: CLIENT_EMAIL,
         status: "internal",
         createdAt: now,
@@ -78,13 +78,13 @@ export const seedStudioData = mutation({
       client = await ctx.db.get(clientId);
       clientCreated = true;
     } else if (
-      client.name !== "McCaigs Studio" ||
-      client.company !== "McCaigs Studio" ||
+      client.name !== "mccaigs studio" ||
+      client.company !== "mccaigs studio" ||
       client.status !== "internal"
     ) {
       await ctx.db.patch(client._id, {
-        name: "McCaigs Studio",
-        company: "McCaigs Studio",
+        name: "mccaigs studio",
+        company: "mccaigs studio",
         status: "internal",
         updatedAt: now,
       });

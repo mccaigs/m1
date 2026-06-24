@@ -74,7 +74,7 @@ function doPost(e) {
     return jsonResponse_({ ok: true });
   } catch (error) {
     var errorMessage = safeErrorMessage_(error);
-    console.error("McCaigs lead webhook failed: " + errorMessage);
+    console.error("mccaigs lead webhook failed: " + errorMessage);
     return jsonResponse_({
       ok: false,
       error: errorMessage,
@@ -105,7 +105,7 @@ function handleContactEnquiry_(payload) {
 
   appendRow_(sheet, row);
   sendNotificationEmail_(
-    "New McCaigs Contact Enquiry",
+    "New mccaigs Contact Enquiry",
     "A new contact enquiry has been received.",
     payload,
   );
@@ -141,7 +141,7 @@ function handleProjectBuilderSubmission_(payload) {
 
   appendRow_(sheet, row);
   sendNotificationEmail_(
-    "New McCaigs Project Builder Submission",
+    "New mccaigs Project Builder Submission",
     "A new Project Builder submission has been received.",
     payload,
   );
@@ -279,7 +279,7 @@ function sendNotificationEmail_(subject, introduction, payload) {
     to: NOTIFICATION_EMAIL,
     subject: subject,
     body: lines.join("\n"),
-    name: "McCaigs Lead Tracking",
+    name: "mccaigs Lead Tracking",
   });
 }
 

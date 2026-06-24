@@ -198,7 +198,7 @@ function Complexity({ input, update }: ComplexityStepProps) {
 }
 
 function PlanningOutput({ estimate, input, offers, pending, reference, submission, submit }: OutputProps) {
-  const mailSubject = encodeURIComponent(`McCaigs project summary: ${estimate.classification}`);
+  const mailSubject = encodeURIComponent(`mccaigs project summary: ${estimate.classification}`);
   const mailBody = encodeURIComponent(`${estimate.summary}\n\nThis is an indicative planning estimate, not a formal quotation.`);
   const projectShape = getProjectShape(estimate.complexity);
   return (
@@ -223,7 +223,7 @@ function PlanningOutput({ estimate, input, offers, pending, reference, submissio
       <p className="mt-6 rounded-xl border border-signal/25 bg-signal/8 p-4 text-sm leading-6 text-deep-blue">This is an indicative planning estimate, not a formal quotation.</p>
       {submission !== "idle" ? <p className="mt-5 text-sm leading-6 text-ink/65">{submission === "stored" ? `Your qualified enquiry has been stored. Reference: ${reference}` : submission === "error" ? "The enquiry could not be stored just now. Your summary is still ready to download or email, and the contact route remains available." : "The backend is not connected in this preview. Your summary is ready to download or email, and the contact route remains available."}</p> : null}
       <div className="mt-6 flex flex-wrap gap-2">
-        <Button className="bg-deep-blue text-white hover:bg-deep-blue/90 hover:text-white" disabled={pending} onClick={() => void submit()}><Send /> Send enquiry to McCaigs</Button>
+        <Button className="bg-deep-blue text-white hover:bg-deep-blue/90 hover:text-white" disabled={pending} onClick={() => void submit()}><Send /> Send enquiry to mccaigs</Button>
         <Button asChild className="border-deep-blue/16 bg-white/50 text-deep-blue hover:bg-white hover:text-deep-blue" variant="outline"><a href={`mailto:${input.email}?subject=${mailSubject}&body=${mailBody}`}><Mail /> Email summary to me</a></Button>
         <Button className="border-deep-blue/16 bg-white/50 text-deep-blue hover:bg-white hover:text-deep-blue" onClick={() => downloadProjectSummary(estimate)} variant="outline"><Download /> Download PDF summary</Button>
         <Button asChild className="border-deep-blue/16 bg-white/50 text-deep-blue hover:bg-white hover:text-deep-blue" variant="outline"><Link href="/contact">Book initial conversation <ArrowUpRight /></Link></Button>

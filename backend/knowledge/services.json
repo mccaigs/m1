@@ -18,11 +18,11 @@
       "phrases": ["too much time on admin", "repetitive work", "manual administration"],
       "fragments": [
         "Repeated administration is often a sign that the process can be simplified.",
-        "McCaigs can review where information is copied, chased, or moved by hand and design a clearer workflow.",
+        "mccaigs can review where information is copied, chased, or moved by hand and design a clearer workflow.",
         "The aim is less repetitive work and more time for the parts of the business that need people."
       ],
       "cta": { "label": "View services", "href": "/services" },
-      "suggested_questions": ["Could an internal system help?", "What would a first project look like?", "How does McCaigs work?"]
+      "suggested_questions": ["Could an internal system help?", "What would a first project look like?", "How does mccaigs work?"]
     },
     {
       "topic": "business_problem_knowledge",
@@ -77,10 +77,10 @@
       "phrases": ["website and workflow", "improve our website"],
       "fragments": [
         "A good website should contribute to the business rather than simply exist online.",
-        "McCaigs builds websites and digital platforms that explain the business clearly, generate enquiries, support customers, and connect into the day-to-day operation."
+        "mccaigs builds websites and digital platforms that explain the business clearly, generate enquiries, support customers, and connect into the day-to-day operation."
       ],
       "cta": { "label": "Start a project", "href": "/start-project" },
-      "suggested_questions": ["Can you improve our enquiry process?", "What kind of budget should we expect?", "How does McCaigs work?"]
+      "suggested_questions": ["Can you improve our enquiry process?", "What kind of budget should we expect?", "How does mccaigs work?"]
     },
     {
       "topic": "service_controlled_assistants",
@@ -99,7 +99,7 @@
       "keywords": ["saas", "product", "marketplace", "mvp"],
       "phrases": ["build a saas", "build a product", "saas product"],
       "fragments": [
-        "McCaigs builds practical product and SaaS foundations with a deliberate first-release scope.",
+        "mccaigs builds practical product and SaaS foundations with a deliberate first-release scope.",
         "That can include portals, marketplaces, and software-enabled services for established businesses or startups.",
         "The first goal is a maintainable product that can be tested with real users and improved using evidence."
       ],

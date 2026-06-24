@@ -72,12 +72,12 @@ export function SiteFooter() {
           <div className="flex flex-wrap gap-x-5 gap-y-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-muted-foreground/80">
             <span>{siteConfig.legalName}</span>
             <span>Edinburgh, Scotland</span>
-            <span>&copy; {year} McCaigs</span>
-            <span className="normal-case tracking-[0.08em]">McCaigs&reg; is a registered trademark.</span>
+            <span>&copy; {year} mccaigs</span>
+            <span className="normal-case tracking-[0.08em]">mccaigs&reg; is a registered trademark.</span>
           </div>
           <div className="flex shrink-0 gap-2">
-              <a aria-label="McCaigs on LinkedIn" className="flex size-9 items-center justify-center rounded-full border border-white/10 transition-colors hover:border-signal/50 hover:text-foreground focus-visible:border-signal/50 focus-visible:text-foreground" href={siteConfig.linkedIn} rel="noreferrer" target="_blank"><LinkedInMark /></a>
-              <a aria-label="McCaigs on X" className="flex size-9 items-center justify-center rounded-full border border-white/10 transition-colors hover:border-signal/50 hover:text-foreground focus-visible:border-signal/50 focus-visible:text-foreground" href={siteConfig.twitter} rel="noreferrer" target="_blank"><XMark /></a>
+              <a aria-label="mccaigs on LinkedIn" className="flex size-9 items-center justify-center rounded-full border border-white/10 transition-colors hover:border-signal/50 hover:text-foreground focus-visible:border-signal/50 focus-visible:text-foreground" href={siteConfig.linkedIn} rel="noreferrer" target="_blank"><LinkedInMark /></a>
+              <a aria-label="mccaigs on X" className="flex size-9 items-center justify-center rounded-full border border-white/10 transition-colors hover:border-signal/50 hover:text-foreground focus-visible:border-signal/50 focus-visible:text-foreground" href={siteConfig.twitter} rel="noreferrer" target="_blank"><XMark /></a>
           </div>
         </div>
       </div>

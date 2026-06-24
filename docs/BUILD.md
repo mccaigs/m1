@@ -2,7 +2,7 @@
 
 ## Current direction
 
-McCaigs is being repositioned as Scotland's Elite Technical Studio.
+mccaigs is being repositioned as Scotland's Elite Technical Studio.
 
 The build should support a premium public website, a future client portal, and reusable deterministic AI product foundations.
 
@@ -151,10 +151,10 @@ A feature is not complete until it has:
 
 ## Brand asset decisions
 
-- `public/logo.svg` is the single authored McCaigs brand mark. A shared `Logo` component is used by public navigation, mobile navigation, the footer, Studio OS, loading UI, and Assistant branding. The Start a Project workspace relies on the global site header rather than repeating the brand mark inside the workflow.
+- `public/logo.svg` is the single authored mccaigs brand mark. A shared `Logo` component is used by public navigation, mobile navigation, the footer, Studio OS, loading UI, and Assistant branding. The Start a Project workspace relies on the global site header rather than repeating the brand mark inside the workflow.
 - `public/favicon.ico` is served explicitly through root metadata for browser tabs, bookmarks, and search-engine icon discovery. The previous competing App Router favicon has been removed.
 - Apple touch, Open Graph, and Twitter images are generated locally from `public/logo.svg`; no external asset URL is required.
-- The web app manifest uses the local favicon and SVG mark with the McCaigs navy theme colour.
+- The web app manifest uses the local favicon and SVG mark with the mccaigs navy theme colour.
 
 ## Homepage publishing refinement
 
@@ -176,10 +176,10 @@ A feature is not complete until it has:
 
 ## Technical SEO and entity decisions
 
-- `src/lib/seo.ts` is the source of truth for the production origin, public route metadata, factual FAQ answers, and McCaigs entity schema. Production canonicals and social image URLs resolve against `https://mccaigs.com`; preview hosts must not leak into metadata.
+- `src/lib/seo.ts` is the source of truth for the production origin, public route metadata, factual FAQ answers, and mccaigs entity schema. Production canonicals and social image URLs resolve against `https://www.mccaigs.com`; preview hosts must not leak into metadata.
 - Every public route exports specific metadata through the shared helper. `/app`, `/sign-in`, and `/sign-up` explicitly opt out of indexing.
 - `robots.txt` and `sitemap.xml` are generated through App Router metadata routes. The sitemap contains the public route inventory and describes the homepage product reel as a local video asset.
-- Root JSON-LD identifies McCaigs, `MCCAIGS GROUP LTD`, Edinburgh, the LinkedIn and X profiles, the website SearchAction, and the six approved service areas. The SearchAction opens the deterministic Assistant with a prefilled question and never invokes an unrestricted model.
+- Root JSON-LD identifies mccaigs, `mccaigs GROUP LTD`, Edinburgh, the LinkedIn and X profiles, the website SearchAction, and the six approved service areas. The SearchAction opens the deterministic Assistant with a prefilled question and never invokes an unrestricted model.
 - The homepage FAQ is visible editorial content backed by the same factual data as its FAQPage JSON-LD. Answers remain concise and do not make invented client, scale, or performance claims.
 - The footer is a restrained studio directory: public routes, technologies, company access, social profiles, legal entity name, and Edinburgh location. It reinforces trust without adding a logo strip or changing the locked visual system.
 
@@ -187,7 +187,7 @@ A feature is not complete until it has:
 
 - `src/content/insights/` is the only source of truth for editorial posts. Each note is one `.mdx` file with reviewed frontmatter and content; there is no CMS, database, admin surface, or competing article model.
 - `src/lib/insights.ts` reads local files during server rendering and static generation. Public routes expose only `published` notes, sort newest first, derive reading time when it is omitted, tolerate incomplete private drafts, and throw during a build when published metadata is incomplete or inconsistent.
-- `/insights/[slug]` uses App Router static params and server-side MDX compilation. MDX remains content-only and receives owned McCaigs components rather than a generic typography layer.
+- `/insights/[slug]` uses App Router static params and server-side MDX compilation. MDX remains content-only and receives owned mccaigs components rather than a generic typography layer.
 - Article metadata includes production canonicals, article-specific Open Graph and Twitter cards, tags, publication dates, and Article JSON-LD. Published note URLs are appended to the generated sitemap.
 - `docs/INSIGHTS.md` is the publishing runbook for editors and coding assistants. `pnpm validate:insights` provides a quick local publish gate before lint and the full production build.
 
@@ -218,5 +218,5 @@ A feature is not complete until it has:
 - The Studio OS routes are `/app`, `/app/leads`, `/app/clients`, `/app/projects`, `/app/projects/[projectId]`, `/app/tasks`, `/app/activity`, and `/app/settings`.
 - Lead records can be converted into clients, used to seed a project, or assigned to an existing project. These actions create explicit `leadAssignments` records.
 - Existing project fields remain compatible with the earlier schema while new mutations enforce the Studio OS project shape.
-- `studioSeed.seedStudioData` is an owner-only, idempotent Studio OS bootstrap mutation. It creates or repairs the internal `McCaigs Studio` client, six initial portfolio projects, one internal creation update per project, and stable `studioSeed` assignment records keyed by project slug.
+- `studioSeed.seedStudioData` is an owner-only, idempotent Studio OS bootstrap mutation. It creates or repairs the internal `mccaigs Studio` client, six initial portfolio projects, one internal creation update per project, and stable `studioSeed` assignment records keyed by project slug.
 - The owner Settings screen exposes the seed action under Developer Tools and reports created versus existing records after each run.

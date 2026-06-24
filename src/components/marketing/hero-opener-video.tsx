@@ -55,7 +55,7 @@ export function HeroOpenerVideo() {
       ref={containerRef}
     >
       <Image
-        alt="McCaigs team working in the Edinburgh studio"
+        alt="mccaigs team working in the Edinburgh studio"
         className="rounded-xl object-cover"
         fill
         fetchPriority="high"
@@ -65,7 +65,7 @@ export function HeroOpenerVideo() {
       />
       {loadVideo ? (
         <video
-          aria-label="McCaigs studio opener"
+          aria-label="mccaigs studio opener"
           autoPlay
           className={`absolute inset-0 h-full w-full rounded-xl object-cover transition-opacity duration-500 ${
             canPlay ? "opacity-100" : "opacity-0"

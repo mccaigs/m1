@@ -1,8 +1,8 @@
-# McCaigs Insights And Blog Publishing Workflow
+# mccaigs Insights And Blog Publishing Workflow
 
 ## One Source Of Truth
 
-McCaigs article bodies use static MDX files only.
+mccaigs article bodies use static MDX files only.
 
 The single source of truth is:
 
@@ -74,7 +74,7 @@ seoTitle: ""
 seoDescription: ""
 status: "draft"
 coverImage: ""
-author: "McCaigs"
+author: "mccaigs"
 readingTime: ""
 ---
 ```
@@ -152,7 +152,7 @@ return no article body even though Convex metadata is already synced.
 
 ## Codex Instructions
 
-When creating a new McCaigs Insight:
+When creating a new mccaigs Insight:
 
 1. Create one new `.mdx` file in `src/content/insights/`.
 2. Use a lowercase kebab-case filename matching the slug.
