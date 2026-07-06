@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogPosts } from "@/lib/blog-convex";
 import { getPublishedInsights } from "@/lib/insights";
-import { absoluteUrl, publicRoutes, socialImageUrl } from "@/lib/seo";
+import { absoluteUrl, publicRoutes, publicTextAssets, socialImageUrl } from "@/lib/seo";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
@@ -26,6 +26,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...publicPages,
+    ...publicTextAssets.map(({ changeFrequency, path, priority }) => ({
+      changeFrequency,
+      lastModified,
+      priority,
+      url: absoluteUrl(path),
+    })),
     ...insightPosts.map((post) => ({
       changeFrequency: "monthly" as const,
       lastModified: new Date(post.updatedAt ?? post.publishedAt),

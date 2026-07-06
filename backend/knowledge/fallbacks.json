@@ -1,8 +1,8 @@
 {
   "starting_prompts": [
     "What does mccaigs do?",
-    "Can AI help my business?",
-    "We spend too much time on admin",
+    "What is Answer Engine Optimisation?",
+    "How visible are we in AI search?",
     "What kind of budget should we expect?"
   ],
   "default_suggested_questions": [
@@ -24,6 +24,13 @@
     ]
   },
   "closest_routes": [
+    {
+      "topic": "closest_ai_visibility",
+      "keywords": ["aeo", "answer engine", "ai visibility", "ai search", "chatgpt", "gemini", "claude", "perplexity", "google ai", "ai overviews", "llms.txt", "llms-full.txt", "ai readiness"],
+      "fragments": ["This sounds closest to the studio's Answer Engine Optimisation and AI Visibility work."],
+      "cta": { "label": "View AI Visibility", "href": "/ai-visibility" },
+      "suggested_questions": ["What is Answer Engine Optimisation?", "What is an AI Visibility Report?", "Can mccaigs guarantee AI recommendations?"]
+    },
     {
       "topic": "closest_services",
       "keywords": ["website", "automation", "workflow", "assistant", "internal tool", "internal system", "software", "portal", "saas", "product"],

@@ -26,9 +26,30 @@ export const publicRoutes = [
   { changeFrequency: "monthly", description: "Contact mccaigs in Edinburgh to discuss a practical AI, automation, website, internal software, or digital product project.", path: "/contact", priority: 0.8, title: "Contact" },
   { changeFrequency: "monthly", description: "Scope a mccaigs project through a structured discovery workflow and receive an indicative planning estimate.", path: "/start-project", priority: 0.8, title: "Start a Project" },
   { changeFrequency: "monthly", description: "mccaigs is a Scottish technical studio founded by David Robertson, building practical AI systems, automation, websites, internal tools, and digital products for startups, SMEs, and organisations.", path: "/about", priority: 0.85, title: "About" },
+  { changeFrequency: "monthly", description: "Answer Engine Optimisation services from mccaigs: technical SEO, structured data, entity clarity, llms.txt, AI-readable content, and deterministic assistants.", path: "/answer-engine-optimisation", priority: 0.86, title: "Answer Engine Optimisation" },
+  { changeFrequency: "monthly", description: "Scottish Answer Engine Optimisation services for businesses that want clearer AI visibility across ChatGPT, Google AI, Gemini, and modern search.", path: "/answer-engine-optimisation-scotland", priority: 0.82, title: "Answer Engine Optimisation Scotland" },
+  { changeFrequency: "monthly", description: "UK Answer Engine Optimisation services that help businesses prepare for AI search, answer engines, structured data, and AI-readable websites.", path: "/answer-engine-optimisation-uk", priority: 0.82, title: "Answer Engine Optimisation UK" },
+  { changeFrequency: "monthly", description: "AI Search Optimisation from mccaigs for businesses preparing their websites for ChatGPT, Gemini, Google AI, and modern answer engines.", path: "/ai-search-optimisation", priority: 0.82, title: "AI Search Optimisation" },
+  { changeFrequency: "monthly", description: "AI Visibility services from mccaigs, including readiness checks, ChatGPT and Gemini prompt testing, structured data, llms.txt, and practical reporting.", path: "/ai-visibility", priority: 0.84, title: "AI Visibility" },
+  { changeFrequency: "monthly", description: "ChatGPT SEO services from mccaigs: prepare your website, entity signals, service pages, FAQs, and llms.txt for AI-assisted recommendations.", path: "/chatgpt-seo", priority: 0.8, title: "ChatGPT SEO" },
+  { changeFrequency: "monthly", description: "Google AI Overviews readiness from mccaigs: practical technical SEO, structured content, schema, FAQs, and crawlable AI-ready website improvements.", path: "/google-ai-overviews", priority: 0.8, title: "Google AI Overviews Readiness" },
+  { changeFrequency: "monthly", description: "llms.txt planning and implementation from mccaigs, with concise AI-readable summaries, key pages, services, and deterministic assistant context.", path: "/llms-txt", priority: 0.78, title: "llms.txt" },
+  { changeFrequency: "monthly", description: "AI-ready websites from mccaigs: fast, structured, crawlable sites with clear services, schema, llms.txt, and deterministic assistant options.", path: "/ai-ready-websites", priority: 0.82, title: "AI-ready Websites" },
+  { changeFrequency: "monthly", description: "A practical guide from mccaigs on preparing your website for Google AI: technical SEO, structured content, schema, FAQs, and crawlability.", path: "/how-to-appear-in-google-ai", priority: 0.76, title: "How to Appear in Google AI" },
+  { changeFrequency: "monthly", description: "A practical guide from mccaigs on improving the signals that may help ChatGPT understand, compare, and cite your business.", path: "/how-to-get-recommended-by-chatgpt", priority: 0.76, title: "How to Get Recommended by ChatGPT" },
+  { changeFrequency: "monthly", description: "How mccaigs built its own AI Visibility system using AEO pages, llms files, public assistant knowledge, schema, sitemap coverage, and deterministic assistant answers.", path: "/ai-visibility-case-study", priority: 0.8, title: "AI Visibility Case Study" },
 ] as const;
 
 export type PublicRoute = (typeof publicRoutes)[number]["path"];
+
+export const publicTextAssets = [
+  { changeFrequency: "monthly", path: "/llms.txt", priority: 0.5 },
+  { changeFrequency: "monthly", path: "/llms-full.txt", priority: 0.5 },
+  { changeFrequency: "monthly", path: "/assistant-knowledge.json", priority: 0.55 },
+  { changeFrequency: "monthly", path: "/assistant-knowledge.md", priority: 0.55 },
+  { changeFrequency: "monthly", path: "/ai-knowledge.json", priority: 0.5 },
+  { changeFrequency: "monthly", path: "/ai-knowledge.md", priority: 0.5 },
+] as const;
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
@@ -40,7 +61,7 @@ export function createPageMetadata({
   title,
 }: {
   description: string;
-  path: PublicRoute;
+  path: string;
   title: string;
 }): Metadata {
   const url = absoluteUrl(path);
@@ -151,6 +172,7 @@ export const frequentlyAskedQuestions = [
 
 const services = [
   ["AI Systems", "Controlled AI assistants, AI-assisted workflows, research systems, and data-backed decision tools."],
+  ["Answer Engine Optimisation & AI Visibility", "Technical SEO, structured data, entity clarity, llms.txt, AI-readable websites, and AI visibility reporting."],
   ["Business Automation", "Practical automation for enquiries, administration, documents, routing, approvals, and reporting."],
   ["Startup Product Development", "Credible first-release foundations for SaaS products, portals, marketplaces, and software-enabled services."],
   ["Internal Platforms", "Calm internal tools and operational platforms designed around the real work of a team."],
@@ -176,6 +198,25 @@ export const rootStructuredData = {
       logo: absoluteUrl("/logo.svg"),
       name: siteConfig.name,
       alternateName: "mccaigs studio",
+      knowsAbout: [
+        "Answer Engine Optimisation",
+        "AI Search Optimisation",
+        "AI Visibility",
+        "AI-ready websites",
+        "Deterministic AI assistants",
+        "AI chatbots for business",
+        "Google AI Overviews readiness",
+        "ChatGPT SEO",
+        "Gemini discoverability",
+        "Claude discoverability",
+        "Perplexity discoverability",
+        "AI Visibility Report",
+        "AEO Audit",
+        "AEO Implementation",
+        "AI Visibility Management",
+        "Scottish AI studio",
+        "UK AI software studio",
+      ],
       founder: {
         "@id": `${siteUrl}/about#david-robertson`,
         "@type": "Person",
@@ -199,6 +240,25 @@ export const rootStructuredData = {
       ],
       description:
         siteConfig.description,
+      knowsAbout: [
+        "Answer Engine Optimisation",
+        "AI Search Optimisation",
+        "AI Visibility",
+        "AI-ready websites",
+        "Deterministic AI assistants",
+        "AI chatbots for business",
+        "Google AI Overviews readiness",
+        "ChatGPT SEO",
+        "Gemini discoverability",
+        "Claude discoverability",
+        "Perplexity discoverability",
+        "AI Visibility Report",
+        "AEO Audit",
+        "AEO Implementation",
+        "AI Visibility Management",
+        "Scottish AI studio",
+        "UK AI software studio",
+      ],
       image: socialImageUrl,
       founder: {
         "@id": `${siteUrl}/about#david-robertson`,

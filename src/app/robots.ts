@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     host: siteUrl,
     rules: {
-      allow: "/",
+      allow: ["/", "/llms.txt", "/llms-full.txt", "/assistant-knowledge.json", "/assistant-knowledge.md", "/ai-knowledge.json", "/ai-knowledge.md"],
       disallow: [
         "/api",
         "/api/",

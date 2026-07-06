@@ -1,0 +1,160 @@
+{
+  "topics": [
+    {
+      "topic": "answer_engine_optimisation",
+      "priority": 14,
+      "keywords": ["answer engine optimisation", "answer engine optimization", "aeo", "answer engines", "ai answers", "ai recommendations"],
+      "phrases": ["what is answer engine optimisation", "what is aeo", "do you do aeo", "answer engine optimisation service", "answer engine optimization service"],
+      "fragments": [
+        "Answer Engine Optimisation helps modern AI systems understand what a business does, who it serves, why it is credible, and when it may be a relevant recommendation.",
+        "Traditional SEO helps people find a website. AEO helps answer engines understand, summarise, cite, and compare the business more accurately.",
+        "mccaigs approaches AEO through technical SEO, structured data, entity clarity, FAQ coverage, internal linking, llms.txt, public assistant knowledge, and fast AI-ready websites."
+      ],
+      "cta": { "label": "View AEO", "href": "/answer-engine-optimisation" },
+      "suggested_questions": ["What is included in an AEO Audit?", "How is AI Visibility different from SEO?", "Can mccaigs guarantee AI recommendations?"]
+    },
+    {
+      "topic": "ai_visibility",
+      "priority": 14,
+      "keywords": ["ai visibility", "ai visibility management", "ai discoverability", "answer visibility", "ai citations", "ai readiness"],
+      "phrases": ["what is ai visibility", "ai visibility management", "how visible are we in ai", "can ai systems find us"],
+      "fragments": [
+        "AI Visibility is the practical work of checking whether a business is easy for AI systems and answer engines to understand.",
+        "mccaigs looks at entity clarity, service pages, structured data, FAQs, internal links, crawlability, llms files, and what tools such as ChatGPT, Gemini, Claude, Perplexity, and Google AI appear to understand from public material.",
+        "The output is not a promise of inclusion. It is a clearer view of what is working, what is missing, and what should be improved next."
+      ],
+      "cta": { "label": "View AI Visibility", "href": "/ai-visibility" },
+      "suggested_questions": ["What is an AI Visibility Report?", "Can ChatGPT recommend my business?", "How did mccaigs build its own AI visibility?"]
+    },
+    {
+      "topic": "ai_search_optimisation",
+      "priority": 13,
+      "keywords": ["ai search optimisation", "ai search optimization", "ai search", "ai seo", "search generative experience", "answer search"],
+      "phrases": ["what is ai search optimisation", "prepare for ai search", "get ready for ai search", "ai search readiness"],
+      "fragments": [
+        "AI Search Optimisation makes a website clearer for AI-assisted search systems by improving the public source material those systems may read.",
+        "Useful work includes clear service architecture, precise metadata, structured data, crawlable FAQs, internal links, public knowledge files, and pages that answer real buyer questions.",
+        "The aim is to reduce ambiguity so AI systems have a better chance of understanding the business accurately."
+      ],
+      "cta": { "label": "View AI Search Optimisation", "href": "/ai-search-optimisation" },
+      "suggested_questions": ["How does AI search work?", "What pages should we improve first?", "What is llms.txt for?"]
+    },
+    {
+      "topic": "chatgpt_seo",
+      "priority": 13,
+      "keywords": ["chatgpt seo", "chatgpt", "recommended by chatgpt", "chatgpt visibility", "chatgpt recommendation"],
+      "phrases": ["how to get recommended by chatgpt", "can chatgpt recommend my business", "chatgpt seo service", "show up in chatgpt"],
+      "fragments": [
+        "ChatGPT SEO is a shorthand for improving the public signals that may help ChatGPT understand a business.",
+        "mccaigs cannot guarantee that ChatGPT will recommend, cite, rank, or include a business. No responsible provider can promise that.",
+        "The practical work is to make the business easier to understand, verify, and cite through service pages, structured data, FAQs, public knowledge files, llms.txt, and consistent entity signals."
+      ],
+      "cta": { "label": "View ChatGPT SEO", "href": "/chatgpt-seo" },
+      "suggested_questions": ["Can mccaigs guarantee ChatGPT recommendations?", "What is public assistant knowledge?", "How do we start an AEO Audit?"]
+    },
+    {
+      "topic": "google_ai_overviews",
+      "priority": 13,
+      "keywords": ["google ai overviews", "google ai", "ai overview", "google ai readiness", "appear in google ai"],
+      "phrases": ["how to appear in google ai", "google ai overviews readiness", "can you get us in ai overviews", "google ai overview inclusion"],
+      "fragments": [
+        "Google AI Overviews readiness means preparing the website so Google and AI-assisted search systems can understand important pages clearly.",
+        "mccaigs cannot guarantee inclusion in Google AI Overviews, AI answers, or search rankings.",
+        "The responsible approach is to improve crawlability, metadata, structured content, schema, service clarity, FAQs, internal links, and public source material."
+      ],
+      "cta": { "label": "View Google AI Overviews readiness", "href": "/google-ai-overviews" },
+      "suggested_questions": ["Can you guarantee Google AI inclusion?", "What should we avoid?", "What is structured data for?"]
+    },
+    {
+      "topic": "gemini_claude_perplexity_discoverability",
+      "priority": 12,
+      "keywords": ["gemini", "claude", "perplexity", "discoverability", "ai crawler", "ai tools", "ai assistants"],
+      "phrases": ["gemini discoverability", "claude discoverability", "perplexity discoverability", "show up in gemini", "show up in claude", "show up in perplexity"],
+      "fragments": [
+        "Different AI systems may use different sources, retrieval methods, search partners, and model behaviour.",
+        "mccaigs cannot guarantee inclusion or rankings in Gemini, Claude, Perplexity, ChatGPT, Google AI, or AI Overviews.",
+        "The useful work is to publish clearer public source material: service pages, schema, FAQs, sitemap coverage, llms files, public assistant knowledge, and consistent entity descriptions."
+      ],
+      "cta": { "label": "View AI Visibility", "href": "/ai-visibility" },
+      "suggested_questions": ["What is AI Visibility Management?", "What should public knowledge files include?", "How did mccaigs build its own AI visibility?"]
+    },
+    {
+      "topic": "llms_files",
+      "priority": 13,
+      "keywords": ["llms.txt", "llms-full.txt", "llms file", "public ai knowledge", "assistant knowledge", "ai knowledge json", "ai knowledge markdown"],
+      "phrases": ["what is llms.txt", "what is llms full", "do we need llms.txt", "public assistant knowledge", "assistant knowledge json"],
+      "fragments": [
+        "llms.txt is a concise AI-readable guide to the website. llms-full.txt provides a fuller knowledge summary.",
+        "mccaigs also publishes safe public assistant knowledge as JSON and Markdown so visitors, crawlers, and answer engines have a preferred factual source.",
+        "These files are useful signals, but they are only one part of AI visibility. They work best alongside clear pages, schema, FAQs, internal links, sitemap coverage, and accurate service copy."
+      ],
+      "cta": { "label": "View llms.txt guide", "href": "/llms-txt" },
+      "suggested_questions": ["Why is llms.txt only one piece?", "What is public assistant knowledge?", "Can you implement this for our site?"]
+    },
+    {
+      "topic": "ai_visibility_report",
+      "priority": 13,
+      "keywords": ["ai visibility report", "ai readiness score", "visibility score", "entity clarity", "structured data coverage", "faq coverage", "prompt checks"],
+      "phrases": ["what is an ai visibility report", "ai readiness score", "monthly ai visibility testing", "visibility report"],
+      "fragments": [
+        "An AI Visibility Report is a practical review of how clearly a business can be understood by answer engines.",
+        "Example metrics include Overall AI Readiness Score, entity clarity, structured data coverage, FAQ coverage, AI crawlability, llms.txt presence, ChatGPT visibility, Gemini visibility, Google AI visibility, and recommended next actions.",
+        "The report is evidence for improvement. It is not a guarantee of inclusion, rankings, or recommendations."
+      ],
+      "cta": { "label": "View AI Visibility", "href": "/ai-visibility" },
+      "suggested_questions": ["What is included in AI Visibility Management?", "What does an AEO Audit include?", "How often should we test visibility?"]
+    },
+    {
+      "topic": "aeo_audit",
+      "priority": 13,
+      "keywords": ["aeo audit", "answer engine audit", "ai visibility check", "technical seo review", "entity signals review"],
+      "phrases": ["what is included in an aeo audit", "aeo audit price", "ai visibility check", "audit our ai visibility"],
+      "fragments": [
+        "The AEO Audit is a focused review of how ready the website is for AI search and answer engines.",
+        "It includes an AI visibility check, technical SEO review, structured data review, entity signals review, llms.txt review, and recommendations report.",
+        "Pricing guidance starts from GBP 299."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["What happens after an AEO Audit?", "What is AEO Implementation?", "Can you review our llms.txt?"]
+    },
+    {
+      "topic": "aeo_implementation",
+      "priority": 13,
+      "keywords": ["aeo implementation", "implement aeo", "schema improvements", "metadata improvements", "faq structure", "internal linking"],
+      "phrases": ["what is aeo implementation", "implement ai visibility", "add llms.txt", "improve schema for ai"],
+      "fragments": [
+        "AEO Implementation turns the audit into practical website changes.",
+        "It can include llms.txt and llms-full.txt, metadata improvements, schema improvements, FAQ structure, internal linking, AI-readable service copy, sitemap checks, and crawl checks.",
+        "Pricing guidance starts from GBP 799."
+      ],
+      "cta": { "label": "Start a project", "href": "/start-project" },
+      "suggested_questions": ["Do you guarantee AI inclusion?", "What is AI Visibility Management?", "What pages should we connect?"]
+    },
+    {
+      "topic": "ai_visibility_management",
+      "priority": 13,
+      "keywords": ["ai visibility management", "monthly ai visibility", "prompt checks", "content recommendations", "visibility monitoring"],
+      "phrases": ["what is ai visibility management", "monthly ai visibility testing", "track ai visibility", "monitor chatgpt visibility"],
+      "fragments": [
+        "AI Visibility Management is ongoing review and improvement of the public signals answer engines may use.",
+        "It can include monthly AI visibility testing, ChatGPT, Gemini, and Google AI prompt checks, content recommendations, schema and content updates, and a visibility report.",
+        "Pricing guidance starts from GBP 99 per month. It improves the source material and monitoring process, but it does not guarantee inclusion or rankings."
+      ],
+      "cta": { "label": "View AI Visibility", "href": "/ai-visibility" },
+      "suggested_questions": ["What does the monthly report include?", "Can you test Gemini and ChatGPT?", "How did mccaigs build its own AI visibility?"]
+    },
+    {
+      "topic": "mccaigs_ai_visibility_case_study",
+      "priority": 12,
+      "keywords": ["ai visibility case study", "mccaigs ai visibility", "own ai visibility", "case study", "how mccaigs built"],
+      "phrases": ["how mccaigs built its own ai visibility", "ai visibility case study", "mccaigs case study"],
+      "fragments": [
+        "mccaigs built its own AI Visibility system using static public signals rather than runtime AI calls.",
+        "The system connects AEO pages, llms.txt, llms-full.txt, public assistant knowledge, schema, sitemap coverage, footer discovery, internal links, and deterministic assistant answers.",
+        "The case study shows the method and boundaries: improve clarity and crawlability, but do not promise inclusion, rankings, or recommendations."
+      ],
+      "cta": { "label": "View case study", "href": "/ai-visibility-case-study" },
+      "suggested_questions": ["Can you build this for our business?", "What public knowledge files do we need?", "What is the first step?"]
+    }
+  ]
+}

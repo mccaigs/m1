@@ -79,9 +79,9 @@ export const assistantTopics: readonly AssistantTopic[] = [
   {
     id: "audits",
     label: "Technical audits",
-    keywords: ["audit", "review", "architecture", "technical review", "assessment"],
+    keywords: ["audit", "review", "architecture", "technical review", "assessment", "aeo audit", "ai visibility check"],
     answer:
-      "A technical review or AI audit looks at the website, workflows, tools, data, and opportunities before more money is committed. It produces a practical diagnosis and a prioritised route forward.",
+      "A technical review, AI audit, or AEO Audit looks at the website, workflows, tools, data, entity signals, structured data, and AI visibility before more money is committed. It produces a practical diagnosis and a prioritised route forward.",
   },
   {
     id: "websites",
@@ -89,6 +89,34 @@ export const assistantTopics: readonly AssistantTopic[] = [
     keywords: ["website", "websites", "web platform", "digital platform", "site"],
     answer:
       "mccaigs builds premium websites and digital platforms that explain the business clearly, generate enquiries, support customers, and connect into the workflows behind them.",
+  },
+  {
+    id: "answer-engine-optimisation",
+    label: "Answer Engine Optimisation",
+    keywords: ["answer engine optimisation", "answer engine optimization", "aeo", "answer engines", "ai answers", "ai recommendations"],
+    answer:
+      "Answer Engine Optimisation helps AI systems understand what a business does, who it serves, why it is credible, and when it may be a relevant recommendation. mccaigs combines technical SEO, structured data, entity clarity, FAQs, internal links, llms.txt, public assistant knowledge, and AI-ready websites.",
+  },
+  {
+    id: "ai-visibility",
+    label: "AI Visibility",
+    keywords: ["ai visibility", "ai search optimisation", "ai search optimization", "ai discoverability", "chatgpt seo", "gemini", "claude", "perplexity", "google ai"],
+    answer:
+      "AI Visibility checks whether a business is easy for answer engines such as ChatGPT, Gemini, Claude, Perplexity, and Google AI to understand from public material. mccaigs can improve the source signals, but cannot guarantee inclusion, rankings, citations, or recommendations.",
+  },
+  {
+    id: "llms-files",
+    label: "llms.txt and public AI knowledge",
+    keywords: ["llms.txt", "llms-full.txt", "public ai knowledge", "assistant knowledge", "ai knowledge json", "ai knowledge markdown"],
+    answer:
+      "llms.txt, llms-full.txt, and public assistant knowledge files give visitors, crawlers, and answer engines clearer approved source material. They are useful, but only one part of AI visibility alongside schema, FAQs, internal links, crawlability, and clear service pages.",
+  },
+  {
+    id: "ai-visibility-report",
+    label: "AI Visibility Report",
+    keywords: ["ai visibility report", "ai readiness score", "visibility score", "prompt checks", "aeo implementation", "ai visibility management"],
+    answer:
+      "An AI Visibility Report can review entity clarity, structured data coverage, FAQ coverage, AI crawlability, llms.txt presence, ChatGPT visibility, Gemini visibility, Google AI visibility, and recommended next actions. It is evidence for improvement, not a guarantee of inclusion.",
   },
 ] as const;
 

@@ -5,6 +5,8 @@ import { siteConfig } from "@/lib/seo";
 const navigation = [
   ["Studio", "/studio"],
   ["Services", "/services"],
+  ["AI Visibility", "/ai-visibility"],
+  ["AEO", "/answer-engine-optimisation"],
   ["Systems", "/systems"],
   ["Process", "/process"],
   ["Assistant", "/assistant"],
@@ -13,6 +15,16 @@ const navigation = [
 ] as const;
 
 const technologies = ["OpenAI", "Anthropic", "Google AI", "Convex", "Clerk", "Vercel", "Next.js", "TypeScript"] as const;
+
+const aiVisibilityLinks = [
+  ["Answer Engine Optimisation", "/answer-engine-optimisation"],
+  ["AI Search Optimisation", "/ai-search-optimisation"],
+  ["ChatGPT SEO", "/chatgpt-seo"],
+  ["Google AI Overviews", "/google-ai-overviews"],
+  ["Case study", "/ai-visibility-case-study"],
+  ["llms.txt", "/llms-txt"],
+  ["AI knowledge", "/assistant-knowledge.md"],
+] as const;
 
 function XMark() {
   return (
@@ -36,7 +48,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-white/8 bg-background">
       <div className="mx-auto max-w-7xl px-5 py-6 text-sm text-muted-foreground sm:px-8 sm:py-7">
-        <div className="grid gap-5 border-b border-white/8 pb-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-[1.35fr_0.9fr_1fr_0.65fr]">
+        <div className="grid gap-5 border-b border-white/8 pb-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-[1.2fr_0.9fr_1fr_1fr_0.65fr]">
           <div>
             <Logo className="text-foreground" size="sm" />
             <p className="mt-2.5 max-w-sm text-xs leading-5">Scotland&apos;s Elite Technical Studio. Practical AI, automation, websites, internal systems, and digital products built properly.</p>
@@ -58,6 +70,14 @@ export function SiteFooter() {
               ))}
             </div>
           </div>
+          <nav aria-label="AI Visibility navigation">
+            <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-signal">AI Visibility</p>
+            <div className="mt-2.5 flex flex-col">
+              {aiVisibilityLinks.map(([label, href]) => (
+                <Link className="inline-flex min-h-7 items-center text-xs transition-colors hover:text-foreground focus-visible:text-foreground" href={href} key={href}>{label}</Link>
+              ))}
+            </div>
+          </nav>
           <div>
             <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-signal">Company</p>
             <div className="mt-2.5 flex flex-col">

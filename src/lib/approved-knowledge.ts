@@ -1,4 +1,5 @@
 import budgetsKnowledge from "../../backend/knowledge/budgets.json";
+import aiVisibilityKnowledge from "../../backend/knowledge/ai-visibility.json";
 import businessQuestionsKnowledge from "../../backend/knowledge/business-questions.json";
 import companyFaqKnowledge from "../../backend/knowledge/company-faq.json";
 import fallbacksKnowledge from "../../backend/knowledge/fallbacks.json";
@@ -58,6 +59,7 @@ type CompanyFaqEntry = {
 const SEARCH_STOP_WORDS = new Set(["the", "and", "for", "what", "who", "how", "does", "did", "can", "you", "about", "tell"]);
 
 const topicKnowledge = [
+  aiVisibilityKnowledge,
   budgetsKnowledge,
   businessQuestionsKnowledge,
   mccaigsKnowledge,
