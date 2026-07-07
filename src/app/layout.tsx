@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { JsonLd } from "@/components/seo/json-ld";
 import { rootStructuredData, siteConfig, siteUrl, socialImageUrl } from "@/lib/seo";
 import "./globals.css";
-
-const gaMeasurementId = "G-R79M92ZJ07";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -93,19 +91,7 @@ export default function RootLayout({
         <JsonLd data={rootStructuredData} />
         {children}
       </body>
-      <Script
-        id="google-analytics"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${gaMeasurementId}');
-        `}
-      </Script>
+      <GoogleAnalytics />
     </html>
   );
 }
