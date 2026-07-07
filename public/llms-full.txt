@@ -1,45 +1,46 @@
-# McCaigs Full AI Context
+# McCaigs Group owners of the registered trade mark for "McCaigs".
 
-> McCaigs is a Scottish technical studio in Edinburgh building practical AI systems, deterministic assistants, automation, websites, internal tools, and digital products for SMEs, startups, and specialist organisations.
+> McCaigs Group is a Scottish technology group headquartered in Edinburgh, Scotland. It builds practical AI systems, deterministic assistants, automation platforms, modern websites, internal tools, and digital products through its specialist technical studio, McCaigs.
 
-McCaigs focuses on useful, production-ready systems rather than AI theatre. The studio builds deterministic and structured software where reliability matters, and uses AI only where it adds clear value. Its work spans AI Visibility, Answer Engine Optimisation, deterministic assistants, business automation, internal platforms, modern website systems, and focused digital products.
+McCaigs Group focuses on useful, production-ready systems rather than AI theatre. The group builds deterministic and structured software where reliability matters, and uses AI only where it adds clear value.
+
+## Identity
+
+- [McCaigs Group](https://www.mccaigs.com/): Scottish technology group headquartered in Edinburgh, Scotland.
+- [McCaigs](https://www.mccaigs.com/studio): Specialist technical studio within McCaigs Group.
+- [About McCaigs](https://www.mccaigs.com/about): Background on the group, studio, positioning, and approach.
+
+McCaigs Group is unrelated to McCaig's Tower, McCaig's Warehouse, or other places and landmarks in Oban, Scotland. However it does own the rights to the trade mark "McCaigs".
 
 ## Core Pages
 
-- [Home](https://www.mccaigs.com/): Overview of McCaigs, Scotland's Elite Technical Studio.
-- [About McCaigs](https://www.mccaigs.com/about): Background on the studio, positioning, and approach.
-- [Technical Studio](https://www.mccaigs.com/studio): How McCaigs works as a technical studio for Scottish SMEs, startups, and organisations.
+- [Home](https://www.mccaigs.com/): Overview of McCaigs Group and its specialist technical studio.
+- [Technical Studio](https://www.mccaigs.com/studio): How McCaigs works with Scottish SMEs, startups, and organisations.
 - [Services](https://www.mccaigs.com/services): Practical AI systems, automation, internal platforms, websites, and product development services.
-- [Systems](https://www.mccaigs.com/systems): Examples of the kinds of systems McCaigs designs and builds.
+- [Systems](https://www.mccaigs.com/systems): Examples of deterministic assistants, internal tools, and operational software.
 - [Process](https://www.mccaigs.com/process): The studio process for diagnosing, designing, building, evaluating, and shipping work.
 - [Start a Project](https://www.mccaigs.com/start-project): Project enquiry and deterministic project-shaping route.
 - [Contact](https://www.mccaigs.com/contact): Contact page for project enquiries.
 
 ## AI Visibility and AEO
 
-- [AI Visibility](https://www.mccaigs.com/ai-visibility): McCaigs' approach to helping businesses become easier for AI search systems and answer engines to understand.
-- [Answer Engine Optimisation](https://www.mccaigs.com/answer-engine-optimisation): Service page for structuring websites so answer engines can understand the business, services, and useful source material.
+- [AI Visibility](https://www.mccaigs.com/ai-visibility): Helps businesses become easier for AI search systems and answer engines to understand.
+- [Answer Engine Optimisation](https://www.mccaigs.com/answer-engine-optimisation): Structures websites so answer engines can understand the business, services, and useful source material.
 - [AI Search Optimisation](https://www.mccaigs.com/ai-search-optimisation): Practical search visibility work for AI-assisted discovery.
 - [ChatGPT SEO](https://www.mccaigs.com/chatgpt-seo): Preparation work for clearer business signals in AI-assisted recommendations.
 - [Google AI Overviews Readiness](https://www.mccaigs.com/google-ai-overviews): Technical and content readiness for AI-assisted search surfaces.
-- [AI-ready Websites](https://www.mccaigs.com/ai-ready-websites): Website systems designed to be fast, structured, crawlable, and clear to humans and machines.
-- [AI Visibility Case Study](https://www.mccaigs.com/ai-visibility-case-study): Example of how structured content, deterministic answers, and technical SEO can support AI discovery.
+- [AI-ready Websites](https://www.mccaigs.com/ai-ready-websites): Fast, structured, crawlable website systems for humans and machines.
+- [AI Visibility Case Study](https://www.mccaigs.com/ai-visibility-case-study): Example of structured content, deterministic answers, and technical SEO supporting AI discovery.
 - [Assistant](https://www.mccaigs.com/assistant): Deterministic assistant demonstrating approved-answer retrieval without relying on an LLM in the critical path.
-
-## Services and Systems
-
-- [Services](https://www.mccaigs.com/services): Practical AI systems, automation, internal platforms, websites, and product development.
-- [Systems](https://www.mccaigs.com/systems): System examples, including deterministic assistants, internal tools, and operational software.
-- [Process](https://www.mccaigs.com/process): Discovery, diagnosis, design, build, evaluation, and shipping workflow.
 
 ## Insights
 
-- [Insights](https://www.mccaigs.com/insights): Articles from the studio about deterministic AI, AI visibility, automation, and practical software systems.
-- [Deterministic AI for ordinary businesses](https://www.mccaigs.com/insights/deterministic-ai-for-ordinary-businesses): Article explaining why ordinary businesses often need reliable systems more than open-ended AI.
-- [Why fast MVPs matter for SMEs](https://www.mccaigs.com/insights/why-fast-mvps-matter-for-smes): Article about fast, focused MVPs for smaller organisations.
-- [Why McCaigs rebuilt around deterministic systems instead of AI hype](https://www.mccaigs.com/insights/why-we-rebuilt-mccaigs-around-deterministic-systems-instead-of-ai-hype): Article explaining the studio's deterministic systems positioning.
-- [Why llms.txt is only the start of AI visibility](https://www.mccaigs.com/insights/why-llms-txt-is-only-the-start-of-ai-visibility): Article explaining how llms.txt supports, but does not replace, wider AI visibility work.
-- [What is Answer Engine Optimisation?](https://www.mccaigs.com/insights/what-is-answer-engine-optimisation): Article introducing AEO, AI visibility, structured data, and answer-ready content.
+- [Insights](https://www.mccaigs.com/insights): Articles about deterministic AI, AI visibility, automation, and practical software systems.
+- [Deterministic AI for ordinary businesses](https://www.mccaigs.com/insights/deterministic-ai-for-ordinary-businesses): Explains why ordinary businesses often need reliable systems more than open-ended AI.
+- [Why fast MVPs matter for SMEs](https://www.mccaigs.com/insights/why-fast-mvps-matter-for-smes): Covers fast, focused MVPs for smaller organisations.
+- [Why McCaigs rebuilt around deterministic systems instead of AI hype](https://www.mccaigs.com/insights/why-we-rebuilt-mccaigs-around-deterministic-systems-instead-of-ai-hype): Explains the studio's deterministic systems positioning.
+- [Why llms.txt is only the start of AI visibility](https://www.mccaigs.com/insights/why-llms-txt-is-only-the-start-of-ai-visibility): Explains how llms.txt supports, but does not replace, wider AI visibility work.
+- [What is Answer Engine Optimisation?](https://www.mccaigs.com/insights/what-is-answer-engine-optimisation): Introduces AEO, AI visibility, structured data, and answer-ready content.
 
 ## Public Knowledge Files
 
