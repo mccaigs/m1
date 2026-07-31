@@ -1,0 +1,50 @@
+---
+title: "Deterministic assistant vs generative chatbot case study"
+slug: "deterministic-assistant-vs-generative-chatbot-case-study"
+excerpt: "Why mccaigs used approved knowledge, deterministic matching, and controlled fallback behaviour for its public assistant."
+publishedAt: "2026-07-31"
+updatedAt: "2026-07-31"
+category: "Case Studies"
+tags:
+  - "Deterministic assistants"
+  - "AI systems"
+  - "Approved knowledge"
+seoTitle: "Deterministic Assistant vs Generative Chatbot Case Study"
+seoDescription: "How the mccaigs Assistant uses approved knowledge and controlled fallbacks, and where that approach differs from an unrestricted generative chatbot."
+status: "published"
+coverImage: ""
+author: "mccaigs studio"
+readingTime: "5 min read"
+---
+
+The public [mccaigs Assistant](/assistant) was built to answer a bounded set of commercial and technical questions. Its job is to explain services, fit, prices that have been approved for publication, delivery, and the next useful route.
+
+That requirement favours control and consistency over open-ended conversation.
+
+## The original problem
+
+An unrestricted generative chatbot can produce fluent answers to questions that were never reviewed by the organisation. That flexibility is useful in some contexts, but it creates the wrong risk profile when the answer concerns service fit, pricing, promises, or what the company does not provide.
+
+The assistant needed to avoid inventing a price, guarantee, client relationship, ranking claim, or capability. It also needed to remain usable without a model provider in the critical path.
+
+## The implemented architecture
+
+The repository contains reviewed JSON knowledge blocks, recognised phrases and keywords, approved response fragments, canonical calls to action, suggested questions, and controlled fallback routes.
+
+The assistant normalises a question, scores approved phrases and keywords, selects the strongest reviewed block, and composes its approved fragments. If the score is too weak, it uses a fallback instead of asking a model to fill the gap.
+
+The same reviewed corpus supports the local website preview and the Python assistant service. New Edinburgh service intents are mapped to their canonical pages, including overlapping queries such as "SEO agency Edinburgh" and "AEO agency Edinburgh".
+
+## What changed
+
+The result is a public assistant whose behaviour can be inspected in the repository. Answers about AEO, AI visibility, AI systems, automation, custom software, technical SEO, web development, service fit, and approved starting prices can be updated deliberately.
+
+This improves control and consistency within the approved knowledge boundary. It does not eliminate every possible error. Phrase matching can select an imperfect topic, source content can become out of date, and a user can ask a question the corpus does not cover. Those limitations are why the fallback and review process remain important.
+
+## When generative AI is the better fit
+
+Generative systems are useful for drafting, summarising, interpreting varied documents, and exploring questions where a broader response is valuable. They require validation, review, and a clear statement of uncertainty when the output can influence business state.
+
+The choice is not deterministic or generative for every feature. A production system can use rules for routing and permissions, approved retrieval for factual answers, and generative assistance for a bounded drafting step.
+
+See [AI systems in Edinburgh](/ai-systems-edinburgh) for production considerations and [AI automation in Edinburgh](/ai-automation-edinburgh) for workflow examples.

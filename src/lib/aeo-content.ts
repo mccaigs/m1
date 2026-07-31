@@ -398,6 +398,7 @@ export const aeoPages = [
     body: [
       "mccaigs treated its own website as a practical AI Visibility project: clarify the entity, explain the services, publish AI-readable knowledge, connect related pages, and keep the deterministic assistant aligned with approved public facts.",
       "The aim was not to guarantee inclusion in ChatGPT, Gemini, Claude, Perplexity, Google AI, or Google AI Overviews. The aim was to make mccaigs easier for visitors, crawlers, and answer engines to understand, cite, and verify.",
+      "The implementation is verifiable in the public routes and repository architecture. No exact ranking, traffic, conversion, citation, or recommendation claim is made because dated supporting evidence is not part of this case study.",
     ],
     points: [
       "Built a connected AEO page set covering Answer Engine Optimisation, AI Search Optimisation, AI Visibility, ChatGPT SEO, Google AI Overviews readiness, llms.txt, and AI-ready websites.",
@@ -406,7 +407,7 @@ export const aeoPages = [
       "Kept the assistant deterministic by using approved static knowledge rather than runtime AI calls.",
     ],
     evidence: [
-      { label: "Public AEO routes", value: "12 connected pages" },
+      { label: "Discovery routes", value: "22 connected pages" },
       { label: "AI-readable files", value: "llms.txt, llms-full.txt, JSON, Markdown" },
       { label: "Assistant model", value: "Static approved knowledge" },
       { label: "Promise boundary", value: "No ranking or inclusion guarantees" },

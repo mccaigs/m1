@@ -4,6 +4,7 @@ import { SiteFrame } from "@/components/marketing/site-frame";
 import { SystemsSection } from "@/components/marketing/studio-sections";
 import { JsonLd } from "@/components/seo/json-ld";
 import { createBreadcrumbStructuredData, createPageMetadata, publicRoutes } from "@/lib/seo";
+import Link from "next/link";
 
 export const metadata = createPageMetadata(publicRoutes[3]);
 
@@ -42,6 +43,10 @@ export default function SystemsPage() {
             ))}
           </div>
         </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+        <h2 className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">Move from a system category to a practical Edinburgh service.</h2>
+        <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">mccaigs builds <Link className="text-signal-soft underline underline-offset-4" href="/ai-systems-edinburgh">production AI systems</Link>, <Link className="text-signal-soft underline underline-offset-4" href="/ai-automation-edinburgh">AI-assisted automation</Link>, <Link className="text-signal-soft underline underline-offset-4" href="/business-automation-edinburgh">rule-based business automation</Link>, and <Link className="text-signal-soft underline underline-offset-4" href="/custom-software-edinburgh">custom operational software</Link> from its Edinburgh base.</p>
       </section>
       <ContactCta />
     </SiteFrame>

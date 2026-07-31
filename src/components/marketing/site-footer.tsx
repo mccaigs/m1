@@ -17,11 +17,14 @@ const navigation = [
 const technologies = ["OpenAI", "Anthropic", "Google AI", "Convex", "Clerk", "Vercel", "Next.js", "TypeScript"] as const;
 
 const aiVisibilityLinks = [
+  ["AEO Agency Edinburgh", "/aeo-agency-edinburgh"],
+  ["AI Visibility Edinburgh", "/ai-visibility-edinburgh"],
   ["Answer Engine Optimisation", "/answer-engine-optimisation"],
   ["AI Search Optimisation", "/ai-search-optimisation"],
   ["ChatGPT SEO", "/chatgpt-seo"],
   ["Google AI Overviews", "/google-ai-overviews"],
   ["Case study", "/ai-visibility-case-study"],
+  ["SEO, AEO or AI Visibility?", "/seo-vs-aeo-vs-ai-visibility"],
   ["llms.txt", "/llms-txt"],
   ["AI knowledge", "/assistant-knowledge.md"],
 ] as const;

@@ -122,6 +122,9 @@ export default function ServicesPage() {
               <Button asChild variant="outline">
                 <Link href="/ai-visibility">View AI visibility <ArrowUpRight /></Link>
               </Button>
+              <Button asChild variant="outline">
+                <Link href="/aeo-agency-edinburgh">AEO agency Edinburgh <ArrowUpRight /></Link>
+              </Button>
             </div>
           </div>
           <div className="grid gap-3">
@@ -141,6 +144,13 @@ export default function ServicesPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="border-y border-white/8 bg-deep-blue/20">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">Edinburgh services</p>
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">Technical delivery for local organisations and teams across Scotland.</h2>
+          <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">Explore <Link className="text-signal-soft underline underline-offset-4" href="/ai-systems-edinburgh">AI systems in Edinburgh</Link>, <Link className="text-signal-soft underline underline-offset-4" href="/business-automation-edinburgh">business automation</Link>, <Link className="text-signal-soft underline underline-offset-4" href="/custom-software-edinburgh">custom software</Link>, <Link className="text-signal-soft underline underline-offset-4" href="/seo-agency-edinburgh">technical SEO</Link>, and <Link className="text-signal-soft underline underline-offset-4" href="/web-development-edinburgh">modern web development</Link>. Each page explains the fit, limitations, and practical starting point.</p>
         </div>
       </section>
       <PageFaqSection eyebrow="Services FAQ" items={[...serviceFaqs]} />

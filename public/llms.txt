@@ -33,6 +33,19 @@ McCaigs Group is unrelated to McCaig's Tower, McCaig's Warehouse, or other place
 - [AI Visibility Case Study](https://www.mccaigs.com/ai-visibility-case-study): Example of structured content, deterministic answers, and technical SEO supporting AI discovery.
 - [Assistant](https://www.mccaigs.com/assistant): Deterministic assistant demonstrating approved-answer retrieval without relying on an LLM in the critical path.
 
+## Edinburgh Commercial Services
+
+- [AEO Agency Edinburgh](https://www.mccaigs.com/aeo-agency-edinburgh): Commercial service-selection page for organisations choosing a technical AEO partner.
+- [Answer Engine Optimisation Edinburgh](https://www.mccaigs.com/answer-engine-optimisation-edinburgh): Detailed AEO explanation and implementation guidance for Edinburgh organisations.
+- [AI Visibility Edinburgh](https://www.mccaigs.com/ai-visibility-edinburgh): Assessment, source review, implementation, and measured monitoring without visibility guarantees.
+- [AI Systems Edinburgh](https://www.mccaigs.com/ai-systems-edinburgh): Deterministic assistants, knowledge systems, portals, internal tools, and bounded AI applications.
+- [AI Automation Edinburgh](https://www.mccaigs.com/ai-automation-edinburgh): AI-assisted workflows with deterministic logic and human oversight.
+- [Business Automation Edinburgh](https://www.mccaigs.com/business-automation-edinburgh): Process mapping, rule-based workflows, approvals, notifications, dashboards, and portals.
+- [Custom Software Edinburgh](https://www.mccaigs.com/custom-software-edinburgh): Bespoke Next.js applications, authenticated portals, dashboards, workflows, and integrations.
+- [Technical SEO Edinburgh](https://www.mccaigs.com/seo-agency-edinburgh): Technical SEO, architecture, schema, performance, local entity clarity, and implementation.
+- [Web Development Edinburgh](https://www.mccaigs.com/web-development-edinburgh): Modern Next.js websites with accessibility, structured content, SEO, AEO, and operational integration.
+- [SEO vs AEO vs AI Visibility](https://www.mccaigs.com/seo-vs-aeo-vs-ai-visibility): Decision guide covering SEO, local SEO, AEO, AI visibility, deterministic assistants, and business automation.
+
 ## Insights
 
 - [Insights](https://www.mccaigs.com/insights): Articles about deterministic AI, AI visibility, automation, and practical software systems.

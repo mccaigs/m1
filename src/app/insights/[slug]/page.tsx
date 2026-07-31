@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { ArticleLayout } from "@/components/insights/article-layout";
@@ -104,6 +105,15 @@ export default async function InsightArticlePage({ params }: InsightPageProps) {
     <SiteFrame>
       <JsonLd data={articleStructuredData} />
       <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: "Insights", path: "/insights" }, { name: post.title, path: `/insights/${post.slug}` }])} />
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-4xl px-5 pt-6 sm:px-8">
+        <ol className="flex flex-wrap items-center gap-2 font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">
+          <li><Link className="transition-colors hover:text-foreground focus-visible:text-foreground" href="/">Home</Link></li>
+          <li aria-hidden="true">/</li>
+          <li><Link className="transition-colors hover:text-foreground focus-visible:text-foreground" href="/insights">Insights</Link></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" className="text-signal-soft">{post.title}</li>
+        </ol>
+      </nav>
       <ArticleLayout authorKey={authorKey} post={post} relatedPosts={relatedPosts}>{content}</ArticleLayout>
     </SiteFrame>
   );

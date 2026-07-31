@@ -1,0 +1,147 @@
+{
+  "topics": [
+    {
+      "topic": "aeo_agency_edinburgh",
+      "priority": 22,
+      "keywords": ["aeo agency edinburgh", "aeo partner edinburgh", "edinburgh aeo agency"],
+      "phrases": ["AEO agency Edinburgh", "find an AEO agency in Edinburgh", "do you provide AEO in Edinburgh"],
+      "fragments": [
+        "mccaigs is an Edinburgh-based technical studio providing AEO audits, technical implementation, structured content, schema, entity clarification, public knowledge files, AI visibility monitoring, and deterministic assistants.",
+        "It is not a conventional content marketing or backlink agency. An AEO Audit starts from £299 and Full Technical AEO Implementation starts from £799.",
+        "No provider can guarantee rankings, citations, recommendations, or inclusion in an external search or answer system."
+      ],
+      "cta": { "label": "AEO Agency Edinburgh", "href": "/aeo-agency-edinburgh" },
+      "suggested_questions": ["What does an AEO agency do?", "What is included in an AEO Audit?", "How does AEO differ from SEO?"]
+    },
+    {
+      "topic": "answer_engine_optimisation_edinburgh",
+      "priority": 21,
+      "keywords": ["answer engine optimisation edinburgh", "answer engine optimization edinburgh", "aeo edinburgh"],
+      "phrases": ["Answer Engine Optimisation Edinburgh", "what is AEO for an Edinburgh business", "how does AEO work in Edinburgh"],
+      "fragments": [
+        "Answer Engine Optimisation makes trustworthy public information easier for answer systems to find, understand, and extract.",
+        "For Edinburgh organisations, useful implementation includes crawlability, clear service and location pages, consistent entities, visible evidence, internal links, structured data, and approved public knowledge.",
+        "AEO can improve source clarity but cannot control whether an external system crawls, ranks, cites, or recommends it."
+      ],
+      "cta": { "label": "AEO in Edinburgh", "href": "/answer-engine-optimisation-edinburgh" },
+      "suggested_questions": ["What does AEO mean?", "Is AEO part of SEO?", "What are common AEO mistakes?"]
+    },
+    {
+      "topic": "ai_visibility_edinburgh",
+      "priority": 20,
+      "keywords": ["ai visibility edinburgh", "ai discoverability edinburgh", "edinburgh ai visibility"],
+      "phrases": ["AI visibility Edinburgh", "check our AI visibility in Edinburgh", "how visible is my Edinburgh business in AI"],
+      "fragments": [
+        "AI visibility assesses whether public sources allow AI-assisted systems to discover, understand, and represent an organisation accurately. It is not simply another name for rankings.",
+        "mccaigs can review entity consistency, service clarity, source quality, structured knowledge, and dated prompt observations. AI Visibility Management starts from £99 per month.",
+        "Results vary by platform, model, account, location, and date. Monitoring is evidence gathering, not a guarantee of mention or recommendation."
+      ],
+      "cta": { "label": "AI Visibility Edinburgh", "href": "/ai-visibility-edinburgh" },
+      "suggested_questions": ["How is AI visibility assessed?", "Why do prompt results vary?", "Do you guarantee AI recommendations?"]
+    },
+    {
+      "topic": "ai_systems_edinburgh",
+      "priority": 19,
+      "keywords": ["ai systems edinburgh", "ai system developer edinburgh", "deterministic assistant edinburgh"],
+      "phrases": ["AI systems Edinburgh", "build an AI system in Edinburgh", "who builds practical AI systems in Edinburgh"],
+      "fragments": [
+        "mccaigs builds practical AI systems in Edinburgh, including deterministic assistants, structured knowledge tools, internal applications, client portals, and carefully bounded AI-assisted workflows.",
+        "Work beyond the demo means designing permissions, validation, fallbacks, human oversight, operating cost, and failure handling around the feature.",
+        "Pricing is confirmed following discovery."
+      ],
+      "cta": { "label": "AI Systems Edinburgh", "href": "/ai-systems-edinburgh" },
+      "suggested_questions": ["What is a deterministic assistant?", "Can a prototype become a production system?", "Do all AI systems need generative AI?"]
+    },
+    {
+      "topic": "ai_automation_edinburgh",
+      "priority": 19,
+      "keywords": ["ai automation edinburgh", "automate with ai edinburgh", "edinburgh ai workflow"],
+      "phrases": ["AI automation Edinburgh", "automate our work with AI", "AI workflow automation in Edinburgh"],
+      "fragments": [
+        "AI automation combines workflow rules with selected AI capabilities for work such as enquiry triage, knowledge retrieval, reporting, documents, approvals, client communication, and handovers.",
+        "mccaigs uses the principle: do not pay for intelligence when logic is enough. Deterministic rules control repeatable decisions and humans remain involved where judgement or risk requires it.",
+        "AI automation is priced following discovery."
+      ],
+      "cta": { "label": "AI Automation Edinburgh", "href": "/ai-automation-edinburgh" },
+      "suggested_questions": ["What tasks can AI automation support?", "When should we use rules instead of AI?", "How is automation measured?"]
+    },
+    {
+      "topic": "business_automation_edinburgh",
+      "priority": 19,
+      "keywords": ["business automation edinburgh", "process automation edinburgh", "workflow automation edinburgh"],
+      "phrases": ["Business automation Edinburgh", "automate a business process in Edinburgh", "reduce duplicated administration"],
+      "fragments": [
+        "Business automation connects process steps, data, responsibilities, rules, notifications, and interfaces. It often does not require AI.",
+        "mccaigs can map duplicated administration, disconnected tools, handoffs, approval routes, dashboards, and portals before building a reliable rule-based workflow.",
+        "Business automation is priced following discovery."
+      ],
+      "cta": { "label": "Business Automation Edinburgh", "href": "/business-automation-edinburgh" },
+      "suggested_questions": ["Does business automation require AI?", "What should we automate first?", "Can you connect our existing tools?"]
+    },
+    {
+      "topic": "custom_software_edinburgh",
+      "priority": 19,
+      "keywords": ["custom software edinburgh", "bespoke software edinburgh", "software developer edinburgh", "next.js developer edinburgh"],
+      "phrases": ["Custom software Edinburgh", "build bespoke software in Edinburgh", "Edinburgh custom software developer"],
+      "fragments": [
+        "mccaigs builds bespoke operational software in Edinburgh, including Next.js applications, authenticated portals, dashboards, role-based workflows, structured content platforms, and integrations.",
+        "Convex-backed systems are used where realtime data and application state are appropriate. The work focuses on maintainability and a controlled first production release rather than a generic technology list.",
+        "Custom software is priced following discovery."
+      ],
+      "cta": { "label": "Custom Software Edinburgh", "href": "/custom-software-edinburgh" },
+      "suggested_questions": ["What custom software do you build?", "When is custom software justified?", "Can you add authentication and roles?"]
+    },
+    {
+      "topic": "technical_seo_edinburgh",
+      "priority": 19,
+      "keywords": ["seo agency edinburgh", "technical seo edinburgh", "edinburgh seo agency"],
+      "phrases": ["SEO agency Edinburgh", "technical SEO in Edinburgh", "do you provide SEO in Edinburgh"],
+      "fragments": [
+        "mccaigs provides technical SEO, website architecture, crawlability improvements, schema, structured content, local entity clarity, performance-oriented development, AEO, and AI visibility work.",
+        "mccaigs is not a conventional full-service marketing agency. It does not sell backlinks, social media packages, or generic campaign management.",
+        "Pricing is confirmed following discovery. An approved AEO Audit starts from £299 where that is the correct starting point."
+      ],
+      "cta": { "label": "Technical SEO Edinburgh", "href": "/seo-agency-edinburgh" },
+      "suggested_questions": ["Do we need technical SEO or a marketing agency?", "Do you implement the recommendations?", "Do we need SEO and AEO?"]
+    },
+    {
+      "topic": "web_development_edinburgh",
+      "priority": 19,
+      "keywords": ["web development edinburgh", "next.js web development edinburgh", "edinburgh website developer"],
+      "phrases": ["Web development Edinburgh", "build a website in Edinburgh", "Next.js developer Edinburgh"],
+      "fragments": [
+        "mccaigs builds modern Next.js websites and web applications in Edinburgh with accessibility, performance, structured content, technical SEO, AEO, and operational integrations.",
+        "The studio modernises existing sites carefully, preserving useful URLs and adding redirects only where necessary. It is not positioned as a cheap template web design supplier.",
+        "Web development is priced following discovery. Existing approved website offers remain available through the project builder where suitable."
+      ],
+      "cta": { "label": "Web Development Edinburgh", "href": "/web-development-edinburgh" },
+      "suggested_questions": ["Do you build Next.js websites?", "Can you modernise an existing website?", "Can forms connect to our workflow?"]
+    },
+    {
+      "topic": "seo_vs_aeo_vs_ai_visibility",
+      "priority": 20,
+      "keywords": ["seo vs aeo", "aeo vs ai visibility", "seo aeo ai visibility", "which search service"],
+      "phrases": ["SEO vs AEO vs AI visibility", "what is the difference between SEO and AEO", "which service do we need"],
+      "fragments": [
+        "SEO helps conventional webpages earn search visibility. Local SEO focuses on maps and location searches. AEO makes trustworthy information easier for answer engines to understand and extract.",
+        "AI visibility assesses how a brand appears across AI-assisted discovery. A deterministic assistant provides controlled answers on the organisation's own site. Business automation connects enquiries, staff, data, and operational processes.",
+        "The disciplines overlap, but each should have a clear objective and measurement method."
+      ],
+      "cta": { "label": "Compare SEO, AEO, and AI Visibility", "href": "/seo-vs-aeo-vs-ai-visibility" },
+      "suggested_questions": ["Do we need SEO and AEO?", "Is AI visibility a ranking?", "Where does business automation fit?"]
+    },
+    {
+      "topic": "not_conventional_marketing_agency",
+      "priority": 24,
+      "keywords": ["social media marketing", "social media management", "digital marketing agency", "advertising agency", "backlink package", "campaign management"],
+      "phrases": ["Do you provide social media marketing?", "do you manage social media", "are you a digital marketing agency", "do you sell backlinks"],
+      "fragments": [
+        "mccaigs is a technical studio, not a conventional full-service marketing, advertising, or social media agency.",
+        "The studio provides technical SEO, website and information architecture, structured content, schema, AEO, AI visibility implementation, custom software, and automation. It does not sell backlink packages or generic social media and campaign management.",
+        "A conventional marketing agency may be the better provider when ongoing advertising, social media management, digital PR, or broad campaign delivery is the main requirement."
+      ],
+      "cta": { "label": "View Technical SEO Edinburgh", "href": "/seo-agency-edinburgh" },
+      "suggested_questions": ["What technical SEO does mccaigs provide?", "Do we need SEO and AEO?", "What makes mccaigs different from a marketing agency?"]
+    }
+  ]
+}
