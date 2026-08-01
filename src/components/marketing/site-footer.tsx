@@ -17,6 +17,9 @@ const navigation = [
 const technologies = ["OpenAI", "Anthropic", "Google AI", "Convex", "Clerk", "Vercel", "Next.js", "TypeScript"] as const;
 
 const aiVisibilityLinks = [
+  ["AEO Agency Scotland", "/aeo-agency-scotland"],
+  ["AI Visibility Scotland", "/ai-visibility-scotland"],
+  ["Oban and West Highlands", "/aeo-agency-oban"],
   ["AEO Agency Edinburgh", "/aeo-agency-edinburgh"],
   ["AI Visibility Edinburgh", "/ai-visibility-edinburgh"],
   ["Answer Engine Optimisation", "/answer-engine-optimisation"],

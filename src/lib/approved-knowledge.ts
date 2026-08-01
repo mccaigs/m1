@@ -9,6 +9,7 @@ import servicesKnowledge from "../../backend/knowledge/services.json";
 import specialOffersKnowledge from "../../backend/knowledge/special-offers.json";
 import timelinesKnowledge from "../../backend/knowledge/timelines.json";
 import edinburghServicesKnowledge from "../../backend/knowledge/edinburgh-services.json";
+import scotlandRegionalServicesKnowledge from "../../backend/knowledge/scotland-regional-services.json";
 
 export type ApprovedKnowledgeBlock = {
   cta: {
@@ -68,6 +69,7 @@ const topicKnowledge = [
   servicesKnowledge,
   timelinesKnowledge,
   edinburghServicesKnowledge,
+  scotlandRegionalServicesKnowledge,
 ] as { topics: ApprovedKnowledgeBlock[] }[];
 
 export const specialOffers = specialOffersKnowledge.offers as SpecialOffer[];

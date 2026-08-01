@@ -1,6 +1,7 @@
 import { absoluteUrl, siteUrl } from "@/lib/seo";
 
 export type EdinburghPage = {
+  areas?: Array<{ name: string; type: "AdministrativeArea" | "City" | "Country" }>;
   approach: string[];
   cta: string;
   definition: string;
@@ -18,7 +19,7 @@ export type EdinburghPage = {
   related: Array<{ href: string; label: string }>;
   reviewed: string;
   sections: Array<{ heading: string; paragraphs: string[] }>;
-  slug: EdinburghPageSlug;
+  slug: string;
   title: string;
 };
 
@@ -370,7 +371,7 @@ export function createEdinburghStructuredData(page: EdinburghPage) {
         "@id": `${url}#webpage`,
         name: page.title,
         description: page.description,
-        dateModified: "2026-07-31",
+        dateModified: page.reviewed === "1 August 2026" ? "2026-08-01" : "2026-07-31",
         author: { "@type": "Person", name: "David Robertson", url: absoluteUrl("/about") },
         isPartOf: { "@id": `${siteUrl}/#website` },
         url,
@@ -380,7 +381,11 @@ export function createEdinburghStructuredData(page: EdinburghPage) {
         "@id": `${url}#service`,
         name: page.title,
         description: page.definition,
-        areaServed: [{ "@type": "City", name: "Edinburgh" }, { "@type": "Country", name: "Scotland" }, { "@type": "Country", name: "United Kingdom" }],
+        areaServed: (page.areas ?? [
+          { type: "City", name: "Edinburgh" },
+          { type: "Country", name: "Scotland" },
+          { type: "Country", name: "United Kingdom" },
+        ]).map((area) => ({ "@type": area.type, name: area.name })),
         provider: { "@id": `${siteUrl}/#professional-service` },
         serviceType: page.title,
         url,

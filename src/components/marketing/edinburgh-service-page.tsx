@@ -95,6 +95,8 @@ export function EdinburghServicePage({ page }: { page: EdinburghPage }) {
   );
 }
 
+export const CommercialServicePage = EdinburghServicePage;
+
 function ComparisonTable() {
   return <section className="border-y border-ink/10 bg-off-white text-ink"><div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20"><h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Match the requirement to the best starting point</h2><div className="mt-8 overflow-x-auto rounded-xl border border-ink/10"><table className="w-full min-w-[40rem] border-collapse text-left"><thead className="bg-deep-blue text-white"><tr><th className="px-5 py-4 text-sm font-semibold" scope="col">Requirement</th><th className="px-5 py-4 text-sm font-semibold" scope="col">Best fit</th></tr></thead><tbody>{serviceComparison.map(([requirement, fit, href]) => <tr className="border-t border-ink/10" key={requirement}><th className="px-5 py-4 text-sm font-medium" scope="row">{requirement}</th><td className="px-5 py-4 text-sm"><Link className="font-semibold text-deep-blue underline decoration-deep-blue/30 underline-offset-4" href={href}>{fit}</Link></td></tr>)}</tbody></table></div></div></section>;
 }

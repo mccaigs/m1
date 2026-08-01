@@ -2,10 +2,6 @@ import { CommercialServicePage } from "@/components/marketing/edinburgh-service-
 import { scotlandPageMap } from "@/lib/scotland-service-content";
 import { createPageMetadata } from "@/lib/seo";
 
-const page = scotlandPageMap["answer-engine-optimisation-scotland"];
-
+const page = scotlandPageMap["ai-visibility-scotland"];
 export const metadata = createPageMetadata(page);
-
-export default function AnswerEngineOptimisationScotlandPage() {
-  return <CommercialServicePage page={page} />;
-}
+export default function Page() { return <CommercialServicePage page={page} />; }

@@ -2,6 +2,7 @@ import { aeoPackages, aeoPages, aiVisibilityMetrics } from "@/lib/aeo-content";
 import { approvedFallbackKnowledge, approvedKnowledgeBlocks, specialOffers } from "@/lib/approved-knowledge";
 import { absoluteUrl, publicRoutes, siteConfig, siteUrl } from "@/lib/seo";
 import { edinburghPages } from "@/lib/edinburgh-service-content";
+import { scotlandPages } from "@/lib/scotland-service-content";
 
 function publicUrl(path: string) {
   return path.startsWith("http") ? path : absoluteUrl(path);
@@ -32,6 +33,11 @@ const industriesServed = [
 ] as const;
 
 const coreServices = [
+  ...scotlandPages.map((page) => ({
+    name: page.title,
+    description: page.definition,
+    url: publicUrl(page.path),
+  })),
   ...edinburghPages.filter((page) => page.kind === "service").map((page) => ({
     name: page.title,
     description: page.definition,

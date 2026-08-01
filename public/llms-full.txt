@@ -46,6 +46,18 @@ McCaigs Group is unrelated to McCaig's Tower, McCaig's Warehouse, or other place
 - [Web Development Edinburgh](https://www.mccaigs.com/web-development-edinburgh): Modern Next.js websites with accessibility, structured content, SEO, AEO, and operational integration.
 - [SEO vs AEO vs AI Visibility](https://www.mccaigs.com/seo-vs-aeo-vs-ai-visibility): Decision guide covering SEO, local SEO, AEO, AI visibility, deterministic assistants, and business automation.
 
+## Scotland, Oban and West Highlands Services
+
+- [AEO Agency Scotland](https://www.mccaigs.com/aeo-agency-scotland): Scotland-wide technical AEO audits and implementation from an Edinburgh-based studio.
+- [Answer Engine Optimisation Scotland](https://www.mccaigs.com/answer-engine-optimisation-scotland): Scotland-wide AEO architecture, structured knowledge, evidence, and direct answers.
+- [AI Visibility Scotland](https://www.mccaigs.com/ai-visibility-scotland): Dated observation, source accuracy, entity clarity, implementation, and measured monitoring.
+- [AI Systems Scotland](https://www.mccaigs.com/ai-systems-scotland): Controlled assistants, structured knowledge, portals, internal tools, and maintained applications.
+- [AI Automation Scotland](https://www.mccaigs.com/ai-automation-scotland): Bounded AI-assisted workflows with reliable rules and human review.
+- [AEO Agency Oban](https://www.mccaigs.com/aeo-agency-oban): Regional AEO support grounded in authentic structured visitor-system evidence. mccaigs is based in Edinburgh and does not claim an Oban office.
+- [AI Visibility Oban](https://www.mccaigs.com/ai-visibility-oban): Source clarity for Oban tourism, hospitality, marine, event, and service organisations.
+- [AI Systems West Highlands](https://www.mccaigs.com/ai-systems-west-highlands): Structured knowledge and controlled systems for seasonal and distributed organisations.
+- [Business Automation West Highlands](https://www.mccaigs.com/business-automation-west-highlands): Enquiry, booking, event, document, approval, and team handover workflows.
+
 ## Insights
 
 - [Insights](https://www.mccaigs.com/insights): Articles about deterministic AI, AI visibility, automation, and practical software systems.
@@ -53,7 +65,11 @@ McCaigs Group is unrelated to McCaig's Tower, McCaig's Warehouse, or other place
 - [Why fast MVPs matter for SMEs](https://www.mccaigs.com/insights/why-fast-mvps-matter-for-smes): Covers fast, focused MVPs for smaller organisations.
 - [Why McCaigs rebuilt around deterministic systems instead of AI hype](https://www.mccaigs.com/insights/why-we-rebuilt-mccaigs-around-deterministic-systems-instead-of-ai-hype): Explains the studio's deterministic systems positioning.
 - [Why llms.txt is only the start of AI visibility](https://www.mccaigs.com/insights/why-llms-txt-is-only-the-start-of-ai-visibility): Explains how llms.txt supports, but does not replace, wider AI visibility work.
-- [What is Answer Engine Optimisation?](https://www.mccaigs.com/insights/what-is-answer-engine-optimisation): Introduces AEO, AI visibility, structured data, and answer-ready content.
+- [What is Answer Engine Optimisation?](https://www.mccaigs.com/answer-engine-optimisation): Introduces AEO, AI visibility, structured data, and answer-ready content.
+- [AI visibility for tourism businesses in Oban](https://www.mccaigs.com/insights/what-ai-visibility-means-for-tourism-businesses-in-oban): Practical owned-source, seasonal information, and visitor-answer guidance.
+- [West Highland answer-engine preparation](https://www.mccaigs.com/insights/how-west-highland-businesses-can-prepare-for-answer-engine-search): A regional guide to approved answers, source ownership, evidence, and structured facts.
+- [Structured digital knowledge for rural Scottish businesses](https://www.mccaigs.com/insights/why-rural-scottish-businesses-need-structured-digital-knowledge): How explicit facts and relationships support customers, staff, search, and controlled assistants.
+- [SEO, AEO and AI visibility outside the central belt](https://www.mccaigs.com/insights/seo-aeo-and-ai-visibility-outside-scotlands-central-belt): How the disciplines fit regional Scottish operating conditions without mass location pages.
 
 ## Public Knowledge Files
 

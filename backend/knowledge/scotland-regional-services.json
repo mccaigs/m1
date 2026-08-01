@@ -1,0 +1,69 @@
+{
+  "topics": [
+    {
+      "topic": "aeo_scotland",
+      "keywords": ["aeo", "scotland", "scottish", "answer engine", "structured knowledge"],
+      "phrases": ["aeo agency scotland", "answer engine optimisation scotland", "aeo for scottish businesses"],
+      "priority": 12,
+      "fragments": [
+        "mccaigs is an Edinburgh-based technical studio serving suitable organisations throughout Scotland.",
+        "Scotland-wide AEO work can include technical audits, canonical intent mapping, direct answers, entity clarity, structured data, public knowledge files, and deterministic assistants.",
+        "The approved starting prices are £299 for an AEO Audit and £799 for Full Technical AEO Implementation. No ranking, indexing, citation, or recommendation is guaranteed."
+      ],
+      "cta": { "label": "View AEO agency Scotland", "href": "/aeo-agency-scotland" },
+      "suggested_questions": ["What does AEO implementation include?", "Does mccaigs work across Scotland?", "Can mccaigs guarantee AI recommendations?"]
+    },
+    {
+      "topic": "ai_visibility_scotland",
+      "keywords": ["ai visibility", "scotland", "scottish", "prompt monitoring", "ai search"],
+      "phrases": ["ai visibility scotland", "ai search visibility scotland", "ai visibility for scottish organisations"],
+      "priority": 12,
+      "fragments": [
+        "AI visibility work assesses whether public sources support accurate discovery and representation in AI-assisted search and research.",
+        "mccaigs records dated observations, reviews entity and source consistency, and separates monitoring from owned-source implementation.",
+        "AI Visibility Management starts from £99 per month. External systems control their own outputs, so inclusion or recommendations cannot be guaranteed."
+      ],
+      "cta": { "label": "View AI visibility Scotland", "href": "/ai-visibility-scotland" },
+      "suggested_questions": ["How is AI visibility assessed?", "Why do prompt results vary?", "What can mccaigs implement?"]
+    },
+    {
+      "topic": "ai_systems_scotland",
+      "keywords": ["ai systems", "scotland", "scottish", "controlled assistant", "internal tool", "portal"],
+      "phrases": ["ai systems scotland", "build an ai system in scotland", "practical ai systems scotland"],
+      "priority": 11,
+      "fragments": [
+        "mccaigs builds practical AI systems for Scottish organisations, including controlled assistants, structured knowledge, portals, internal tools, and bounded AI-assisted workflows.",
+        "The studio is based in Edinburgh and can deliver suitable work remotely across Scotland.",
+        "Deterministic rules are used where predictability matters, with AI added only where interpretation or drafting provides clear value."
+      ],
+      "cta": { "label": "View AI systems Scotland", "href": "/ai-systems-scotland" },
+      "suggested_questions": ["Does every system need generative AI?", "Can mccaigs work remotely?", "What is a controlled assistant?"]
+    },
+    {
+      "topic": "oban_services",
+      "keywords": ["oban", "argyll", "tourism", "visitor", "mccaigs tower", "marine"],
+      "phrases": ["aeo agency oban", "ai visibility oban", "do you work in oban", "oban ai visibility"],
+      "priority": 14,
+      "fragments": [
+        "mccaigs serves suitable Oban organisations from its Edinburgh base and does not claim an office in Oban.",
+        "Relevant regional evidence is the independent, unofficial McCaig's Tower visitor website, which uses structured events, multilingual content, local context, and deterministic visitor assistance.",
+        "The project does not imply ownership of, or official authority over, the landmark and does not support claims of rankings, traffic, citations, or market leadership."
+      ],
+      "cta": { "label": "View AEO agency Oban", "href": "/aeo-agency-oban" },
+      "suggested_questions": ["What Oban evidence does mccaigs have?", "What does AI visibility mean for tourism?", "Does mccaigs have an Oban office?"]
+    },
+    {
+      "topic": "west_highlands_systems",
+      "keywords": ["west highlands", "highland", "rural", "tourism", "business automation", "ai systems"],
+      "phrases": ["ai systems west highlands", "business automation west highlands", "ai for west highland businesses"],
+      "priority": 13,
+      "fragments": [
+        "mccaigs can build structured knowledge, controlled assistants, event systems, internal tools, and workflow automation for suitable West Highland organisations.",
+        "The work can address seasonal demand, distributed teams, fragmented visitor information, third-party platforms, and limited internal technical capacity.",
+        "mccaigs is based in Edinburgh and does not claim a West Highlands office."
+      ],
+      "cta": { "label": "View West Highland AI systems", "href": "/ai-systems-west-highlands" },
+      "suggested_questions": ["What can a West Highland business automate?", "Can mccaigs work remotely?", "Is AI always required?"]
+    }
+  ]
+}
