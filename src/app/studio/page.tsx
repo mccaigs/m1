@@ -11,9 +11,9 @@ export default function StudioPage() {
   return (
     <SiteFrame>
       <PageHero
-        copy="A creative technical studio for ambitious businesses that need practical AI, automation, websites, internal systems, and digital products built properly."
+        copy="mccaigs is a technical studio based in Edinburgh, building AI visibility systems, deterministic assistants, internal business systems and bespoke software for organisations across Scotland."
         eyebrow="Studio / Edinburgh, Scotland"
-        title="Scotland's Elite Technical Studio"
+        title="An Edinburgh technical studio building systems across Scotland"
       />
       <section className="border-b border-ink/10 bg-off-white text-ink">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">

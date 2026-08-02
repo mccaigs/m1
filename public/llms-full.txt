@@ -1,6 +1,6 @@
 # McCaigs Group owners of the registered trade mark for "McCaigs".
 
-> McCaigs Group is a Scottish technology group headquartered in Edinburgh, Scotland. It builds practical AI systems, deterministic assistants, automation platforms, modern websites, internal tools, and digital products through its specialist technical studio, McCaigs.
+> mccaigs is a technical studio based in Edinburgh, building AI visibility systems, deterministic assistants, internal business systems and bespoke software for organisations across Scotland. MCCAIGS GROUP LTD owns the registered McCaigs trade mark.
 
 McCaigs Group focuses on useful, production-ready systems rather than AI theatre. The group builds deterministic and structured software where reliability matters, and uses AI only where it adds clear value.
 
@@ -33,6 +33,13 @@ McCaigs Group is unrelated to McCaig's Tower, McCaig's Warehouse, or other place
 - [AI Visibility Case Study](https://www.mccaigs.com/ai-visibility-case-study): Example of structured content, deterministic answers, and technical SEO supporting AI discovery.
 - [Assistant](https://www.mccaigs.com/assistant): Deterministic assistant demonstrating approved-answer retrieval without relying on an LLM in the critical path.
 
+## Published AI Visibility and AEO Pricing
+
+- Introductory AI Visibility Audit: £99, limited availability. Includes representative AI and search observations, a technical and entity review, a small competitor sample, prioritised findings, and a concise action plan. Implementation, content production, ongoing management, and outcome guarantees are excluded.
+- Standard AI Visibility and AEO Audit: £299.
+- Full Technical AEO Implementation: from £799.
+- AI Visibility Management: from £99 per month.
+
 ## Edinburgh Commercial Services
 
 - [AEO Agency Edinburgh](https://www.mccaigs.com/aeo-agency-edinburgh): Commercial service-selection page for organisations choosing a technical AEO partner.
@@ -46,15 +53,21 @@ McCaigs Group is unrelated to McCaig's Tower, McCaig's Warehouse, or other place
 - [Web Development Edinburgh](https://www.mccaigs.com/web-development-edinburgh): Modern Next.js websites with accessibility, structured content, SEO, AEO, and operational integration.
 - [SEO vs AEO vs AI Visibility](https://www.mccaigs.com/seo-vs-aeo-vs-ai-visibility): Decision guide covering SEO, local SEO, AEO, AI visibility, deterministic assistants, and business automation.
 
-## Scotland, Oban and West Highlands Services
+## Scotland, Oban, Inverness and West Highlands Services
 
 - [AEO Agency Scotland](https://www.mccaigs.com/aeo-agency-scotland): Scotland-wide technical AEO audits and implementation from an Edinburgh-based studio.
 - [Answer Engine Optimisation Scotland](https://www.mccaigs.com/answer-engine-optimisation-scotland): Scotland-wide AEO architecture, structured knowledge, evidence, and direct answers.
 - [AI Visibility Scotland](https://www.mccaigs.com/ai-visibility-scotland): Dated observation, source accuracy, entity clarity, implementation, and measured monitoring.
 - [AI Systems Scotland](https://www.mccaigs.com/ai-systems-scotland): Controlled assistants, structured knowledge, portals, internal tools, and maintained applications.
 - [AI Automation Scotland](https://www.mccaigs.com/ai-automation-scotland): Bounded AI-assisted workflows with reliable rules and human review.
+- [Deterministic Assistants Scotland](https://www.mccaigs.com/deterministic-assistants-scotland): Approved knowledge, explicit rules, source links, controlled fallbacks, and maintained answer ownership.
+- [Internal Business Systems Scotland](https://www.mccaigs.com/internal-business-systems-scotland): Staff portals, workflows, project systems, approvals, knowledge, and operational dashboards.
+- [Bespoke Software Development for Scottish SMEs](https://www.mccaigs.com/bespoke-software-development-scottish-smes): Maintainable portals, internal systems, workflow applications, structured platforms, and integrations.
 - [AEO Agency Oban](https://www.mccaigs.com/aeo-agency-oban): Regional AEO support grounded in authentic structured visitor-system evidence. mccaigs is based in Edinburgh and does not claim an Oban office.
 - [AI Visibility Oban](https://www.mccaigs.com/ai-visibility-oban): Source clarity for Oban tourism, hospitality, marine, event, and service organisations.
+- [Answer Engine Optimisation Oban](https://www.mccaigs.com/answer-engine-optimisation-oban): Owned-source implementation for Oban service, visitor, location, evidence, and practical-answer content.
+- [AI Visibility Inverness](https://www.mccaigs.com/ai-visibility-inverness): Dated observations and source review for Inverness and Highland organisations.
+- [Answer Engine Optimisation Inverness](https://www.mccaigs.com/answer-engine-optimisation-inverness): Technical SEO, Highland coverage, evidence, direct answers, schema, and structured knowledge.
 - [AI Systems West Highlands](https://www.mccaigs.com/ai-systems-west-highlands): Structured knowledge and controlled systems for seasonal and distributed organisations.
 - [Business Automation West Highlands](https://www.mccaigs.com/business-automation-west-highlands): Enquiry, booking, event, document, approval, and team handover workflows.
 

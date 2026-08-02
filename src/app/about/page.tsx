@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import { absoluteUrl, createBreadcrumbStructuredData, createPageMetadata, siteConfig, siteUrl } from "@/lib/seo";
 
-const aboutDescription = "mccaigs is a Scottish technical studio founded by David Robertson, building practical AI systems, automation, websites, internal tools, and digital products for startups, SMEs, and organisations.";
+const aboutDescription = "Learn about mccaigs, the Edinburgh technical studio building AI visibility, deterministic assistants, internal systems and bespoke software across Scotland.";
 
 export const metadata = createPageMetadata({
   description: aboutDescription,
@@ -19,11 +19,12 @@ const timeline = [
   ["2015", "David Robertson wins The Pitch UK Digital Marketing Award."],
   ["2016", "mccaigs trademark registered."],
   ["2025", "mccaigs successfully completes the TechScaler Catalyst programme."],
-  ["Today", "mccaigs operates as a Scottish technical studio focused on practical engineering, deterministic systems, AI, automation, websites, internal systems and fast MVP delivery."],
+  ["Today", "mccaigs operates from Edinburgh as a Scottish technical studio focused on AI visibility, deterministic assistants, internal business systems, automation and bespoke software."],
 ] as const;
 
 const buildAreas = [
   "Deterministic AI systems",
+  "AI visibility and AEO",
   "Business automation",
   "Websites and digital platforms",
   "Internal tools",
@@ -68,7 +69,7 @@ export default function AboutPage() {
           </p>
           <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.06em] sm:text-7xl">mccaigs is Scotland&apos;s Elite Technical Studio.</h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">
-            We design and build practical AI systems, automation, websites, internal tools and digital products for startups, SMEs and organisations that need useful software built properly.
+            mccaigs is a technical studio based in Edinburgh, building AI visibility systems, deterministic assistants, internal business systems and bespoke software for organisations across Scotland.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild size="lg"><Link href="/start-project">Start a project <ArrowUpRight /></Link></Button>

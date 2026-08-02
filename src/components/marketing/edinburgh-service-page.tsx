@@ -8,8 +8,11 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import { createBreadcrumbStructuredData } from "@/lib/seo";
 import { createEdinburghStructuredData, serviceComparison, type EdinburghPage } from "@/lib/edinburgh-service-content";
+import { specialOffers } from "@/lib/approved-knowledge";
 
 export function EdinburghServicePage({ page }: { page: EdinburghPage }) {
+  const offer = page.offerId ? specialOffers.find((item) => item.id === page.offerId) : undefined;
+
   return (
     <SiteFrame>
       <JsonLd data={createBreadcrumbStructuredData([{ name: "Home", path: "/" }, { name: page.title, path: page.path }])} />
@@ -38,6 +41,17 @@ export function EdinburghServicePage({ page }: { page: EdinburghPage }) {
           <aside className="h-fit rounded-xl border border-white/10 bg-card/55 p-6" aria-label="Engagement details">
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-signal">Starting point</p>
             <p className="mt-4 text-xl font-semibold">{page.price}</p>
+            {offer ? (
+              <div className="mt-6 rounded-lg border border-signal/25 bg-signal/5 p-4">
+                <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Introductory offer / Limited availability</p>
+                <h2 className="mt-3 text-lg font-semibold">{offer.title}: {offer.price}</h2>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{offer.summary}</p>
+                <ul className="mt-3 space-y-2">
+                  {offer.includes.map((item) => <li className="flex gap-2 text-xs leading-5 text-muted-foreground" key={item}><Check className="mt-0.5 size-3.5 shrink-0 text-signal" />{item}</li>)}
+                </ul>
+                <p className="mt-3 text-xs leading-5 text-muted-foreground">Implementation and ongoing management are not included. The standard combined audit is £299.</p>
+              </div>
+            ) : null}
             <p className="mt-6 border-t border-white/10 pt-5 text-sm leading-6 text-muted-foreground">Reviewed by David Robertson, founder of mccaigs, on {page.reviewed}.</p>
             <Button asChild className="mt-6 w-full" size="lg"><Link href="/start-project">{page.cta} <ArrowUpRight /></Link></Button>
           </aside>

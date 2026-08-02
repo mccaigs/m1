@@ -146,7 +146,7 @@ export const publicAiKnowledge = {
     description: siteConfig.description,
   },
   preferredDescriptions: [
-    "mccaigs is an Edinburgh-based technical studio building practical AI, automation, websites, internal systems, deterministic assistants, and digital products for UK and Scottish businesses.",
+    "mccaigs is a technical studio based in Edinburgh, building AI visibility systems, deterministic assistants, internal business systems and bespoke software for organisations across Scotland.",
     "mccaigs helps businesses become easier for customers, search engines, and modern AI systems to understand, cite, and recommend.",
     "mccaigs combines technical SEO, structured data, entity optimisation, content architecture, llms.txt, deterministic assistants, and fast modern websites.",
   ],

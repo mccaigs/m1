@@ -2,13 +2,13 @@
   "topics": [
     {
       "topic": "aeo_scotland",
-      "keywords": ["aeo", "scotland", "scottish", "answer engine", "structured knowledge"],
-      "phrases": ["aeo agency scotland", "answer engine optimisation scotland", "aeo for scottish businesses"],
-      "priority": 12,
+      "keywords": ["aeo", "scotland", "scottish", "answer engine", "structured knowledge", "guarantee rankings", "guarantee indexing", "guarantee citations", "guarantee ai recommendations"],
+      "phrases": ["aeo agency scotland", "answer engine optimisation scotland", "aeo for scottish businesses", "can you guarantee rankings indexing citations or ai recommendations", "can mccaigs guarantee ai recommendations", "do you guarantee ai inclusion"],
+      "priority": 24,
       "fragments": [
-        "mccaigs is an Edinburgh-based technical studio serving suitable organisations throughout Scotland.",
+        "mccaigs is a technical studio based in Edinburgh, building AI visibility systems, deterministic assistants, internal business systems and bespoke software for organisations across Scotland.",
         "Scotland-wide AEO work can include technical audits, canonical intent mapping, direct answers, entity clarity, structured data, public knowledge files, and deterministic assistants.",
-        "The approved starting prices are £299 for an AEO Audit and £799 for Full Technical AEO Implementation. No ranking, indexing, citation, or recommendation is guaranteed."
+        "The standard AI Visibility and AEO Audit is £299, Full Technical AEO Implementation starts from £799, and ongoing management starts from £99 per month. No ranking, indexing, citation, or recommendation is guaranteed."
       ],
       "cta": { "label": "View AEO agency Scotland", "href": "/aeo-agency-scotland" },
       "suggested_questions": ["What does AEO implementation include?", "Does mccaigs work across Scotland?", "Can mccaigs guarantee AI recommendations?"]
@@ -21,7 +21,7 @@
       "fragments": [
         "AI visibility work assesses whether public sources support accurate discovery and representation in AI-assisted search and research.",
         "mccaigs records dated observations, reviews entity and source consistency, and separates monitoring from owned-source implementation.",
-        "AI Visibility Management starts from £99 per month. External systems control their own outputs, so inclusion or recommendations cannot be guaranteed."
+        "A limited introductory AI Visibility Audit is £99, the standard combined audit is £299, and ongoing management starts from £99 per month. External systems control their own outputs, so inclusion or recommendations cannot be guaranteed."
       ],
       "cta": { "label": "View AI visibility Scotland", "href": "/ai-visibility-scotland" },
       "suggested_questions": ["How is AI visibility assessed?", "Why do prompt results vary?", "What can mccaigs implement?"]
@@ -42,7 +42,7 @@
     {
       "topic": "oban_services",
       "keywords": ["oban", "argyll", "tourism", "visitor", "mccaigs tower", "marine"],
-      "phrases": ["aeo agency oban", "ai visibility oban", "do you work in oban", "oban ai visibility"],
+      "phrases": ["aeo agency oban", "ai visibility oban", "answer engine optimisation oban", "do you work in oban", "oban ai visibility"],
       "priority": 14,
       "fragments": [
         "mccaigs serves suitable Oban organisations from its Edinburgh base and does not claim an office in Oban.",
@@ -51,6 +51,45 @@
       ],
       "cta": { "label": "View AEO agency Oban", "href": "/aeo-agency-oban" },
       "suggested_questions": ["What Oban evidence does mccaigs have?", "What does AI visibility mean for tourism?", "Does mccaigs have an Oban office?"]
+    },
+    {
+      "topic": "inverness_visibility_and_aeo",
+      "keywords": ["inverness", "highland", "ai visibility", "aeo", "answer engine", "ai search"],
+      "phrases": ["ai visibility inverness", "answer engine optimisation inverness", "aeo inverness", "do you work in inverness"],
+      "priority": 14,
+      "fragments": [
+        "mccaigs can assess AI visibility and implement Answer Engine Optimisation for suitable Inverness and Highland organisations from its Edinburgh base. It does not claim an Inverness office.",
+        "AI visibility records dated observations and source gaps. AEO implementation improves owned pages, technical access, entity clarity, evidence, direct answers, structured data, internal links, and public knowledge.",
+        "A limited introductory AI Visibility Audit is £99, the standard combined AI Visibility and AEO Audit is £299, and Full Technical AEO Implementation starts from £799. External inclusion is not guaranteed."
+      ],
+      "cta": { "label": "View AI visibility Inverness", "href": "/ai-visibility-inverness" },
+      "suggested_questions": ["Does mccaigs have an Inverness office?", "How is AI visibility measured?", "How is AEO different from monitoring?"]
+    },
+    {
+      "topic": "deterministic_assistants_scotland",
+      "keywords": ["deterministic assistant", "controlled assistant", "approved answers", "approved knowledge", "chatbot", "scotland"],
+      "phrases": ["deterministic assistants scotland", "controlled assistant scotland", "approved answer chatbot", "deterministic chatbot"],
+      "priority": 13,
+      "fragments": [
+        "A deterministic assistant selects from approved knowledge and explicit rules instead of generating an unrestricted answer each time.",
+        "mccaigs can build source-linked answers, intent rules, controlled fallbacks, contact handoff, tests, and a documented maintenance process for Scottish organisations.",
+        "The assistant should state when its approved knowledge does not contain an answer and is not a substitute for professional judgement or accountable staff."
+      ],
+      "cta": { "label": "View deterministic assistants Scotland", "href": "/deterministic-assistants-scotland" },
+      "suggested_questions": ["What is a deterministic assistant?", "When is generative AI a better fit?", "Can the assistant hand off to a person?"]
+    },
+    {
+      "topic": "internal_systems_and_bespoke_software_scotland",
+      "keywords": ["internal system", "business system", "bespoke software", "custom software", "scottish sme", "portal", "workflow"],
+      "phrases": ["internal business systems scotland", "bespoke software development scottish smes", "custom software scotland", "staff portal scotland"],
+      "priority": 13,
+      "fragments": [
+        "mccaigs builds internal business systems and bespoke web software for suitable Scottish SMEs, including portals, workflow tools, project systems, dashboards, structured platforms, and integrations.",
+        "Discovery compares bespoke software with configuration, integration, and standard products, then maps users, data, permissions, exceptions, security needs, and ongoing ownership.",
+        "Bespoke software is priced following discovery because migration, integrations, security, users, and operating requirements materially affect scope."
+      ],
+      "cta": { "label": "View internal business systems Scotland", "href": "/internal-business-systems-scotland" },
+      "suggested_questions": ["When is bespoke software justified?", "Can mccaigs connect existing tools?", "Does mccaigs work across Scotland?"]
     },
     {
       "topic": "west_highlands_systems",

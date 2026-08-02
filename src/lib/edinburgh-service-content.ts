@@ -13,6 +13,7 @@ export type EdinburghPage = {
   h1: string;
   kind: "service" | "comparison";
   limitations: string[];
+  offerId?: string;
   path: string;
   price: string;
   proof: Array<{ href: string; label: string; text: string }>;
@@ -40,7 +41,7 @@ export const edinburghPages = [
     eyebrow: "AEO partner / Edinburgh",
     kind: "service",
     definition: "An AEO agency helps an organisation make its public information easier for answer engines to find, understand, extract, and represent accurately. mccaigs combines technical SEO, structured content, schema, entity clarification, public knowledge files, and deterministic assistants for organisations in Edinburgh and across Scotland.",
-    price: "AEO Audit from £299. Full Technical AEO Implementation from £799.",
+    price: "AI Visibility and AEO Audit £299. Full Technical AEO Implementation from £799.",
     cta: "Discuss an Edinburgh AEO project",
     sections: [
       { heading: "A technical partner, not a conventional content agency", paragraphs: ["AEO overlaps with SEO, but it asks a different set of questions. Can a machine identify the organisation, its services, locations, evidence, and limitations? Can it extract a direct answer without losing the meaning? Is the supporting source crawlable and consistent?", "mccaigs diagnoses those questions and then implements the answer in the website and approved knowledge system. The work is senior-led and logic-first. It does not depend on publishing large volumes of generic copy or buying links."] },
@@ -56,7 +57,7 @@ export const edinburghPages = [
     faqs: [
       { question: "What does an AEO agency do?", answer: "It improves the technical and editorial signals that help answer engines understand an organisation. Typical work includes crawlability, information architecture, entities, direct answers, structured data, public knowledge, internal links, and measurement." },
       { question: "How is mccaigs different from a conventional SEO agency?", answer: "mccaigs is a technical studio. It can diagnose and implement the website, structured data, knowledge files, and deterministic assistant. It does not offer generic campaign management, social packages, or backlink selling." },
-      { question: "What does an AEO audit cost?", answer: "The approved public starting price for an AEO Audit is £299. Scope and any implementation work are confirmed after discovery." },
+      { question: "What does an AEO audit cost?", answer: "The standard AI Visibility and AEO Audit is £299. Scope and any implementation work are confirmed after discovery." },
       { question: "Do you work beyond Edinburgh?", answer: "Yes. mccaigs is based in Edinburgh and works with organisations across Scotland and the wider UK where the project is a good fit." },
       { question: "How quickly does AEO work produce a result?", answer: "Technical changes can be implemented on a defined schedule, but external discovery systems update on their own timescales. Monitoring should be treated as evidence gathering, not a promise of immediate visibility." },
       noGuarantee,
@@ -71,7 +72,7 @@ export const edinburghPages = [
     eyebrow: "AEO explained / Edinburgh",
     kind: "service",
     definition: "Answer Engine Optimisation, or AEO, is the work of making trustworthy information easier for search and AI answer systems to understand and extract. For an Edinburgh business, that includes clear services and geography, crawlable pages, direct answers, consistent entities, visible evidence, useful internal links, and structured data that matches the page.",
-    price: "AEO Audit from £299. Full Technical AEO Implementation from £799.",
+    price: "AI Visibility and AEO Audit £299. Full Technical AEO Implementation from £799.",
     cta: "Plan an AEO implementation",
     sections: [
       { heading: "How answer engines use public information", paragraphs: ["Google's AI-assisted experiences and other answer engines may combine indexed pages, structured information, citations, and wider source signals. AEO cannot dictate the output. It can reduce ambiguity by making the source page technically accessible, specific, well organised, and supported by evidence.", "AEO therefore sits alongside SEO. Crawlability, performance, internal linking, and authority still matter. The additional emphasis is on extractable answers, named entities, relationships, evidence, and information that remains clear when summarised."] },
@@ -97,30 +98,34 @@ export const edinburghPages = [
     slug: "ai-visibility-edinburgh",
     path: "/ai-visibility-edinburgh",
     title: "AI Visibility Edinburgh",
-    description: "AI visibility assessment and implementation for Edinburgh organisations, covering entity consistency, service clarity, sources, structured knowledge, and monitoring.",
+    description: "AI visibility audits for Edinburgh organisations: dated answer observations, entity and service clarity, supporting sources, and prioritised owned-source gaps.",
     h1: "AI visibility for Edinburgh organisations",
     eyebrow: "AI discovery / Edinburgh",
     kind: "service",
-    definition: "AI visibility describes whether an organisation can be discovered, understood, and represented accurately in AI-assisted research and search. It is not another name for rankings. mccaigs assesses public source signals, entity consistency, service clarity, structured knowledge, and representative prompts, then separates monitoring findings from implementation work.",
-    price: "AI Visibility Management from £99 per month.",
+    definition: "AI visibility describes whether public sources help AI-assisted search and research systems identify, understand, cite, and recommend an Edinburgh organisation accurately. It is not another name for rankings. mccaigs records dated observations across relevant answer platforms, reviews entity and source consistency, and separates measurement from AEO implementation.",
+    price: "AI Visibility and AEO Audit £299. AI Visibility Management from £99 per month.",
+    offerId: "introductory-ai-visibility-audit",
     cta: "Start an AI visibility review",
     sections: [
       { heading: "Measure understanding, not just mentions", paragraphs: ["A useful review asks whether the brand is identified correctly, whether its services and geography are clear, which public sources support the description, and where systems return incomplete or inaccurate answers. A mention without the correct context is not necessarily useful visibility.", "Prompt checks are snapshots. Results can vary by platform, model, location, account, and date. Monitoring records what was observed and connects each gap to source material that can be improved."] },
       { heading: "Monitoring and implementation are different", paragraphs: ["Monitoring provides a baseline and shows changes over time. Implementation improves the owned sources through clearer pages, entity relationships, technical SEO, structured data, citations, internal links, and public knowledge.", "mccaigs reports the limits of the evidence. It does not imply control over ChatGPT, Claude, Gemini, Perplexity, Google, Bing, Copilot, or another external system."] },
+      { heading: "What the Edinburgh audit reviews", paragraphs: ["The standard £299 AI Visibility and AEO Audit combines representative prompt observations with checks of crawl access, entity consistency, service and location clarity, evidence, page intent, internal links, structured data, and public knowledge.", "A limited £99 introductory audit provides a narrower first view: representative AI and search observations, a technical and entity review, a small competitor sample, prioritised findings, and a concise action plan. It excludes implementation, content production, ongoing management, and any guarantee of rankings or inclusion."] },
+      { heading: "Turn findings into a clearer owned source", paragraphs: ["A finding becomes useful when it points to a verifiable source improvement. That might be a clearer service page, stronger organisation facts, connected evidence, a direct answer, matching schema, or a better-defined relationship between Edinburgh and Scotland-wide coverage.", "Full Technical AEO Implementation starts from £799. Ongoing AI Visibility Management starts from £99 per month where comparable observations and source maintenance are useful after the initial work."] },
+      { heading: "Visibility, extraction, citation, and recommendation are different", paragraphs: ["Visibility means an organisation can be discovered or represented in an answer experience. Extraction means a system can identify and reuse a relevant fact or passage. Citation means the system presents a source reference. Recommendation means it selects the organisation as a possible fit for a user's need.", "Clear website structure, useful content, entity consistency, accurate structured data, and conventional search authority can support those stages, but none gives mccaigs control over an external answer. The audit reports each observation precisely instead of collapsing them into one score."] },
     ],
     approach: ["Define representative discovery questions and record the date and platform tested.", "Review brand, founder, services, geography, and organisation consistency.", "Trace observed answers back to available public sources.", "Prioritise owned-source improvements separately from monitoring.", "Repeat tests carefully and report variance and uncertainty."],
     deliverables: ["AI visibility baseline", "Entity and source consistency review", "Prompt observation record", "Owned-source improvement plan", "Technical implementation scope", "Measured follow-up report"],
     fit: ["Organisations already investing in clear public information", "Teams concerned about inaccurate or incomplete AI-assisted descriptions", "Businesses that want evidence before commissioning wider implementation"],
     limitations: ["Monitoring cannot prove how every user or platform will see a business.", "mccaigs cannot guarantee a recommendation, citation, mention, ranking, or inclusion."],
     proof: [{ href: "/ai-visibility-case-study", label: "How mccaigs built its AI visibility system", text: "A verifiable account of the connected public-source architecture used on this website." }],
-    related: [{ href: "/aeo-agency-edinburgh", label: "AEO agency Edinburgh" }, { href: "/answer-engine-optimisation-edinburgh", label: "AEO implementation" }, { href: "/ai-visibility", label: "UK and Scotland AI visibility service" }, { href: "/seo-vs-aeo-vs-ai-visibility", label: "Choose the right discipline" }],
+    related: [{ href: "/answer-engine-optimisation-edinburgh", label: "Implement AEO in Edinburgh" }, { href: "/ai-visibility-scotland", label: "AI visibility across Scotland" }, { href: "/ai-visibility-case-study", label: "Review the owned-source architecture" }, { href: "/seo-vs-aeo-vs-ai-visibility", label: "Choose the right discipline" }],
     reviewed,
     faqs: [
       { question: "What is AI visibility?", answer: "It is the degree to which public sources allow AI-assisted systems to discover, understand, and represent an organisation accurately." },
       { question: "Is AI visibility the same as search ranking?", answer: "No. Rankings describe ordered search results. AI visibility also considers descriptions, citations, entity accuracy, service understanding, and appearance across varied answer experiences." },
       { question: "How do you assess AI visibility?", answer: "mccaigs reviews owned sources, entity consistency, technical accessibility, structured knowledge, and a dated set of representative prompt observations." },
       { question: "Why can prompt results vary?", answer: "Platforms use different sources, models, personalisation, locations, and update cycles. A test is a dated observation rather than a universal result." },
-      { question: "What is the approved starting price?", answer: "AI Visibility Management currently starts from £99 per month. Wider implementation is priced following discovery." },
+      { question: "What does an AI visibility review cost?", answer: "A limited introductory AI Visibility Audit is £99. The standard combined AI Visibility and AEO Audit is £299, and ongoing management starts from £99 per month." },
       noGuarantee,
     ],
   },
@@ -253,7 +258,7 @@ export const edinburghPages = [
     eyebrow: "Technical SEO / Edinburgh",
     kind: "service",
     definition: "mccaigs provides technical SEO, website and information architecture, crawlability improvements, schema, structured content, local entity clarity, performance-oriented development, AEO, and AI visibility work. It is a technical studio, not a conventional full-service marketing agency offering social media packages or generic campaign management.",
-    price: "Priced following discovery. AEO Audit from £299 where that is the correct starting point.",
+    price: "Priced following discovery. AI Visibility and AEO Audit £299 where that is the correct starting point.",
     cta: "Discuss a technical SEO project",
     sections: [
       { heading: "Choose the provider that matches the problem", paragraphs: ["A technical studio is the strongest fit when the obstacle sits in the website, rendering, architecture, structured data, content model, performance, or integration between search and the product. An AEO specialist is useful when the organisation also needs answer-ready content, entity clarity, and AI discovery measurement.", "A conventional SEO marketing agency may be the better lead provider for ongoing editorial campaigns, digital PR, outreach, or broad campaign management. Some organisations need both providers with clear ownership."] },
@@ -314,7 +319,7 @@ export const edinburghPages = [
     eyebrow: "Service comparison / Decision guide",
     kind: "comparison",
     definition: "SEO helps webpages earn visibility in conventional search. Local SEO focuses on maps and location searches. AEO makes trustworthy information easier for answer engines to understand and extract. AI visibility assesses how a brand appears across AI-assisted discovery. Deterministic assistants control answers on the organisation's own site, while business automation connects operational work.",
-    price: "The right starting point is priced according to the selected discipline. Approved AEO Audit pricing starts from £299.",
+    price: "The right starting point is priced according to the selected discipline. The standard AI Visibility and AEO Audit is £299.",
     cta: "Choose the right starting point",
     sections: [
       { heading: "Where the disciplines overlap", paragraphs: ["All six disciplines benefit from clear information, sound architecture, accurate entities, useful evidence, and measurable objectives. SEO and AEO share technical foundations. Local SEO adds geographic relevance. AI visibility observes whether those sources are reflected accurately in answer experiences.", "A deterministic assistant is different because the organisation controls its approved knowledge boundary. Business automation is different again: it connects enquiries, staff, data, decisions, and operational state. One project may involve several disciplines, but each should have a clear purpose."] },

@@ -70,6 +70,56 @@
         "Can you improve our enquiry process?",
         "What happens if we need custom functionality?"
       ]
+    },
+    {
+      "id": "introductory-ai-visibility-audit",
+      "title": "Introductory AI Visibility Audit",
+      "price": "£99",
+      "priority": 12,
+      "keywords": [
+        "ai visibility audit",
+        "ai visibility offer",
+        "aeo audit",
+        "chatgpt visibility audit",
+        "google ai visibility",
+        "ai search audit",
+        "introductory audit",
+        "99"
+      ],
+      "phrases": [
+        "how much is an ai visibility audit",
+        "introductory ai visibility audit",
+        "what is included in the 99 audit",
+        "do you have an ai visibility audit offer"
+      ],
+      "summary": "A focused introductory review of how clearly an organisation can be found, understood, and represented across a sample of AI-assisted search environments.",
+      "related_response_fragment": "The introductory AI Visibility Audit is £99. The standard combined AI Visibility and AEO Audit remains £299.",
+      "includes": [
+        "Representative AI and search visibility observations",
+        "Technical and entity-level website review",
+        "Small competitor visibility sample",
+        "Prioritised findings",
+        "Concise written action plan"
+      ],
+      "excludes": [
+        "Technical implementation",
+        "Content production",
+        "Ongoing AI Visibility Management",
+        "Guaranteed rankings, citations, or recommendations"
+      ],
+      "response_fragments": [
+        "The introductory AI Visibility Audit is currently available for £99, subject to limited availability.",
+        "It reviews representative AI and search visibility, the website's technical and entity signals, a small competitor sample, and the highest-priority next actions.",
+        "The client receives prioritised findings and a concise written action plan.",
+        "Implementation and ongoing management are not included. The standard combined AI Visibility and AEO Audit remains £299, and no ranking, citation, or recommendation is guaranteed."
+      ],
+      "cta_label": "Start an audit",
+      "cta_href": "/start-project",
+      "suggested_questions": [
+        "What is included in the £99 AI Visibility Audit?",
+        "What is the standard audit price?",
+        "What happens after the audit?"
+      ]
     }
   ]
 }

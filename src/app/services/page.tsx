@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import { aeoPackages } from "@/lib/aeo-content";
 import { createBreadcrumbStructuredData, createPageMetadata, publicRoutes } from "@/lib/seo";
+import { scotlandPageMap, type ScotlandPageSlug } from "@/lib/scotland-service-content";
 import { commonServiceProblems, services, typicalEngagements } from "@/lib/studio-content";
 import { ArrowUpRight, Check } from "lucide-react";
 import Link from "next/link";
@@ -26,6 +27,17 @@ const serviceFaqs = [
     answer: "Yes. Many projects begin with an existing website, workflow, spreadsheet, software process, or AI idea that needs to become clearer, faster, or easier to maintain.",
   },
 ] as const;
+
+const scotlandServiceSlugs = [
+  "answer-engine-optimisation-scotland",
+  "ai-visibility-scotland",
+  "ai-automation-scotland",
+  "deterministic-assistants-scotland",
+  "internal-business-systems-scotland",
+  "bespoke-software-development-scottish-smes",
+  "answer-engine-optimisation-oban",
+  "ai-visibility-inverness",
+] as const satisfies readonly ScotlandPageSlug[];
 
 export default function ServicesPage() {
   return (
@@ -143,6 +155,25 @@ export default function ServicesPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="border-y border-ink/10 bg-off-white text-ink">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-deep-blue/65">Scotland-wide technical services</p>
+          <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">Clear routes for visibility, controlled AI, internal systems, and bespoke software.</h2>
+          <p className="mt-5 max-w-3xl text-base leading-7 text-ink/65">mccaigs is based in Edinburgh and delivers suitable projects across Scotland. National and regional pages are separated by real service intent, audience questions, and operating context.</p>
+          <div className="mt-9 grid gap-px overflow-hidden rounded-xl border border-ink/10 bg-ink/10 md:grid-cols-2 lg:grid-cols-4">
+            {scotlandServiceSlugs.map((slug) => {
+              const service = scotlandPageMap[slug];
+              return (
+                <Link className="group bg-off-white p-5 transition-colors hover:bg-white" href={service.path} key={slug}>
+                  <h3 className="font-semibold leading-6">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-ink/60">{service.definition}</p>
+                  <span className="mt-5 inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.15em] text-deep-blue">View service <ArrowUpRight className="size-3 transition-transform group-hover:translate-x-0.5" /></span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

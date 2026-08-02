@@ -452,8 +452,8 @@ export const aeoPageMap = Object.fromEntries(aeoPages.map((page) => [page.slug, 
 
 export const aeoPackages = [
   {
-    title: "AEO Audit",
-    price: "from GBP 299",
+    title: "AI Visibility and AEO Audit",
+    price: "£299 standard",
     includes: [
       "AI visibility check",
       "Technical SEO review",
@@ -465,7 +465,7 @@ export const aeoPackages = [
   },
   {
     title: "AEO Implementation",
-    price: "from GBP 799",
+    price: "from £799",
     includes: [
       "llms.txt and llms-full.txt",
       "Metadata improvements",
@@ -478,7 +478,7 @@ export const aeoPackages = [
   },
   {
     title: "AI Visibility Management",
-    price: "from GBP 99/month",
+    price: "from £99 per month",
     includes: [
       "Monthly AI visibility testing",
       "ChatGPT, Gemini, and Google AI prompt checks",

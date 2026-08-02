@@ -57,7 +57,7 @@ export function SiteFooter() {
         <div className="grid gap-5 border-b border-white/8 pb-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-[1.2fr_0.9fr_1fr_1fr_0.65fr]">
           <div>
             <Logo className="text-foreground" size="sm" />
-            <p className="mt-2.5 max-w-sm text-xs leading-5">Scotland&apos;s Elite Technical Studio. Practical AI, automation, websites, internal systems, and digital products built properly.</p>
+            <p className="mt-2.5 max-w-sm text-xs leading-5">A technical studio based in Edinburgh, building AI visibility systems, deterministic assistants, internal business systems and bespoke software across Scotland.</p>
             <p className="mt-2.5 font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Edinburgh, Scotland</p>
           </div>
           <nav aria-label="Footer navigation">

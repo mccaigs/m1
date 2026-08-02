@@ -108,11 +108,11 @@
       "topic": "aeo_audit",
       "priority": 13,
       "keywords": ["aeo audit", "answer engine audit", "ai visibility check", "technical seo review", "entity signals review"],
-      "phrases": ["what is included in an aeo audit", "aeo audit price", "ai visibility check", "audit our ai visibility"],
+      "phrases": ["what is included in an aeo audit", "what is included in the 299 standard ai visibility and aeo audit", "aeo audit price", "ai visibility check", "audit our ai visibility"],
       "fragments": [
-        "The AEO Audit is a focused review of how ready the website is for AI search and answer engines.",
+        "The standard AI Visibility and AEO Audit is a focused review of how ready the website is for AI search and answer engines.",
         "It includes an AI visibility check, technical SEO review, structured data review, entity signals review, llms.txt review, and recommendations report.",
-        "Pricing guidance starts from GBP 299."
+        "The standard price is £299. A separate limited introductory AI Visibility Audit is £99 with a narrower scope."
       ],
       "cta": { "label": "Start a project", "href": "/start-project" },
       "suggested_questions": ["What happens after an AEO Audit?", "What is AEO Implementation?", "Can you review our llms.txt?"]
